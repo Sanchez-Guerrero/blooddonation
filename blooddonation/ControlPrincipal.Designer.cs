@@ -47,6 +47,7 @@
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnAdministrador);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.button2);
@@ -81,7 +83,7 @@
             this.btnAdministrador.ForeColor = System.Drawing.Color.White;
             this.btnAdministrador.Image = ((System.Drawing.Image)(resources.GetObject("btnAdministrador.Image")));
             this.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministrador.Location = new System.Drawing.Point(3, 333);
+            this.btnAdministrador.Location = new System.Drawing.Point(3, 389);
             this.btnAdministrador.Name = "btnAdministrador";
             this.btnAdministrador.Size = new System.Drawing.Size(181, 50);
             this.btnAdministrador.TabIndex = 8;
@@ -118,7 +120,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(2, 277);
+            this.button2.Location = new System.Drawing.Point(3, 333);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 50);
             this.button2.TabIndex = 6;
@@ -155,7 +157,7 @@
             this.btnCitas.ForeColor = System.Drawing.Color.White;
             this.btnCitas.Image = ((System.Drawing.Image)(resources.GetObject("btnCitas.Image")));
             this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitas.Location = new System.Drawing.Point(3, 228);
+            this.btnCitas.Location = new System.Drawing.Point(3, 277);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(181, 50);
             this.btnCitas.TabIndex = 4;
@@ -288,6 +290,23 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(2, 228);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 50);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Donante";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ControlPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +350,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAdministrador;
+        private System.Windows.Forms.Button button1;
     }
 }
 
