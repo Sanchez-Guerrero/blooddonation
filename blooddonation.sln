@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blooddonation", "blooddonation\blooddonation.csproj", "{58DE3894-7EC6-4E70-8028-E4AE3F9A6B8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{461C5D2E-13C2-41BC-B4F9-5F5B89E162B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repo", "Repo\Repo.csproj", "{7EC0FBF7-8865-4B88-BD35-F20BA2CF3064}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58DE3894-7EC6-4E70-8028-E4AE3F9A6B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58DE3894-7EC6-4E70-8028-E4AE3F9A6B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58DE3894-7EC6-4E70-8028-E4AE3F9A6B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58DE3894-7EC6-4E70-8028-E4AE3F9A6B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461C5D2E-13C2-41BC-B4F9-5F5B89E162B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461C5D2E-13C2-41BC-B4F9-5F5B89E162B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461C5D2E-13C2-41BC-B4F9-5F5B89E162B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461C5D2E-13C2-41BC-B4F9-5F5B89E162B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC0FBF7-8865-4B88-BD35-F20BA2CF3064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC0FBF7-8865-4B88-BD35-F20BA2CF3064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC0FBF7-8865-4B88-BD35-F20BA2CF3064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC0FBF7-8865-4B88-BD35-F20BA2CF3064}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
