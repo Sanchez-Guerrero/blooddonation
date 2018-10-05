@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace blooddonation
 {
-    public partial class FrmPacientes : Form
+    public partial class ControlDonante : Form
     {
-        public FrmPacientes()
+        public ControlDonante()
         {
             InitializeComponent();
         }
-
         private void AbrirFormInPanel(object Formhijo)
         {
             if (this.pnContenedorPacientes.Controls.Count > 0)
@@ -32,24 +31,13 @@ namespace blooddonation
             btnNuevoPaciente.Dispose();
             btnModificarUsuario.Dispose();
             btnBuscar.Dispose();
-            dGVConsulta.Dispose();
             txtBuscar.Dispose();
+            dGVConsulta.Dispose();
             rSTabla.Dispose();
         }
-
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FrmRegistrarPaciente());
-        }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new TestParaDonar());
-        }
-
-        private void btnModificarUsuario_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new UpdatePaciente());
+            AbrirFormInPanel(new RegistrarDonante());
         }
     }
 }

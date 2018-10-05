@@ -81,5 +81,10 @@ namespace blooddonation
         {
             AbrirFormInPanel(new ControlAdmin());
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new ControlDonante());
+        }
     }
 }

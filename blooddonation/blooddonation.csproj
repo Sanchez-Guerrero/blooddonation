@@ -66,6 +66,12 @@
     <Compile Include="ControlAdmin.Designer.cs">
       <DependentUpon>ControlAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlDonante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDonante.Designer.cs">
+      <DependentUpon>ControlDonante.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteCitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,12 @@
     <Compile Include="FrmPacientes.Designer.cs">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarDonante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarDonante.Designer.cs">
+      <DependentUpon>RegistrarDonante.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowRecomendaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="ControlAdmin.resx">
       <DependentUpon>ControlAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDonante.resx">
+      <DependentUpon>ControlDonante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCitas.resx">
       <DependentUpon>DeleteCitas.cs</DependentUpon>
@@ -191,6 +206,9 @@
     </Compile>
     <EmbeddedResource Include="FrmPacientes.resx">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarDonante.resx">
+      <DependentUpon>RegistrarDonante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowRecomendaciones.resx">
       <DependentUpon>ShowRecomendaciones.cs</DependentUpon>
@@ -230,6 +248,7 @@
     <Content Include="Content\Calendar.png" />
     <Content Include="Content\cerrar.png" />
     <Content Include="Content\Citas.png" />
+    <Content Include="Content\donante.png" />
     <Content Include="Content\El-Blood.png" />
     <Content Include="Content\Eliminar.png" />
     <Content Include="Content\Home.png" />
@@ -238,6 +257,7 @@
     <Content Include="Content\logoSangre.png" />
     <Content Include="Content\Logotipo.png" />
     <Content Include="Content\lupa.png" />
+    <Content Include="Content\Next.png" />
     <Content Include="Content\nuevo-usuario.png" />
     <Content Include="Content\Registrar.png" />
     <Content Include="Content\salir.png" />

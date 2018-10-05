@@ -1,6 +1,6 @@
 ﻿namespace blooddonation
 {
-    partial class FrmPacientes
+    partial class ControlDonante
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPacientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlDonante));
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
@@ -57,19 +57,19 @@
             this.pnEncabezadoPacientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnEncabezadoPacientes.Location = new System.Drawing.Point(0, 0);
             this.pnEncabezadoPacientes.Name = "pnEncabezadoPacientes";
-            this.pnEncabezadoPacientes.Size = new System.Drawing.Size(726, 71);
-            this.pnEncabezadoPacientes.TabIndex = 0;
+            this.pnEncabezadoPacientes.Size = new System.Drawing.Size(740, 71);
+            this.pnEncabezadoPacientes.TabIndex = 1;
             // 
             // lbPacientes
             // 
             this.lbPacientes.AutoSize = true;
             this.lbPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPacientes.ForeColor = System.Drawing.Color.White;
-            this.lbPacientes.Location = new System.Drawing.Point(294, 23);
+            this.lbPacientes.Location = new System.Drawing.Point(305, 23);
             this.lbPacientes.Name = "lbPacientes";
-            this.lbPacientes.Size = new System.Drawing.Size(126, 25);
+            this.lbPacientes.Size = new System.Drawing.Size(124, 25);
             this.lbPacientes.TabIndex = 0;
-            this.lbPacientes.Text = "PACIENTES";
+            this.lbPacientes.Text = "DONANTES";
             // 
             // pnContenedorPacientes
             // 
@@ -83,8 +83,8 @@
             this.pnContenedorPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedorPacientes.Location = new System.Drawing.Point(0, 71);
             this.pnContenedorPacientes.Name = "pnContenedorPacientes";
-            this.pnContenedorPacientes.Size = new System.Drawing.Size(726, 428);
-            this.pnContenedorPacientes.TabIndex = 1;
+            this.pnContenedorPacientes.Size = new System.Drawing.Size(740, 421);
+            this.pnContenedorPacientes.TabIndex = 2;
             // 
             // dGVConsulta
             // 
@@ -99,9 +99,9 @@
             this.Edad,
             this.ECivil});
             this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
-            this.dGVConsulta.Location = new System.Drawing.Point(35, 186);
+            this.dGVConsulta.Location = new System.Drawing.Point(35, 159);
             this.dGVConsulta.Name = "dGVConsulta";
-            this.dGVConsulta.Size = new System.Drawing.Size(662, 208);
+            this.dGVConsulta.Size = new System.Drawing.Size(662, 235);
             this.dGVConsulta.TabIndex = 35;
             // 
             // ID
@@ -145,7 +145,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(518, 127);
+            this.btnBuscar.Location = new System.Drawing.Point(518, 108);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(156, 31);
             this.btnBuscar.TabIndex = 10;
@@ -156,7 +156,7 @@
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(35, 127);
+            this.txtBuscar.Location = new System.Drawing.Point(35, 107);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(477, 31);
             this.txtBuscar.TabIndex = 2;
@@ -172,13 +172,12 @@
             this.btnModificarUsuario.ForeColor = System.Drawing.Color.White;
             this.btnModificarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarUsuario.Image")));
             this.btnModificarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarUsuario.Location = new System.Drawing.Point(433, 34);
+            this.btnModificarUsuario.Location = new System.Drawing.Point(456, 24);
             this.btnModificarUsuario.Name = "btnModificarUsuario";
             this.btnModificarUsuario.Size = new System.Drawing.Size(185, 50);
             this.btnModificarUsuario.TabIndex = 8;
             this.btnModificarUsuario.Text = "Modificar";
             this.btnModificarUsuario.UseVisualStyleBackColor = false;
-            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
             // 
             // btnNuevoPaciente
             // 
@@ -191,7 +190,7 @@
             this.btnNuevoPaciente.ForeColor = System.Drawing.Color.White;
             this.btnNuevoPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoPaciente.Image")));
             this.btnNuevoPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(72, 34);
+            this.btnNuevoPaciente.Location = new System.Drawing.Point(68, 24);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
             this.btnNuevoPaciente.Size = new System.Drawing.Size(185, 50);
             this.btnNuevoPaciente.TabIndex = 4;
@@ -206,7 +205,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rSTabla});
-            this.shapeContainer1.Size = new System.Drawing.Size(726, 428);
+            this.shapeContainer1.Size = new System.Drawing.Size(740, 421);
             this.shapeContainer1.TabIndex = 9;
             this.shapeContainer1.TabStop = false;
             // 
@@ -214,20 +213,20 @@
             // 
             this.rSTabla.BorderColor = System.Drawing.Color.Silver;
             this.rSTabla.Enabled = false;
-            this.rSTabla.Location = new System.Drawing.Point(15, 114);
+            this.rSTabla.Location = new System.Drawing.Point(15, 93);
             this.rSTabla.Name = "rSTabla";
-            this.rSTabla.Size = new System.Drawing.Size(689, 296);
+            this.rSTabla.Size = new System.Drawing.Size(689, 317);
             // 
-            // FrmPacientes
+            // ControlDonante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 499);
+            this.ClientSize = new System.Drawing.Size(740, 492);
             this.Controls.Add(this.pnContenedorPacientes);
             this.Controls.Add(this.pnEncabezadoPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmPacientes";
-            this.Text = "RegistroUsuario";
+            this.Name = "ControlDonante";
+            this.Text = "ControlDonante";
             this.pnEncabezadoPacientes.ResumeLayout(false);
             this.pnEncabezadoPacientes.PerformLayout();
             this.pnContenedorPacientes.ResumeLayout(false);
@@ -242,12 +241,6 @@
         private System.Windows.Forms.Panel pnEncabezadoPacientes;
         private System.Windows.Forms.Label lbPacientes;
         private System.Windows.Forms.Panel pnContenedorPacientes;
-        private System.Windows.Forms.Button btnModificarUsuario;
-        private System.Windows.Forms.Button btnNuevoPaciente;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rSTabla;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dGVConsulta;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
@@ -255,5 +248,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnModificarUsuario;
+        private System.Windows.Forms.Button btnNuevoPaciente;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rSTabla;
     }
 }
