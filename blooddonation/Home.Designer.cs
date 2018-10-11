@@ -43,7 +43,7 @@
             // 
             // PanelContenedorHome
             // 
-            this.PanelContenedorHome.BackColor = System.Drawing.Color.Transparent;
+            this.PanelContenedorHome.BackColor = System.Drawing.Color.LightGray;
             this.PanelContenedorHome.Controls.Add(this.lbesDonarVida);
             this.PanelContenedorHome.Controls.Add(this.lbDonarSangre);
             this.PanelContenedorHome.Controls.Add(this.pblogomanossangre);
@@ -61,7 +61,7 @@
             this.lbesDonarVida.BackColor = System.Drawing.Color.Transparent;
             this.lbesDonarVida.Font = new System.Drawing.Font("Century Schoolbook", 50.25F, System.Drawing.FontStyle.Bold);
             this.lbesDonarVida.ForeColor = System.Drawing.Color.Red;
-            this.lbesDonarVida.Location = new System.Drawing.Point(128, 116);
+            this.lbesDonarVida.Location = new System.Drawing.Point(128, 143);
             this.lbesDonarVida.Name = "lbesDonarVida";
             this.lbesDonarVida.Size = new System.Drawing.Size(524, 78);
             this.lbesDonarVida.TabIndex = 4;
@@ -73,7 +73,7 @@
             this.lbDonarSangre.BackColor = System.Drawing.Color.Transparent;
             this.lbDonarSangre.Font = new System.Drawing.Font("Century Schoolbook", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDonarSangre.ForeColor = System.Drawing.Color.Red;
-            this.lbDonarSangre.Location = new System.Drawing.Point(128, 22);
+            this.lbDonarSangre.Location = new System.Drawing.Point(128, 49);
             this.lbDonarSangre.Name = "lbDonarSangre";
             this.lbDonarSangre.Size = new System.Drawing.Size(517, 78);
             this.lbDonarSangre.TabIndex = 3;
@@ -95,7 +95,7 @@
             this.lbFecha.BackColor = System.Drawing.Color.Transparent;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.lbFecha.Location = new System.Drawing.Point(50, 353);
+            this.lbFecha.Location = new System.Drawing.Point(50, 380);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(79, 29);
             this.lbFecha.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.lbHora.BackColor = System.Drawing.Color.Transparent;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.lbHora.Location = new System.Drawing.Point(86, 261);
+            this.lbHora.Location = new System.Drawing.Point(86, 288);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(209, 76);
             this.lbHora.TabIndex = 0;

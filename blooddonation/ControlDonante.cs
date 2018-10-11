@@ -39,5 +39,10 @@ namespace blooddonation
         {
             AbrirFormInPanel(new RegistrarDonante());
         }
+
+        private void btnModificarUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new UpdateDonante());
+        }
     }
 }

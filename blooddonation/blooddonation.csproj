@@ -158,6 +158,12 @@
     <Compile Include="UpdateCitas.Designer.cs">
       <DependentUpon>UpdateCitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateDonante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDonante.Designer.cs">
+      <DependentUpon>UpdateDonante.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     <EmbeddedResource Include="UpdateCitas.resx">
       <DependentUpon>UpdateCitas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDonante.resx">
+      <DependentUpon>UpdateDonante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdatePaciente.resx">
       <DependentUpon>UpdatePaciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +260,7 @@
     <Content Include="Content\donante.png" />
     <Content Include="Content\El-Blood.png" />
     <Content Include="Content\Eliminar.png" />
+    <Content Include="Content\enviar.png" />
     <Content Include="Content\Home.png" />
     <Content Include="Content\Homedos.png" />
     <Content Include="Content\Icono.ico" />

@@ -32,8 +32,14 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
-            this.rTBSitioCita = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnModificarCita = new System.Windows.Forms.Button();
+            this.dGVConsulta = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dTPHoraCita = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dTPFechaCita = new System.Windows.Forms.DateTimePicker();
@@ -44,14 +50,10 @@
             this.lbtiquetaNombre = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.dGVConsulta = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModificarCita = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorPacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVConsulta)).BeginInit();
@@ -81,10 +83,12 @@
             // pnContenedorPacientes
             // 
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorPacientes.Controls.Add(this.comboBox2);
+            this.pnContenedorPacientes.Controls.Add(this.comboBox1);
+            this.pnContenedorPacientes.Controls.Add(this.label5);
+            this.pnContenedorPacientes.Controls.Add(this.label4);
             this.pnContenedorPacientes.Controls.Add(this.btnModificarCita);
             this.pnContenedorPacientes.Controls.Add(this.dGVConsulta);
-            this.pnContenedorPacientes.Controls.Add(this.rTBSitioCita);
-            this.pnContenedorPacientes.Controls.Add(this.label4);
             this.pnContenedorPacientes.Controls.Add(this.dTPHoraCita);
             this.pnContenedorPacientes.Controls.Add(this.label3);
             this.pnContenedorPacientes.Controls.Add(this.dTPFechaCita);
@@ -100,27 +104,71 @@
             this.pnContenedorPacientes.Size = new System.Drawing.Size(710, 555);
             this.pnContenedorPacientes.TabIndex = 3;
             // 
-            // rTBSitioCita
+            // btnModificarCita
             // 
-            this.rTBSitioCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rTBSitioCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTBSitioCita.Location = new System.Drawing.Point(41, 177);
-            this.rTBSitioCita.Name = "rTBSitioCita";
-            this.rTBSitioCita.Size = new System.Drawing.Size(638, 57);
-            this.rTBSitioCita.TabIndex = 32;
-            this.rTBSitioCita.Text = "";
+            this.btnModificarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnModificarCita.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarCita.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnModificarCita.FlatAppearance.BorderSize = 0;
+            this.btnModificarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarCita.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCita.ForeColor = System.Drawing.Color.White;
+            this.btnModificarCita.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarCita.Image")));
+            this.btnModificarCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarCita.Location = new System.Drawing.Point(494, 398);
+            this.btnModificarCita.Name = "btnModificarCita";
+            this.btnModificarCita.Size = new System.Drawing.Size(185, 50);
+            this.btnModificarCita.TabIndex = 5;
+            this.btnModificarCita.Text = "Modificar";
+            this.btnModificarCita.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // dGVConsulta
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label4.Location = new System.Drawing.Point(37, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 24);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Sitio de la cita";
+            this.dGVConsulta.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.nombre,
+            this.APaterno,
+            this.AMaterno,
+            this.Edad,
+            this.ECivil});
+            this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
+            this.dGVConsulta.Location = new System.Drawing.Point(28, 252);
+            this.dGVConsulta.Name = "dGVConsulta";
+            this.dGVConsulta.Size = new System.Drawing.Size(651, 140);
+            this.dGVConsulta.TabIndex = 37;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "N\'Cita";
+            this.ID.Name = "ID";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Paciente";
+            this.nombre.Name = "nombre";
+            // 
+            // APaterno
+            // 
+            this.APaterno.HeaderText = "Donante";
+            this.APaterno.Name = "APaterno";
+            // 
+            // AMaterno
+            // 
+            this.AMaterno.HeaderText = "Fecha";
+            this.AMaterno.Name = "AMaterno";
+            // 
+            // Edad
+            // 
+            this.Edad.HeaderText = "Hora";
+            this.Edad.Name = "Edad";
+            // 
+            // ECivil
+            // 
+            this.ECivil.HeaderText = "Sitio de la cita";
+            this.ECivil.Name = "ECivil";
             // 
             // dTPHoraCita
             // 
@@ -130,7 +178,7 @@
             this.dTPHoraCita.Location = new System.Drawing.Point(387, 112);
             this.dTPHoraCita.Name = "dTPHoraCita";
             this.dTPHoraCita.ShowUpDown = true;
-            this.dTPHoraCita.Size = new System.Drawing.Size(292, 26);
+            this.dTPHoraCita.Size = new System.Drawing.Size(292, 27);
             this.dTPHoraCita.TabIndex = 21;
             // 
             // label3
@@ -155,7 +203,7 @@
             this.dTPFechaCita.Font = new System.Drawing.Font("FontAwesome", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dTPFechaCita.Location = new System.Drawing.Point(41, 111);
             this.dTPFechaCita.Name = "dTPFechaCita";
-            this.dTPFechaCita.Size = new System.Drawing.Size(292, 26);
+            this.dTPFechaCita.Size = new System.Drawing.Size(292, 27);
             this.dTPFechaCita.TabIndex = 19;
             // 
             // label2
@@ -239,71 +287,55 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(682, 445);
             // 
-            // dGVConsulta
+            // comboBox2
             // 
-            this.dGVConsulta.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
-            this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
-            this.dGVConsulta.Location = new System.Drawing.Point(28, 252);
-            this.dGVConsulta.Name = "dGVConsulta";
-            this.dGVConsulta.Size = new System.Drawing.Size(651, 140);
-            this.dGVConsulta.TabIndex = 37;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.Black;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(387, 181);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox2.Size = new System.Drawing.Size(292, 32);
+            this.comboBox2.TabIndex = 38;
             // 
-            // ID
+            // label5
             // 
-            this.ID.HeaderText = "N\'Cita";
-            this.ID.Name = "ID";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label5.Location = new System.Drawing.Point(387, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 24);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Dirección de Hospital";
             // 
-            // nombre
+            // comboBox1
             // 
-            this.nombre.HeaderText = "Paciente";
-            this.nombre.Name = "nombre";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(41, 181);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox1.Size = new System.Drawing.Size(292, 32);
+            this.comboBox1.TabIndex = 36;
             // 
-            // APaterno
+            // label4
             // 
-            this.APaterno.HeaderText = "Donante";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Fecha";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Hora";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Sitio de la cita";
-            this.ECivil.Name = "ECivil";
-            // 
-            // btnModificarCita
-            // 
-            this.btnModificarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnModificarCita.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarCita.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnModificarCita.FlatAppearance.BorderSize = 0;
-            this.btnModificarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarCita.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarCita.ForeColor = System.Drawing.Color.White;
-            this.btnModificarCita.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarCita.Image")));
-            this.btnModificarCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarCita.Location = new System.Drawing.Point(494, 398);
-            this.btnModificarCita.Name = "btnModificarCita";
-            this.btnModificarCita.Size = new System.Drawing.Size(185, 50);
-            this.btnModificarCita.TabIndex = 5;
-            this.btnModificarCita.Text = "Modificar";
-            this.btnModificarCita.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label4.Location = new System.Drawing.Point(37, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 24);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Hospital";
             // 
             // UpdateCitas
             // 
@@ -329,8 +361,6 @@
         private System.Windows.Forms.Panel pnEncabezadoPacientes;
         private System.Windows.Forms.Label lbPacientes;
         private System.Windows.Forms.Panel pnContenedorPacientes;
-        private System.Windows.Forms.RichTextBox rTBSitioCita;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dTPHoraCita;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dTPFechaCita;
@@ -349,5 +379,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
         private System.Windows.Forms.Button btnModificarCita;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

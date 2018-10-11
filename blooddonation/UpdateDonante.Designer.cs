@@ -1,6 +1,6 @@
 ﻿namespace blooddonation
 {
-    partial class UpdateAdmin
+    partial class UpdateDonante
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateAdmin));
-            this.pnEncabezadoRegistrar = new System.Windows.Forms.Panel();
-            this.etRegistrar = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateDonante));
+            this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
+            this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cBCP = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cBColonia = new System.Windows.Forms.ComboBox();
@@ -54,6 +55,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cBTipSangre = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCurp = new System.Windows.Forms.TextBox();
@@ -72,43 +75,34 @@
             this.lbEtiquetaDPersonales = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rshDatosPersonales = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.pnEncabezadoRegistrar.SuspendLayout();
+            this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorRegistarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnEncabezadoRegistrar
+            // pnEncabezadoPacientes
             // 
-            this.pnEncabezadoRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.pnEncabezadoRegistrar.Controls.Add(this.etRegistrar);
-            this.pnEncabezadoRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnEncabezadoRegistrar.Location = new System.Drawing.Point(0, 0);
-            this.pnEncabezadoRegistrar.Name = "pnEncabezadoRegistrar";
-            this.pnEncabezadoRegistrar.Size = new System.Drawing.Size(718, 71);
-            this.pnEncabezadoRegistrar.TabIndex = 3;
+            this.pnEncabezadoPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.pnEncabezadoPacientes.Controls.Add(this.lbPacientes);
+            this.pnEncabezadoPacientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnEncabezadoPacientes.Location = new System.Drawing.Point(0, 0);
+            this.pnEncabezadoPacientes.Name = "pnEncabezadoPacientes";
+            this.pnEncabezadoPacientes.Size = new System.Drawing.Size(750, 71);
+            this.pnEncabezadoPacientes.TabIndex = 2;
             // 
-            // etRegistrar
+            // lbPacientes
             // 
-            this.etRegistrar.AutoSize = true;
-            this.etRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etRegistrar.ForeColor = System.Drawing.Color.White;
-            this.etRegistrar.Location = new System.Drawing.Point(200, 23);
-            this.etRegistrar.Name = "etRegistrar";
-            this.etRegistrar.Size = new System.Drawing.Size(294, 25);
-            this.etRegistrar.TabIndex = 0;
-            this.etRegistrar.Text = "MODIFICAR ADMINISTRADOR";
+            this.lbPacientes.AutoSize = true;
+            this.lbPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPacientes.ForeColor = System.Drawing.Color.White;
+            this.lbPacientes.Location = new System.Drawing.Point(227, 23);
+            this.lbPacientes.Name = "lbPacientes";
+            this.lbPacientes.Size = new System.Drawing.Size(226, 25);
+            this.lbPacientes.TabIndex = 0;
+            this.lbPacientes.Text = "MODIFICAR DONANTE";
             // 
             // pnContenedorRegistarPaciente
             // 
@@ -116,13 +110,6 @@
             this.pnContenedorRegistarPaciente.BackColor = System.Drawing.Color.Gainsboro;
             this.pnContenedorRegistarPaciente.Controls.Add(this.btnModificar);
             this.pnContenedorRegistarPaciente.Controls.Add(this.dataGridView1);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.comboBox1);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.label16);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.label15);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.txtPassword);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.label11);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.textBox1);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.label5);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBCP);
             this.pnContenedorRegistarPaciente.Controls.Add(this.label14);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBColonia);
@@ -138,6 +125,8 @@
             this.pnContenedorRegistarPaciente.Controls.Add(this.label7);
             this.pnContenedorRegistarPaciente.Controls.Add(this.txtCalle);
             this.pnContenedorRegistarPaciente.Controls.Add(this.label6);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.cBTipSangre);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.label5);
             this.pnContenedorRegistarPaciente.Controls.Add(this.txtTelefono);
             this.pnContenedorRegistarPaciente.Controls.Add(this.label4);
             this.pnContenedorRegistarPaciente.Controls.Add(this.txtCurp);
@@ -159,87 +148,74 @@
             this.pnContenedorRegistarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedorRegistarPaciente.Location = new System.Drawing.Point(0, 71);
             this.pnContenedorRegistarPaciente.Name = "pnContenedorRegistarPaciente";
-            this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(718, 299);
+            this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(750, 428);
             this.pnContenedorRegistarPaciente.TabIndex = 6;
             // 
-            // comboBox1
+            // btnModificar
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(479, 455);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(190, 32);
-            this.comboBox1.TabIndex = 53;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(497, 566);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(184, 50);
+            this.btnModificar.TabIndex = 32;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // label16
+            // dataGridView1
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label16.Location = new System.Drawing.Point(475, 432);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(120, 20);
-            this.label16.TabIndex = 52;
-            this.label16.Text = "Tipo de Usuario";
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.nombre,
+            this.APaterno,
+            this.AMaterno,
+            this.Edad,
+            this.ECivil});
+            this.dataGridView1.GridColor = System.Drawing.Color.Silver;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 433);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(650, 120);
+            this.dataGridView1.TabIndex = 36;
             // 
-            // label15
+            // ID
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label15.Location = new System.Drawing.Point(252, 433);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 20);
-            this.label15.TabIndex = 51;
-            this.label15.Text = "Password";
+            this.ID.HeaderText = "N\'Paciente";
+            this.ID.Name = "ID";
             // 
-            // txtPassword
+            // nombre
             // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(256, 456);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(190, 31);
-            this.txtPassword.TabIndex = 50;
+            this.nombre.HeaderText = "Nombre\'s";
+            this.nombre.Name = "nombre";
             // 
-            // label11
+            // APaterno
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label11.Location = new System.Drawing.Point(30, 433);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 20);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "Nombre de Usuario";
+            this.APaterno.HeaderText = "Apellido Paterno";
+            this.APaterno.Name = "APaterno";
             // 
-            // textBox1
+            // AMaterno
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(34, 456);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 31);
-            this.textBox1.TabIndex = 48;
+            this.AMaterno.HeaderText = "Apellido Materno";
+            this.AMaterno.Name = "AMaterno";
             // 
-            // label5
+            // Edad
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.label5.Location = new System.Drawing.Point(30, 405);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 24);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Cuenta";
+            this.Edad.HeaderText = "Edad";
+            this.Edad.Name = "Edad";
+            // 
+            // ECivil
+            // 
+            this.ECivil.HeaderText = "Estado Civil";
+            this.ECivil.Name = "ECivil";
             // 
             // cBCP
             // 
@@ -410,11 +386,36 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.label6.Location = new System.Drawing.Point(30, 237);
+            this.label6.Location = new System.Drawing.Point(30, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 24);
             this.label6.TabIndex = 15;
             this.label6.Text = "Dirección";
+            // 
+            // cBTipSangre
+            // 
+            this.cBTipSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBTipSangre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cBTipSangre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBTipSangre.ForeColor = System.Drawing.Color.Black;
+            this.cBTipSangre.FormattingEnabled = true;
+            this.cBTipSangre.Location = new System.Drawing.Point(479, 189);
+            this.cBTipSangre.Name = "cBTipSangre";
+            this.cBTipSangre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cBTipSangre.Size = new System.Drawing.Size(190, 32);
+            this.cBTipSangre.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label5.Location = new System.Drawing.Point(475, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Tipo de Sangre";
             // 
             // txtTelefono
             // 
@@ -611,30 +612,28 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape5,
-            this.rectangleShape2,
             this.rectangleShape1,
             this.rshDatosPersonales});
-            this.shapeContainer1.Size = new System.Drawing.Size(701, 697);
+            this.shapeContainer1.Size = new System.Drawing.Size(733, 616);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
-            // rectangleShape2
+            // rectangleShape5
             // 
-            this.rectangleShape2.BackColor = System.Drawing.Color.Transparent;
-            this.rectangleShape2.BorderColor = System.Drawing.Color.Silver;
-            this.rectangleShape2.Enabled = false;
-            this.rectangleShape2.Location = new System.Drawing.Point(12, 250);
-            this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(681, 151);
+            this.rectangleShape5.BorderColor = System.Drawing.Color.Silver;
+            this.rectangleShape5.Enabled = false;
+            this.rectangleShape5.Location = new System.Drawing.Point(12, 415);
+            this.rectangleShape5.Name = "rectangleShape5";
+            this.rectangleShape5.Size = new System.Drawing.Size(680, 212);
             // 
             // rectangleShape1
             // 
             this.rectangleShape1.BackColor = System.Drawing.Color.Transparent;
             this.rectangleShape1.BorderColor = System.Drawing.Color.Silver;
             this.rectangleShape1.Enabled = false;
-            this.rectangleShape1.Location = new System.Drawing.Point(13, 418);
+            this.rectangleShape1.Location = new System.Drawing.Point(12, 253);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(681, 87);
+            this.rectangleShape1.Size = new System.Drawing.Size(681, 151);
             // 
             // rshDatosPersonales
             // 
@@ -644,92 +643,18 @@
             this.rshDatosPersonales.Name = "rshDatosPersonales";
             this.rshDatosPersonales.Size = new System.Drawing.Size(681, 207);
             // 
-            // rectangleShape5
-            // 
-            this.rectangleShape5.BorderColor = System.Drawing.Color.Silver;
-            this.rectangleShape5.Enabled = false;
-            this.rectangleShape5.Location = new System.Drawing.Point(12, 516);
-            this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(680, 190);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
-            this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 531);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 110);
-            this.dataGridView1.TabIndex = 37;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "N\'Paciente";
-            this.ID.Name = "ID";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre\'s";
-            this.nombre.Name = "nombre";
-            // 
-            // APaterno
-            // 
-            this.APaterno.HeaderText = "Apellido Paterno";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Apellido Materno";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Estado Civil";
-            this.ECivil.Name = "ECivil";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(497, 647);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(184, 50);
-            this.btnModificar.TabIndex = 33;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
-            // UpdateAdmin
+            // UpdateDonante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 370);
+            this.ClientSize = new System.Drawing.Size(750, 499);
             this.Controls.Add(this.pnContenedorRegistarPaciente);
-            this.Controls.Add(this.pnEncabezadoRegistrar);
+            this.Controls.Add(this.pnEncabezadoPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UpdateAdmin";
-            this.Text = "UpdateAdmin";
-            this.pnEncabezadoRegistrar.ResumeLayout(false);
-            this.pnEncabezadoRegistrar.PerformLayout();
+            this.Name = "UpdateDonante";
+            this.Text = "UpdateDonante";
+            this.pnEncabezadoPacientes.ResumeLayout(false);
+            this.pnEncabezadoPacientes.PerformLayout();
             this.pnContenedorRegistarPaciente.ResumeLayout(false);
             this.pnContenedorRegistarPaciente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -739,16 +664,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnEncabezadoRegistrar;
-        private System.Windows.Forms.Label etRegistrar;
+        private System.Windows.Forms.Panel pnEncabezadoPacientes;
+        private System.Windows.Forms.Label lbPacientes;
         private System.Windows.Forms.Panel pnContenedorRegistarPaciente;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
         private System.Windows.Forms.ComboBox cBCP;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cBColonia;
@@ -764,6 +690,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cBTipSangre;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCurp;
@@ -782,17 +710,8 @@
         private System.Windows.Forms.Label lbEtiquetaDPersonales;
         private System.Windows.Forms.TextBox txtNombres;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rshDatosPersonales;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
-        private System.Windows.Forms.Button btnModificar;
     }
 }

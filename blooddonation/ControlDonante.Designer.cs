@@ -178,6 +178,7 @@
             this.btnModificarUsuario.TabIndex = 8;
             this.btnModificarUsuario.Text = "Modificar";
             this.btnModificarUsuario.UseVisualStyleBackColor = false;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
             // 
             // btnNuevoPaciente
             // 
