@@ -49,15 +49,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Ctl_Clinica.cs" />
+    <Compile Include="Data\Ctl_Colonia.cs" />
+    <Compile Include="Data\Ctl_CodigoPostal.cs" />
+    <Compile Include="Data\Ctl_EstadoCivil.cs" />
+    <Compile Include="Data\Ctl_Estados.cs" />
+    <Compile Include="Data\Ctl_Estatus.cs" />
+    <Compile Include="Data\Ctl_Genero.cs" />
+    <Compile Include="Data\Ctl_Municipio.cs" />
+    <Compile Include="Data\Ctl_Perfil.cs" />
+    <Compile Include="Data\Ctl_TipoSangre.cs" />
+    <Compile Include="Data\Persona.cs" />
+    <Compile Include="Data\Responsables.cs" />
+    <Compile Include="Data\Tbl_Donante.cs" />
+    <Compile Include="Data\Tbl_Solicitante.cs" />
+    <Compile Include="Data\Tbl_Administrador.cs" />
+    <Compile Include="Data\Tbl_Cita.cs" />
+    <Compile Include="Data\Tbl_Direccion.cs" />
+    <Compile Include="Data\Tbl_Login.cs" />
+    <Compile Include="Data\Tbl_TestDonarSangre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewDataModels\Donante_ViewDataModelDonante.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

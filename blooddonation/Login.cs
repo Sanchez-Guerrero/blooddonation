@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model.Data;
+using Repo.Repositorio;
 
 namespace blooddonation
 {
@@ -58,6 +60,27 @@ namespace blooddonation
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tbl_Login login = new Tbl_Login();
+            RepoLogin repositorio = new RepoLogin();
+            var user = login.Usuario = txtUsuario.Text;
+            var pass = login.Password = txtPassword.Text;
+            repositorio.logear(user);
+            var IdPerfil = repositorio.ObtenerPerfil(user);
+
+            if (IdPerfil == 1)
+            {
+                MessageBox.Show("BIenvenido Administrador");
+                this.Hide();
+                ControlPrincipal ctrl = new ControlPrincipal();
+                ctrl.Show();
+
+
+            }
+
         }
     }
 }

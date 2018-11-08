@@ -16,5 +16,15 @@ namespace blooddonation
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cBEstCivil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="etDescripcionDefinitivos.Text" xml:space="preserve">
     <value>1.Haber tenido hepatitis después de los 10 años de vida. 
 3.Enfermedad de Chagas o brucelosis o prueba positiva para cualquiera de ellas. 
 4.Ser hemofílico, hemodializado o haber recibido injerto de meninges o córnea. 
@@ -126,7 +126,7 @@
   saber: pérdida de peso inexplicable, fiebre de más de 10 días de evolución, 
   agrandamiento ganglionar.</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
+  <data name="etDescripcionDoce.Text" xml:space="preserve">
     <value>1.Tatuajes, perforaciones de la piel en alguna parte del cuerpo o acupuntura. 
 2.Enfermedades de transmisión sexual: sífilis, gonorrea. 
 3.Relaciones sexuales con adictos o ex adictos a drogas. 

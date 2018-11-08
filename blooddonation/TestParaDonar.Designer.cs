@@ -32,12 +32,12 @@
             this.pnEncabezadoTest = new System.Windows.Forms.Panel();
             this.etTest = new System.Windows.Forms.Label();
             this.etImpedimentosDefinitivos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.etDescripcionDefinitivos = new System.Windows.Forms.Label();
+            this.etImpedimentosDoce = new System.Windows.Forms.Label();
+            this.etDescripcionDoce = new System.Windows.Forms.Label();
             this.ContenedorTest = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.comboEstatus = new System.Windows.Forms.ComboBox();
+            this.etEstatus = new System.Windows.Forms.Label();
             this.cB72HorasNo = new System.Windows.Forms.CheckBox();
             this.cB72HorasSI = new System.Windows.Forms.CheckBox();
             this.cBMuejeresNO = new System.Windows.Forms.CheckBox();
@@ -46,10 +46,10 @@
             this.cB12MesesSI = new System.Windows.Forms.CheckBox();
             this.cBIDefinitivosNO = new System.Windows.Forms.CheckBox();
             this.cBIDefinitivosSI = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.etDescripcionSetentaydos = new System.Windows.Forms.Label();
+            this.etImpedimentosSetentaydos = new System.Windows.Forms.Label();
+            this.etDescripcionMujeres = new System.Windows.Forms.Label();
+            this.etImpedimentosMujeres = new System.Windows.Forms.Label();
             this.btnGuadarTest = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -90,48 +90,48 @@
             this.etImpedimentosDefinitivos.TabIndex = 6;
             this.etImpedimentosDefinitivos.Text = "Impedimentos Definitivos";
             // 
-            // label1
+            // etDescripcionDefinitivos
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(30, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(542, 126);
-            this.label1.TabIndex = 7;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.etDescripcionDefinitivos.AutoSize = true;
+            this.etDescripcionDefinitivos.BackColor = System.Drawing.Color.Transparent;
+            this.etDescripcionDefinitivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etDescripcionDefinitivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.etDescripcionDefinitivos.Location = new System.Drawing.Point(30, 43);
+            this.etDescripcionDefinitivos.Name = "etDescripcionDefinitivos";
+            this.etDescripcionDefinitivos.Size = new System.Drawing.Size(542, 126);
+            this.etDescripcionDefinitivos.TabIndex = 7;
+            this.etDescripcionDefinitivos.Text = resources.GetString("etDescripcionDefinitivos.Text");
             // 
-            // label8
+            // etImpedimentosDoce
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label8.Location = new System.Drawing.Point(27, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(291, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Impedimentos para donar por 12 meses";
+            this.etImpedimentosDoce.AutoSize = true;
+            this.etImpedimentosDoce.BackColor = System.Drawing.Color.Transparent;
+            this.etImpedimentosDoce.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etImpedimentosDoce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.etImpedimentosDoce.Location = new System.Drawing.Point(27, 175);
+            this.etImpedimentosDoce.Name = "etImpedimentosDoce";
+            this.etImpedimentosDoce.Size = new System.Drawing.Size(291, 20);
+            this.etImpedimentosDoce.TabIndex = 14;
+            this.etImpedimentosDoce.Text = "Impedimentos para donar por 12 meses";
             // 
-            // label9
+            // etDescripcionDoce
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.label9.Location = new System.Drawing.Point(30, 201);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(622, 119);
-            this.label9.TabIndex = 15;
-            this.label9.Text = resources.GetString("label9.Text");
+            this.etDescripcionDoce.AutoSize = true;
+            this.etDescripcionDoce.BackColor = System.Drawing.Color.Transparent;
+            this.etDescripcionDoce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etDescripcionDoce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.etDescripcionDoce.Location = new System.Drawing.Point(30, 201);
+            this.etDescripcionDoce.Name = "etDescripcionDoce";
+            this.etDescripcionDoce.Size = new System.Drawing.Size(622, 119);
+            this.etDescripcionDoce.TabIndex = 15;
+            this.etDescripcionDoce.Text = resources.GetString("etDescripcionDoce.Text");
             // 
             // ContenedorTest
             // 
             this.ContenedorTest.AutoScroll = true;
             this.ContenedorTest.BackColor = System.Drawing.Color.Gainsboro;
-            this.ContenedorTest.Controls.Add(this.comboBox2);
-            this.ContenedorTest.Controls.Add(this.label6);
+            this.ContenedorTest.Controls.Add(this.comboEstatus);
+            this.ContenedorTest.Controls.Add(this.etEstatus);
             this.ContenedorTest.Controls.Add(this.cB72HorasNo);
             this.ContenedorTest.Controls.Add(this.cB72HorasSI);
             this.ContenedorTest.Controls.Add(this.cBMuejeresNO);
@@ -140,14 +140,14 @@
             this.ContenedorTest.Controls.Add(this.cB12MesesSI);
             this.ContenedorTest.Controls.Add(this.cBIDefinitivosNO);
             this.ContenedorTest.Controls.Add(this.cBIDefinitivosSI);
-            this.ContenedorTest.Controls.Add(this.label5);
-            this.ContenedorTest.Controls.Add(this.label4);
-            this.ContenedorTest.Controls.Add(this.label3);
-            this.ContenedorTest.Controls.Add(this.label2);
+            this.ContenedorTest.Controls.Add(this.etDescripcionSetentaydos);
+            this.ContenedorTest.Controls.Add(this.etImpedimentosSetentaydos);
+            this.ContenedorTest.Controls.Add(this.etDescripcionMujeres);
+            this.ContenedorTest.Controls.Add(this.etImpedimentosMujeres);
             this.ContenedorTest.Controls.Add(this.btnGuadarTest);
-            this.ContenedorTest.Controls.Add(this.label9);
-            this.ContenedorTest.Controls.Add(this.label8);
-            this.ContenedorTest.Controls.Add(this.label1);
+            this.ContenedorTest.Controls.Add(this.etDescripcionDoce);
+            this.ContenedorTest.Controls.Add(this.etImpedimentosDoce);
+            this.ContenedorTest.Controls.Add(this.etDescripcionDefinitivos);
             this.ContenedorTest.Controls.Add(this.etImpedimentosDefinitivos);
             this.ContenedorTest.Controls.Add(this.shapeContainer1);
             this.ContenedorTest.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -156,30 +156,30 @@
             this.ContenedorTest.Size = new System.Drawing.Size(707, 545);
             this.ContenedorTest.TabIndex = 3;
             // 
-            // comboBox2
+            // comboEstatus
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(31, 491);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox2.Size = new System.Drawing.Size(190, 32);
-            this.comboBox2.TabIndex = 47;
+            this.comboEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstatus.ForeColor = System.Drawing.Color.Black;
+            this.comboEstatus.FormattingEnabled = true;
+            this.comboEstatus.Location = new System.Drawing.Point(31, 491);
+            this.comboEstatus.Name = "comboEstatus";
+            this.comboEstatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboEstatus.Size = new System.Drawing.Size(190, 32);
+            this.comboEstatus.TabIndex = 47;
             // 
-            // label6
+            // etEstatus
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label6.Location = new System.Drawing.Point(27, 465);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Estatus";
+            this.etEstatus.AutoSize = true;
+            this.etEstatus.BackColor = System.Drawing.Color.Transparent;
+            this.etEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.etEstatus.Location = new System.Drawing.Point(27, 465);
+            this.etEstatus.Name = "etEstatus";
+            this.etEstatus.Size = new System.Drawing.Size(64, 20);
+            this.etEstatus.TabIndex = 46;
+            this.etEstatus.Text = "Estatus";
             // 
             // cB72HorasNo
             // 
@@ -208,6 +208,7 @@
             this.cB72HorasSI.TabIndex = 44;
             this.cB72HorasSI.Text = "SI";
             this.cB72HorasSI.UseVisualStyleBackColor = true;
+            this.cB72HorasSI.CheckedChanged += new System.EventHandler(this.cB72HorasSI_CheckedChanged);
             // 
             // cBMuejeresNO
             // 
@@ -236,6 +237,7 @@
             this.cBMuejeresSI.TabIndex = 42;
             this.cBMuejeresSI.Text = "SI";
             this.cBMuejeresSI.UseVisualStyleBackColor = true;
+            this.cBMuejeresSI.CheckedChanged += new System.EventHandler(this.cBMuejeresSI_CheckedChanged);
             // 
             // cB12MesesNO
             // 
@@ -264,6 +266,7 @@
             this.cB12MesesSI.TabIndex = 40;
             this.cB12MesesSI.Text = "SI";
             this.cB12MesesSI.UseVisualStyleBackColor = true;
+            this.cB12MesesSI.CheckedChanged += new System.EventHandler(this.cB12MesesSI_CheckedChanged);
             // 
             // cBIDefinitivosNO
             // 
@@ -292,56 +295,59 @@
             this.cBIDefinitivosSI.TabIndex = 35;
             this.cBIDefinitivosSI.Text = "SI";
             this.cBIDefinitivosSI.UseVisualStyleBackColor = true;
+            this.cBIDefinitivosSI.CheckedChanged += new System.EventHandler(this.cBIDefinitivosSI_CheckedChanged);
             // 
-            // label5
+            // etDescripcionSetentaydos
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.label5.Location = new System.Drawing.Point(30, 423);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(576, 36);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "1.Durante el embarazo, hasta cumplir 8 semanas después del parto y 12 meses luego" +
+            this.etDescripcionSetentaydos.AutoSize = true;
+            this.etDescripcionSetentaydos.BackColor = System.Drawing.Color.Transparent;
+            this.etDescripcionSetentaydos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etDescripcionSetentaydos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.etDescripcionSetentaydos.Location = new System.Drawing.Point(30, 423);
+            this.etDescripcionSetentaydos.Name = "etDescripcionSetentaydos";
+            this.etDescripcionSetentaydos.Size = new System.Drawing.Size(631, 36);
+            this.etDescripcionSetentaydos.TabIndex = 34;
+            this.etDescripcionSetentaydos.Text = "1.Procedimientos odontológicos (extracción, tratamiento de conducto, limpieza den" +
+    "taria, etc.). \r\n2.Infecciones, vómitos, diarrea y/o fiebre.";
+            this.etDescripcionSetentaydos.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // etImpedimentosSetentaydos
+            // 
+            this.etImpedimentosSetentaydos.AutoSize = true;
+            this.etImpedimentosSetentaydos.BackColor = System.Drawing.Color.Transparent;
+            this.etImpedimentosSetentaydos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etImpedimentosSetentaydos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.etImpedimentosSetentaydos.Location = new System.Drawing.Point(27, 401);
+            this.etImpedimentosSetentaydos.Name = "etImpedimentosSetentaydos";
+            this.etImpedimentosSetentaydos.Size = new System.Drawing.Size(284, 20);
+            this.etImpedimentosSetentaydos.TabIndex = 33;
+            this.etImpedimentosSetentaydos.Text = "Impedimentos para donar por 72 horas";
+            this.etImpedimentosSetentaydos.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // etDescripcionMujeres
+            // 
+            this.etDescripcionMujeres.AutoSize = true;
+            this.etDescripcionMujeres.BackColor = System.Drawing.Color.Transparent;
+            this.etDescripcionMujeres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etDescripcionMujeres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.etDescripcionMujeres.Location = new System.Drawing.Point(28, 361);
+            this.etDescripcionMujeres.Name = "etDescripcionMujeres";
+            this.etDescripcionMujeres.Size = new System.Drawing.Size(576, 36);
+            this.etDescripcionMujeres.TabIndex = 32;
+            this.etDescripcionMujeres.Text = "1.Durante el embarazo, hasta cumplir 8 semanas después del parto y 12 meses luego" +
     " \r\n   de cesárea o aborto. \r\n";
             // 
-            // label4
+            // etImpedimentosMujeres
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label4.Location = new System.Drawing.Point(27, 401);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Impedimentos para donar por 72 horas";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.label3.Location = new System.Drawing.Point(28, 361);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(576, 36);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "1.Durante el embarazo, hasta cumplir 8 semanas después del parto y 12 meses luego" +
-    " \r\n   de cesárea o aborto. \r\n";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(27, 334);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 20);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Impedimentos para donantes mujeres";
+            this.etImpedimentosMujeres.AutoSize = true;
+            this.etImpedimentosMujeres.BackColor = System.Drawing.Color.Transparent;
+            this.etImpedimentosMujeres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etImpedimentosMujeres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.etImpedimentosMujeres.Location = new System.Drawing.Point(27, 334);
+            this.etImpedimentosMujeres.Name = "etImpedimentosMujeres";
+            this.etImpedimentosMujeres.Size = new System.Drawing.Size(277, 20);
+            this.etImpedimentosMujeres.TabIndex = 31;
+            this.etImpedimentosMujeres.Text = "Impedimentos para donantes mujeres";
             // 
             // btnGuadarTest
             // 
@@ -406,17 +412,17 @@
         private System.Windows.Forms.Panel pnEncabezadoTest;
         private System.Windows.Forms.Label etTest;
         private System.Windows.Forms.Label etImpedimentosDefinitivos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label etDescripcionDefinitivos;
+        private System.Windows.Forms.Label etImpedimentosDoce;
+        private System.Windows.Forms.Label etDescripcionDoce;
         private System.Windows.Forms.Panel ContenedorTest;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private System.Windows.Forms.Button btnGuadarTest;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label etDescripcionMujeres;
+        private System.Windows.Forms.Label etImpedimentosMujeres;
+        private System.Windows.Forms.Label etDescripcionSetentaydos;
+        private System.Windows.Forms.Label etImpedimentosSetentaydos;
         private System.Windows.Forms.CheckBox cB72HorasNo;
         private System.Windows.Forms.CheckBox cB72HorasSI;
         private System.Windows.Forms.CheckBox cBMuejeresNO;
@@ -425,7 +431,7 @@
         private System.Windows.Forms.CheckBox cB12MesesSI;
         private System.Windows.Forms.CheckBox cBIDefinitivosNO;
         private System.Windows.Forms.CheckBox cBIDefinitivosSI;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboEstatus;
+        private System.Windows.Forms.Label etEstatus;
     }
 }

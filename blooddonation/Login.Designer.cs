@@ -34,8 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnAcceder = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.etUsuario = new System.Windows.Forms.Label();
+            this.etContrasenia = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -53,7 +55,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 163);
             this.pictureBox1.TabIndex = 0;
@@ -64,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(399, 17);
+            this.label1.Location = new System.Drawing.Point(366, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 32);
             this.label1.TabIndex = 1;
@@ -72,48 +74,47 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtUsuario.BackColor = System.Drawing.Color.Gray;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(244, 82);
+            this.txtUsuario.Location = new System.Drawing.Point(397, 70);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(374, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(254, 26);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.Text = "USUARIO";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPassword.BackColor = System.Drawing.Color.Gray;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(244, 146);
+            this.txtPassword.Location = new System.Drawing.Point(397, 130);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(374, 30);
+            this.txtPassword.Size = new System.Drawing.Size(257, 26);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "PASSWORD";
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // button1
+            // BtnAcceder
             // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.button1.Location = new System.Drawing.Point(244, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(421, 45);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "ACCEDER";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnAcceder.BackColor = System.Drawing.Color.Red;
+            this.BtnAcceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAcceder.FlatAppearance.BorderSize = 0;
+            this.BtnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.BtnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.BtnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAcceder.ForeColor = System.Drawing.Color.White;
+            this.BtnAcceder.Location = new System.Drawing.Point(233, 190);
+            this.BtnAcceder.Name = "BtnAcceder";
+            this.BtnAcceder.Size = new System.Drawing.Size(421, 45);
+            this.BtnAcceder.TabIndex = 4;
+            this.BtnAcceder.Text = "ACCEDER";
+            this.BtnAcceder.UseVisualStyleBackColor = false;
+            this.BtnAcceder.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCerrar
             // 
@@ -126,17 +127,39 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // etUsuario
+            // 
+            this.etUsuario.AutoSize = true;
+            this.etUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etUsuario.Location = new System.Drawing.Point(228, 70);
+            this.etUsuario.Name = "etUsuario";
+            this.etUsuario.Size = new System.Drawing.Size(112, 25);
+            this.etUsuario.TabIndex = 6;
+            this.etUsuario.Text = "USUARIO:";
+            // 
+            // etContrasenia
+            // 
+            this.etContrasenia.AutoSize = true;
+            this.etContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etContrasenia.Location = new System.Drawing.Point(228, 130);
+            this.etContrasenia.Name = "etContrasenia";
+            this.etContrasenia.Size = new System.Drawing.Size(163, 25);
+            this.etContrasenia.TabIndex = 7;
+            this.etContrasenia.Text = "CONTRASEÑA:";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(685, 294);
+            this.ClientSize = new System.Drawing.Size(685, 263);
+            this.Controls.Add(this.etContrasenia);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.etUsuario);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnAcceder);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -157,7 +180,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnAcceder;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.Label etUsuario;
+        private System.Windows.Forms.Label etContrasenia;
     }
 }

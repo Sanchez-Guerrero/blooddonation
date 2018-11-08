@@ -158,6 +158,7 @@
             this.btnGuardar.TabIndex = 46;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cBCP
             // 
@@ -438,6 +439,7 @@
             this.cBEstCivil.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBEstCivil.Size = new System.Drawing.Size(190, 32);
             this.cBEstCivil.TabIndex = 11;
+            this.cBEstCivil.SelectedIndexChanged += new System.EventHandler(this.cBEstCivil_SelectedIndexChanged);
             // 
             // label1
             // 
