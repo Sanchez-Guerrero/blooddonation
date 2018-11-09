@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model.Data;
+using Repo.Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,12 @@ namespace blooddonation
 {
     public partial class TestParaDonar : Form
     {
-        //modificación Gis 
+        public TestParaDonar()
+        {
+            InitializeComponent();
+            LlenarComboEstatus();
+        }
+
         private void AbrirFormInPanel(object Formhijo)
         {
             if (this.ContenedorTest.Controls.Count > 0)
@@ -48,47 +55,29 @@ namespace blooddonation
             //OTRO CONTENEDOR
             rectangleShape2.Dispose();
         }
-        //hasta aqui
-
-        public TestParaDonar()
-        {
-            InitializeComponent();
-        }
 
         private void cBIDefinitivosSI_CheckedChanged(object sender, EventArgs e)
         {
-            //modificacion Gis
             MessageBox.Show("No puedes donar sangre, cumples con uno o varios impedimentos definitivos");
             MessageBox.Show("Gracias por intentar apoyar a otros");
-            //Application.Exit();
-            AbrirFormInPanel(new ControlDonante());
-
-
-
         }
 
     private void cB12MesesSI_CheckedChanged(object sender, EventArgs e)
         {
-            //modificacion Gis
             MessageBox.Show("Debes esperar 12 meses para poder donar");
             MessageBox.Show("Gracias por intentar apoyar a otros");
-            AbrirFormInPanel(new ControlDonante());
         }
 
         private void cBMuejeresSI_CheckedChanged(object sender, EventArgs e)
         {
-            //modificacion Gis
             MessageBox.Show("Por el momento no puedes donar");
             MessageBox.Show("Gracias por intentar apoyar a otros");
-            AbrirFormInPanel(new ControlDonante());
         }
 
         private void cB72HorasSI_CheckedChanged(object sender, EventArgs e)
         {
-            //modificacion Gis
             MessageBox.Show("Deja transcurrir mínimo 72 horas para poder donar sangre");
             MessageBox.Show("Gracias por intentar apoyar a otros");
-            AbrirFormInPanel(new ControlDonante());
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -99,6 +88,19 @@ namespace blooddonation
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LlenarComboEstatus()
+        {
+            Ctl_Estatus est = new Ctl_Estatus();
+            RepoEstatus repo = new RepoEstatus();
+            List<Ctl_Estatus> listaEstatus = repo.CargarEstatus().ToList();
+            est.Id_Estatus = -1;
+            est.Descripcion = "-------Selecciona-------";
+            listaEstatus.Insert(0, est);
+            this.comboEstatus.ValueMember = "Id_Estatus";
+            this.comboEstatus.DisplayMember = "Descripcion";
+            this.comboEstatus.DataSource = listaEstatus;
         }
     }
 }

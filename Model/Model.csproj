@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,9 +60,7 @@
     <Compile Include="Data\Ctl_Municipio.cs" />
     <Compile Include="Data\Ctl_Perfil.cs" />
     <Compile Include="Data\Ctl_TipoSangre.cs" />
-    <Compile Include="Data\Persona.cs" />
-    <Compile Include="Data\Responsables.cs" />
-    <Compile Include="Data\Tbl_Donante.cs" />
+    <Compile Include="Data\Tbl_Persona.cs" />
     <Compile Include="Data\Tbl_Solicitante.cs" />
     <Compile Include="Data\Tbl_Administrador.cs" />
     <Compile Include="Data\Tbl_Cita.cs" />

@@ -40,7 +40,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,9 +54,14 @@
     <Compile Include="Conexion\AllBloodContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\RepoClinica.cs" />
+    <Compile Include="Repositorio\RepoDireccion.cs" />
     <Compile Include="Repositorio\RepoDonante.cs" />
+    <Compile Include="Repositorio\RepoEstadoCivil.cs" />
+    <Compile Include="Repositorio\RepoEstatus.cs" />
+    <Compile Include="Repositorio\RepoGenero.cs" />
     <Compile Include="Repositorio\RepoLogin.cs" />
     <Compile Include="Repositorio\RepoSolicitante.cs" />
+    <Compile Include="Repositorio\RepoTipoSangre.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

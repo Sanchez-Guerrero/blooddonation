@@ -11,7 +11,6 @@ namespace Model.Data
     {
         [Key]
         public int Id_Colonia { get; set; }
-        public string Desripcion { get; set; }
-        public int Id_CP { get; set;  }
+        public string Descripcion { get; set; }
     }
 }

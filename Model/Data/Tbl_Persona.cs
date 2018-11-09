@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Data
 {
-    public class Persona
+    public class Tbl_Persona
     {
         [Key]
         public int id { get; set; }
@@ -21,7 +21,12 @@ namespace Model.Data
         public int idDireccion { get; set; }
         public int idGenero { get; set; }
         public int idEstadoCivil { get; set; }
-
-
+        public int idTipoPaciente { get; set; }
+        public int idTest { get; set; }
+        public int idCita { get; set; }
+        public string Calle { get; set; }
+        public string NumExterior { get; set; }
+        public string NumInterior { get; set; }
+        public int Id_Estado { get; set; }
     }
 }
