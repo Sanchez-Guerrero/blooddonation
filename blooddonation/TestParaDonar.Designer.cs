@@ -366,6 +366,7 @@
             this.btnGuadarTest.TabIndex = 30;
             this.btnGuadarTest.Text = "Guardar";
             this.btnGuadarTest.UseVisualStyleBackColor = false;
+            this.btnGuadarTest.Click += new System.EventHandler(this.btnGuadarTest_Click);
             // 
             // shapeContainer1
             // 

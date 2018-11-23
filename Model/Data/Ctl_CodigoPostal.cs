@@ -13,5 +13,6 @@ namespace Model.Data
         [Key]
         public int Id_CP { get; set; }
         public string CodigoPostal { get; set; }
+        public int Id_Colonia { get; set; }
     }
 }

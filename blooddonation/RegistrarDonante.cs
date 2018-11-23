@@ -1,5 +1,6 @@
 ﻿using Model.Data;
 using Repo.Repositorio;
+using Repo.Validaciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,13 +15,12 @@ namespace blooddonation
 {
     public partial class RegistrarDonante : Form
     {
+        ValidarLetras v = new ValidarLetras();
+        ValidarNumeros vn = new ValidarNumeros();
         public RegistrarDonante()
         {
             InitializeComponent();
             LlenarComboEstados();
-            LlenarComboMunicipio();
-            LlenarComboColonia();
-            LlenarComboCP();
             LlenarComboTipoSangre();
             LlenarComboGenero();
             LlenarComboEstadoCivil();
@@ -36,22 +36,6 @@ namespace blooddonation
             this.pnContenedorRegistarPaciente.Controls.Add(fh);
             this.pnContenedorRegistarPaciente.Tag = fh;
             fh.Show();
-            txtNombres.Dispose();
-            txtApellidoPaterno.Dispose();
-            txtApellidoMaterno.Dispose();
-            txtEdad.Dispose();
-            txtCurp.Dispose();
-            txtTelefono.Dispose();
-            cBEstCivil.Dispose();
-            cBGenero.Dispose();
-            cBTipSangre.Dispose();
-            txtCalle.Dispose();
-            cBEstadoDireccion.Dispose();
-            cBMunicipio.Dispose();
-            cBColonia.Dispose();
-            txtNumExterior.Dispose();
-            txtNumInterior.Dispose();
-            cBCP.Dispose();
             pnEncabezadoRegistrar.Dispose();
             lbEtiquetaDPersonales.Dispose();
             label1.Dispose();
@@ -77,7 +61,86 @@ namespace blooddonation
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new TestParaDonar());
+            Tbl_Persona per = new Tbl_Persona();
+            RepoDonante repo = new RepoDonante();
+            per.nombre = txtNombres.Text;
+            per.aPaterno = txtApellidoPaterno.Text;
+            per.aMaterno = txtApellidoMaterno.Text;
+            per.edad = int.Parse(txtEdad.Text);
+            per.curp = txtCurp.Text.ToUpper();
+            per.telefono = long.Parse(txtTelefono.Text);
+            per.idTipoSangre = cBTipSangre.SelectedIndex;
+            per.Calle = txtCalle.Text;
+            per.NumExterior = txtNumExterior.Text;
+            per.NumInterior = txtNumInterior.Text;
+            per.idGenero = cBGenero.SelectedIndex;
+            per.idEstadoCivil = cBEstCivil.SelectedIndex;
+            per.idTipoPaciente = 2;
+            per.Id_CodigoPostal = int.Parse(cBCP.SelectedValue.ToString());
+            var estado = cBEstadoDireccion.SelectedIndex;
+            var muni = cBMunicipio.SelectedIndex;
+            var col = cBColonia.SelectedIndex;
+
+            if (per.nombre == "")
+            {
+                MessageBox.Show("El Campo Nombre debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.aPaterno == "")
+            {
+                MessageBox.Show("El Campo Apellido Paterno debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.aMaterno == "")
+            {
+                MessageBox.Show("El Campo Apellido Materno debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.curp == "")
+            {
+                MessageBox.Show("El Campo CURP debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.idEstadoCivil == 0)
+            {
+                MessageBox.Show("El combo Estado civil debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.idGenero == 0)
+            {
+                MessageBox.Show("El combo Genero debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.idTipoSangre == 0)
+            {
+                MessageBox.Show("El combo Tipo de sangre debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.Calle == "")
+            {
+                MessageBox.Show("El Campo Calle debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (estado == 0)
+            {
+                MessageBox.Show("El combo Estado debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (muni == 0)
+            {
+                MessageBox.Show("El combo Municipio debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (col == 0)
+            {
+                MessageBox.Show("El combo Colonia debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.NumExterior == "")
+            {
+                MessageBox.Show("El Campo Numero Exterior debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.NumInterior == "")
+            {
+                MessageBox.Show("El Campo Numero interio debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (per.Id_CodigoPostal == -1)
+            {
+                MessageBox.Show("El combo Codigo postal debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                repo.RegistrarDonante(per);
+            }
         }
 
         private void LlenarComboEstados()
@@ -93,40 +156,40 @@ namespace blooddonation
             this.cBEstadoDireccion.DataSource = listaEstados;
         }
 
-        private void LlenarComboMunicipio()
+        private void LlenarComboMunicipio(int Id_Estado)
         {
-            Ctl_Municipio est = new Ctl_Municipio();
+            Ctl_Municipio muni = new Ctl_Municipio();
             RepoDireccion repo = new RepoDireccion();
-            List<Ctl_Municipio> listaMunicipio = repo.CargarMunicipios().ToList();
-            est.Id_Municipio = -1;
-            est.Descripcion = "-------Selecciona-------";
-            listaMunicipio.Insert(0, est);
+            List<Ctl_Municipio> listaMunicipio = repo.CargarMunicipios(Id_Estado).ToList();
+            muni.Id_Municipio = -1;
+            muni.Descripcion = "-------Selecciona-------";
+            listaMunicipio.Insert(0, muni);
             this.cBMunicipio.ValueMember = "Id_Municipio";
             this.cBMunicipio.DisplayMember = "Descripcion";
             this.cBMunicipio.DataSource = listaMunicipio;
         }
 
-        private void LlenarComboColonia()
+        private void LlenarComboColonia(int Id_Municipio)
         {
-            Ctl_Colonia est = new Ctl_Colonia();
+            Ctl_Colonia col = new Ctl_Colonia();
             RepoDireccion repo = new RepoDireccion();
-            List<Ctl_Colonia> listaColonia = repo.CargarColonias().ToList();
-            est.Id_Colonia = -1;
-            est.Descripcion = "-------Selecciona-------";
-            listaColonia.Insert(0, est);
+            List<Ctl_Colonia> listaColonia = repo.CargarColonias(Id_Municipio).ToList();
+            col.Id_Colonia = -1;
+            col.Descripcion = "-------Selecciona-------";
+            listaColonia.Insert(0, col);
             this.cBColonia.ValueMember = "Id_Colonia";
             this.cBColonia.DisplayMember = "Descripcion";
             this.cBColonia.DataSource = listaColonia;
         }
 
-        private void LlenarComboCP()
+        private void LlenarComboCP(int Id_Colonia)
         {
-            Ctl_CodigoPostal est = new Ctl_CodigoPostal();
+            Ctl_CodigoPostal cp = new Ctl_CodigoPostal();
             RepoDireccion repo = new RepoDireccion();
-            List<Ctl_CodigoPostal> listaCP = repo.CargarCP().ToList();
-            est.Id_CP = -1;
-            est.CodigoPostal = "Selecciona";
-            listaCP.Insert(0, est);
+            List<Ctl_CodigoPostal> listaCP = repo.CargarCP(Id_Colonia).ToList();
+            cp.Id_CP = -1;
+            cp.CodigoPostal = "Selecciona";
+            listaCP.Insert(0, cp);
             this.cBCP.ValueMember = "Id_CP";
             this.cBCP.DisplayMember = "CodigoPostal";
             this.cBCP.DataSource = listaCP;
@@ -169,6 +232,87 @@ namespace blooddonation
             this.cBEstCivil.ValueMember = "Id_EstadoCivil";
             this.cBEstCivil.DisplayMember = "Descripcion";
             this.cBEstCivil.DataSource = listaEstadoCivil;
+        }
+        
+        private void cBEstadoDireccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBEstadoDireccion.SelectedValue.ToString() != null)
+            {
+                int Id_Estado = int.Parse(cBEstadoDireccion.SelectedValue.ToString());
+                LlenarComboMunicipio(Id_Estado);
+            }
+        }
+
+        private void cBMunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBMunicipio.SelectedValue.ToString() != null)
+            {
+                int Id_Municipio = int.Parse(cBMunicipio.SelectedValue.ToString());
+                LlenarComboColonia(Id_Municipio);
+            }
+        }
+
+        private void cBColonia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBColonia.SelectedValue.ToString() != null)
+            {
+                int Id_Colonia = int.Parse(cBColonia.SelectedValue.ToString());
+                LlenarComboCP(Id_Colonia);
+            }
+        }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloLetras(e);
+        }
+
+        private void txtApellidoPaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloLetras(e);
+        }
+
+        private void txtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloLetras(e);
+        }
+
+        private void txtCalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloLetras(e);
+        }
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vn.SoloNumeros(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vn.SoloNumeros(e);
+        }
+
+        private void txtNombres_TextChanged(object sender, EventArgs e)
+        {
+            txtNombres.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNombres.Text);
+            txtNombres.SelectionStart = txtNombres.Text.Length;
+        }
+
+        private void txtApellidoPaterno_TextChanged(object sender, EventArgs e)
+        {
+            txtApellidoPaterno.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoPaterno.Text);
+            txtApellidoPaterno.SelectionStart = txtApellidoPaterno.Text.Length;
+        }
+
+        private void txtApellidoMaterno_TextChanged(object sender, EventArgs e)
+        {
+            txtApellidoMaterno.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoMaterno.Text);
+            txtApellidoMaterno.SelectionStart = txtApellidoMaterno.Text.Length;
+        }
+
+        private void txtCalle_TextChanged(object sender, EventArgs e)
+        {
+            txtCalle.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtCalle.Text);
+            txtCalle.SelectionStart = txtCalle.Text.Length;
         }
     }
 }

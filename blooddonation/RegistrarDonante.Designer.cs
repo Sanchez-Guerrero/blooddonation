@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarDonante));
             this.pnEncabezadoRegistrar = new System.Windows.Forms.Panel();
             this.etRegistrar = new System.Windows.Forms.Label();
-            this.txtNombres = new System.Windows.Forms.TextBox();
             this.lbEtiquetaDPersonales = new System.Windows.Forms.Label();
             this.lbtiquetaNombre = new System.Windows.Forms.Label();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cBCP = new System.Windows.Forms.ComboBox();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -94,15 +94,6 @@
             this.etRegistrar.Size = new System.Drawing.Size(228, 25);
             this.etRegistrar.TabIndex = 0;
             this.etRegistrar.Text = "REGISTRAR DONANTE";
-            // 
-            // txtNombres
-            // 
-            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(31, 63);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(190, 31);
-            this.txtNombres.TabIndex = 0;
             // 
             // lbEtiquetaDPersonales
             // 
@@ -136,6 +127,8 @@
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(190, 31);
             this.txtApellidoPaterno.TabIndex = 4;
+            this.txtApellidoPaterno.TextChanged += new System.EventHandler(this.txtApellidoPaterno_TextChanged);
+            this.txtApellidoPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoPaterno_KeyPress);
             // 
             // lblEtiqutaAPaterno
             // 
@@ -157,6 +150,8 @@
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(190, 31);
             this.txtApellidoMaterno.TabIndex = 6;
+            this.txtApellidoMaterno.TextChanged += new System.EventHandler(this.txtApellidoMaterno_TextChanged);
+            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             // 
             // lblEtiqueaAMaterno
             // 
@@ -190,6 +185,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(190, 31);
             this.txtEdad.TabIndex = 9;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // label1
             // 
@@ -282,6 +278,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(190, 31);
             this.txtTelefono.TabIndex = 35;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label5
             // 
@@ -328,6 +325,8 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(190, 31);
             this.txtCalle.TabIndex = 17;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
+            this.txtCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalle_KeyPress);
             // 
             // label7
             // 
@@ -407,6 +406,7 @@
             this.cBEstadoDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBEstadoDireccion.Size = new System.Drawing.Size(190, 32);
             this.cBEstadoDireccion.TabIndex = 39;
+            this.cBEstadoDireccion.SelectedIndexChanged += new System.EventHandler(this.cBEstadoDireccion_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -432,6 +432,7 @@
             this.cBMunicipio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBMunicipio.Size = new System.Drawing.Size(190, 32);
             this.cBMunicipio.TabIndex = 41;
+            this.cBMunicipio.SelectedIndexChanged += new System.EventHandler(this.cBMunicipio_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -457,6 +458,7 @@
             this.cBColonia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBColonia.Size = new System.Drawing.Size(190, 32);
             this.cBColonia.TabIndex = 43;
+            this.cBColonia.SelectedIndexChanged += new System.EventHandler(this.cBColonia_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -487,6 +489,7 @@
             // 
             this.pnContenedorRegistarPaciente.AutoScroll = true;
             this.pnContenedorRegistarPaciente.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorRegistarPaciente.Controls.Add(this.txtNombres);
             this.pnContenedorRegistarPaciente.Controls.Add(this.btnSiguiente);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBCP);
             this.pnContenedorRegistarPaciente.Controls.Add(this.label14);
@@ -521,13 +524,23 @@
             this.pnContenedorRegistarPaciente.Controls.Add(this.txtApellidoPaterno);
             this.pnContenedorRegistarPaciente.Controls.Add(this.lbtiquetaNombre);
             this.pnContenedorRegistarPaciente.Controls.Add(this.lbEtiquetaDPersonales);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.txtNombres);
             this.pnContenedorRegistarPaciente.Controls.Add(this.shapeContainer1);
             this.pnContenedorRegistarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedorRegistarPaciente.Location = new System.Drawing.Point(0, 71);
             this.pnContenedorRegistarPaciente.Name = "pnContenedorRegistarPaciente";
             this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(755, 479);
             this.pnContenedorRegistarPaciente.TabIndex = 3;
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(31, 63);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(190, 31);
+            this.txtNombres.TabIndex = 47;
+            this.txtNombres.TextChanged += new System.EventHandler(this.txtNombres_TextChanged);
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             // 
             // btnSiguiente
             // 
@@ -599,7 +612,6 @@
 
         private System.Windows.Forms.Panel pnEncabezadoRegistrar;
         private System.Windows.Forms.Label etRegistrar;
-        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label lbEtiquetaDPersonales;
         private System.Windows.Forms.Label lbtiquetaNombre;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
@@ -638,5 +650,6 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rshDatosPersonales;
         private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.TextBox txtNombres;
     }
 }

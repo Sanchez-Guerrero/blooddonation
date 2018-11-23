@@ -34,8 +34,10 @@ namespace Repo.Repositorio
                 cmd.Parameters.AddWithValue("@calle", pers.Calle);
                 cmd.Parameters.AddWithValue("@NumExterior", pers.NumExterior);
                 cmd.Parameters.AddWithValue("@NumInterior", pers.NumInterior);
-                cmd.Parameters.AddWithValue("@idEstado", pers.Id_Estado);
-                cmd.Parameters.AddWithValue("@direccionTemId", pers.idDireccion);
+                cmd.Parameters.AddWithValue("@idGenero",pers.idGenero);
+                cmd.Parameters.AddWithValue("@idEstadoCivil", pers.idEstadoCivil);
+                cmd.Parameters.AddWithValue("@idTipoPaciente", pers.idTipoPaciente);
+                cmd.Parameters.AddWithValue("@Id_CodigoPostal", pers.Id_CodigoPostal);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

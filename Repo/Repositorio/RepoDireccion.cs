@@ -2,6 +2,7 @@
 using Repo.Conexion;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +28,14 @@ namespace Repo.Repositorio
             }
         }
 
-        public List<Ctl_Municipio> CargarMunicipios()
+        public List<Ctl_Municipio> CargarMunicipios(int idEstado)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_Municipio> municipios = db.Database.SqlQuery<Ctl_Municipio>("st_ConsultarMunicipios").ToList();
+                    List<Ctl_Municipio> municipios = db.Database.SqlQuery<Ctl_Municipio>("st_ConsultarMunicipios @Id_Estado",
+                         new SqlParameter("@Id_Estado", idEstado)).ToList();
 
                     return municipios;
                 }
@@ -44,13 +46,14 @@ namespace Repo.Repositorio
             }
         }
 
-        public List<Ctl_Colonia> CargarColonias()
+        public List<Ctl_Colonia> CargarColonias(int idMunicipio)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_Colonia> colonias = db.Database.SqlQuery<Ctl_Colonia>("st_ConsultarColonia").ToList();
+                    List<Ctl_Colonia> colonias = db.Database.SqlQuery<Ctl_Colonia>("st_ConsultarColonia @Id_Municipio",
+                        new SqlParameter("@Id_Municipio", idMunicipio)).ToList();
 
                     return colonias;
                 }
@@ -61,13 +64,14 @@ namespace Repo.Repositorio
             }
         }
 
-        public List<Ctl_CodigoPostal> CargarCP()
+        public List<Ctl_CodigoPostal> CargarCP(int Id_Colonia)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_CodigoPostal> cp = db.Database.SqlQuery<Ctl_CodigoPostal>("st_ConsultarCodigosPostal").ToList();
+                    List<Ctl_CodigoPostal> cp = db.Database.SqlQuery<Ctl_CodigoPostal>("st_ConsultarCodigosPostal @Id_Colonia",
+                        new SqlParameter("@Id_Colonia",Id_Colonia)).ToList();
 
                     return cp;
                 }

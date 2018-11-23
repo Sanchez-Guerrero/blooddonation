@@ -60,24 +60,56 @@ namespace blooddonation
         {
             MessageBox.Show("No puedes donar sangre, cumples con uno o varios impedimentos definitivos");
             MessageBox.Show("Gracias por intentar apoyar a otros");
+            cBIDefinitivosSI.Enabled = false;
+            cBIDefinitivosNO.Enabled = false;
+            cB12MesesSI.Enabled = false;
+            cB12MesesNO.Enabled = false;
+            cBMuejeresSI.Enabled = false;
+            cBMuejeresNO.Enabled = false;
+            cB72HorasSI.Enabled = false;
+            cB72HorasNo.Enabled = false;
         }
 
     private void cB12MesesSI_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Debes esperar 12 meses para poder donar");
             MessageBox.Show("Gracias por intentar apoyar a otros");
+            cBIDefinitivosSI.Enabled = false;
+            cBIDefinitivosNO.Enabled = false;
+            cB12MesesSI.Enabled = false;
+            cB12MesesNO.Enabled = false;
+            cBMuejeresSI.Enabled = false;
+            cBMuejeresNO.Enabled = false;
+            cB72HorasSI.Enabled = false;
+            cB72HorasNo.Enabled = false;
         }
 
         private void cBMuejeresSI_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Por el momento no puedes donar");
             MessageBox.Show("Gracias por intentar apoyar a otros");
+            cBIDefinitivosSI.Enabled = false;
+            cBIDefinitivosNO.Enabled = false;
+            cBMuejeresSI.Enabled = false;
+            cB12MesesSI.Enabled = false;
+            cB12MesesNO.Enabled = false;
+            cBMuejeresNO.Enabled = false;
+            cB72HorasSI.Enabled = false;
+            cB72HorasNo.Enabled = false;
         }
 
         private void cB72HorasSI_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Deja transcurrir mínimo 72 horas para poder donar sangre");
             MessageBox.Show("Gracias por intentar apoyar a otros");
+            cBIDefinitivosSI.Enabled = false;
+            cBIDefinitivosNO.Enabled = false;
+            cB12MesesSI.Enabled = false;
+            cB12MesesNO.Enabled = false;
+            cBMuejeresSI.Enabled = false;
+            cBMuejeresNO.Enabled = false;
+            cB72HorasSI.Enabled = false;
+            cB72HorasNo.Enabled = false;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -101,6 +133,11 @@ namespace blooddonation
             this.comboEstatus.ValueMember = "Id_Estatus";
             this.comboEstatus.DisplayMember = "Descripcion";
             this.comboEstatus.DataSource = listaEstatus;
+        }
+
+        private void btnGuadarTest_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

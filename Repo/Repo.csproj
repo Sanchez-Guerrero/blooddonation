@@ -62,6 +62,8 @@
     <Compile Include="Repositorio\RepoLogin.cs" />
     <Compile Include="Repositorio\RepoSolicitante.cs" />
     <Compile Include="Repositorio\RepoTipoSangre.cs" />
+    <Compile Include="Validaciones\ValidarLetras.cs" />
+    <Compile Include="Validaciones\ValidarNumeros.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
