@@ -38,6 +38,11 @@ namespace Repo.Repositorio
                 cmd.Parameters.AddWithValue("@idEstadoCivil", pers.idEstadoCivil);
                 cmd.Parameters.AddWithValue("@idTipoPaciente", pers.idTipoPaciente);
                 cmd.Parameters.AddWithValue("@Id_CodigoPostal", pers.Id_CodigoPostal);
+                cmd.Parameters.AddWithValue("@ImpDefinitivos", pers.ImpDefinitivos);
+                cmd.Parameters.AddWithValue("@Imp12Meses", pers.Imp12Meses);
+                cmd.Parameters.AddWithValue("@ImpMujeres", pers.ImpMujeres);
+                cmd.Parameters.AddWithValue("@Imp72Horas", pers.Imp72Horas);
+                cmd.Parameters.AddWithValue("@Id_Estatus", pers.Id_Estatus);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

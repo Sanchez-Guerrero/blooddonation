@@ -61,85 +61,92 @@ namespace blooddonation
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            Tbl_Persona per = new Tbl_Persona();
-            RepoDonante repo = new RepoDonante();
-            per.nombre = txtNombres.Text;
-            per.aPaterno = txtApellidoPaterno.Text;
-            per.aMaterno = txtApellidoMaterno.Text;
-            per.edad = int.Parse(txtEdad.Text);
-            per.curp = txtCurp.Text.ToUpper();
-            per.telefono = long.Parse(txtTelefono.Text);
-            per.idTipoSangre = cBTipSangre.SelectedIndex;
-            per.Calle = txtCalle.Text;
-            per.NumExterior = txtNumExterior.Text;
-            per.NumInterior = txtNumInterior.Text;
-            per.idGenero = cBGenero.SelectedIndex;
-            per.idEstadoCivil = cBEstCivil.SelectedIndex;
-            per.idTipoPaciente = 2;
-            per.Id_CodigoPostal = int.Parse(cBCP.SelectedValue.ToString());
+            TestParaDonar ftest = new TestParaDonar();
+            ftest.lblNombre.Text = txtNombres.Text;
+            ftest.lblAP.Text = txtApellidoPaterno.Text;
+            ftest.lblAM.Text = txtApellidoMaterno.Text;
+            ftest.lblEdad.Text = txtEdad.Text;
+            ftest.lblCurp.Text = txtCurp.Text.ToUpper();
+            ftest.lblTelefono.Text = txtTelefono.Text;
+            ftest.lblTipoSangre.Text = cBTipSangre.SelectedIndex.ToString();
+            ftest.lblCalle.Text = txtCalle.Text;
+            ftest.lblNExterior.Text = txtNumExterior.Text;
+            ftest.lblNumInterior.Text = txtNumInterior.Text;
+            ftest.lblGenero.Text = cBGenero.SelectedIndex.ToString();
+            ftest.lblEstCivil.Text = cBEstCivil.SelectedIndex.ToString();
+            ftest.lblTipoPaciente.Text = "2";
+            ftest.lblCP.Text = cBCP.SelectedValue.ToString();
             var estado = cBEstadoDireccion.SelectedIndex;
             var muni = cBMunicipio.SelectedIndex;
             var col = cBColonia.SelectedIndex;
-
-            if (per.nombre == "")
+            if (ftest.lblNombre.Text == "")
             {
-                MessageBox.Show("El Campo Nombre debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo nombre debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.aPaterno == "")
+            else if (ftest.lblAP.Text == "")
             {
-                MessageBox.Show("El Campo Apellido Paterno debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo apellido paterno debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.aMaterno == "")
+            else if (ftest.lblAM.Text == "")
             {
-                MessageBox.Show("El Campo Apellido Materno debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo apellido materno debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.curp == "")
+            else if (ftest.lblEdad.Text == "")
             {
-                MessageBox.Show("El Campo CURP debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo edad debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.idEstadoCivil == 0)
+            else if (ftest.lblCurp.Text == "")
             {
-                MessageBox.Show("El combo Estado civil debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo curp debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.idGenero == 0)
+            else if (ftest.lblTelefono.Text == "")
             {
-                MessageBox.Show("El combo Genero debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo teléfono debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.idTipoSangre == 0)
+            else if (ftest.lblEstCivil.Text == "0")
             {
-                MessageBox.Show("El combo Tipo de sangre debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un estado civil!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.Calle == "")
+            else if (ftest.lblGenero.Text == "0")
             {
-                MessageBox.Show("El Campo Calle debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un genero!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (ftest.lblTipoSangre.Text == "0")
+            {
+                MessageBox.Show("Debe de elegir un tipo de sangre!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (ftest.lblCalle.Text == "")
+            {
+                MessageBox.Show("El campo calle debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (estado == 0)
             {
-                MessageBox.Show("El combo Estado debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un estado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (muni == 0)
             {
-                MessageBox.Show("El combo Municipio debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un municipio!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (col == 0)
             {
-                MessageBox.Show("El combo Colonia debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir una colonia!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.NumExterior == "")
+            else if (ftest.lblNExterior.Text == "")
             {
-                MessageBox.Show("El Campo Numero Exterior debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo numero exterior debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.NumInterior == "")
+            else if (ftest.lblNumInterior.Text == "")
             {
-                MessageBox.Show("El Campo Numero interio debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo numero interior debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.Id_CodigoPostal == -1)
+            else if (ftest.lblCP.Text == "-1")
             {
-                MessageBox.Show("El combo Codigo postal debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un codigo postal!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                repo.RegistrarDonante(per);
+                this.Hide();
+                ftest.ShowDialog();
             }
         }
 

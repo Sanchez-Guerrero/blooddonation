@@ -25,5 +25,10 @@ namespace Model.Data
         public int idGenero { get; set; }
         public int idEstadoCivil { get; set; }
         public int idTipoPaciente { get; set; }
+        public Boolean ImpDefinitivos { get; set; }
+        public Boolean Imp12Meses { get; set; }
+        public Boolean ImpMujeres { get; set; }
+        public Boolean Imp72Horas { get; set; }
+        public int Id_Estatus { get; set; }
     }
 }

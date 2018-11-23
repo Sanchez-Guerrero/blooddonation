@@ -18,6 +18,7 @@ namespace blooddonation
         {
             InitializeComponent();
             LlenarComboEstatus();
+            btnGuadarTest.Enabled = false;
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -68,9 +69,10 @@ namespace blooddonation
             cBMuejeresNO.Enabled = false;
             cB72HorasSI.Enabled = false;
             cB72HorasNo.Enabled = false;
+            btnGuadarTest.Enabled = true;
         }
 
-    private void cB12MesesSI_CheckedChanged(object sender, EventArgs e)
+        private void cB12MesesSI_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Debes esperar 12 meses para poder donar");
             MessageBox.Show("Gracias por intentar apoyar a otros");
@@ -82,6 +84,7 @@ namespace blooddonation
             cBMuejeresNO.Enabled = false;
             cB72HorasSI.Enabled = false;
             cB72HorasNo.Enabled = false;
+            btnGuadarTest.Enabled = true;
         }
 
         private void cBMuejeresSI_CheckedChanged(object sender, EventArgs e)
@@ -96,6 +99,7 @@ namespace blooddonation
             cBMuejeresNO.Enabled = false;
             cB72HorasSI.Enabled = false;
             cB72HorasNo.Enabled = false;
+            btnGuadarTest.Enabled = true;
         }
 
         private void cB72HorasSI_CheckedChanged(object sender, EventArgs e)
@@ -110,6 +114,12 @@ namespace blooddonation
             cBMuejeresNO.Enabled = false;
             cB72HorasSI.Enabled = false;
             cB72HorasNo.Enabled = false;
+            btnGuadarTest.Enabled = true;
+        }
+
+        private void cB72HorasNo_CheckedChanged(object sender, EventArgs e)
+        {
+            btnGuadarTest.Enabled = true;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -137,7 +147,37 @@ namespace blooddonation
 
         private void btnGuadarTest_Click(object sender, EventArgs e)
         {
-            
+            Tbl_Persona per = new Tbl_Persona();
+            RepoDonante repo = new RepoDonante();
+            per.nombre = lblNombre.Text;
+            per.aPaterno = lblAP.Text;
+            per.aMaterno = lblAM.Text;
+            per.edad = int.Parse(lblEdad.Text);
+            per.curp = lblCurp.Text;
+            per.telefono = long.Parse(lblTelefono.Text);
+            per.idEstadoCivil = int.Parse(lblEstCivil.Text);
+            per.idGenero = int.Parse(lblGenero.Text);
+            per.idTipoSangre = int.Parse(lblTipoSangre.Text);
+            per.Calle = lblCalle.Text;
+            per.NumExterior = lblNExterior.Text;
+            per.NumInterior = lblNumInterior.Text;
+            per.idTipoPaciente = int.Parse(lblTipoPaciente.Text);
+            per.Id_CodigoPostal = int.Parse(lblCP.Text);
+            per.ImpDefinitivos = cBIDefinitivosSI.Checked;
+            per.Imp12Meses = cB12MesesSI.Checked;
+            per.ImpMujeres = cBMuejeresSI.Checked;
+            per.Imp72Horas = cB72HorasSI.Checked;
+            per.Id_Estatus = comboEstatus.SelectedIndex;
+            if(per.Id_Estatus == 0)
+            {
+                MessageBox.Show("Debe de elegir un status al test!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                repo.RegistrarDonante(per);
+            }
         }
+
+        
     }
 }

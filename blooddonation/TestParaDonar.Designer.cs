@@ -36,6 +36,20 @@
             this.etImpedimentosDoce = new System.Windows.Forms.Label();
             this.etDescripcionDoce = new System.Windows.Forms.Label();
             this.ContenedorTest = new System.Windows.Forms.Panel();
+            this.lblTipoPaciente = new System.Windows.Forms.Label();
+            this.lblCP = new System.Windows.Forms.Label();
+            this.lblNumInterior = new System.Windows.Forms.Label();
+            this.lblNExterior = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblTipoSangre = new System.Windows.Forms.Label();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.lblEstCivil = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblCurp = new System.Windows.Forms.Label();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblAM = new System.Windows.Forms.Label();
+            this.lblAP = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.comboEstatus = new System.Windows.Forms.ComboBox();
             this.etEstatus = new System.Windows.Forms.Label();
             this.cB72HorasNo = new System.Windows.Forms.CheckBox();
@@ -130,6 +144,20 @@
             // 
             this.ContenedorTest.AutoScroll = true;
             this.ContenedorTest.BackColor = System.Drawing.Color.Gainsboro;
+            this.ContenedorTest.Controls.Add(this.lblTipoPaciente);
+            this.ContenedorTest.Controls.Add(this.lblCP);
+            this.ContenedorTest.Controls.Add(this.lblNumInterior);
+            this.ContenedorTest.Controls.Add(this.lblNExterior);
+            this.ContenedorTest.Controls.Add(this.lblCalle);
+            this.ContenedorTest.Controls.Add(this.lblTipoSangre);
+            this.ContenedorTest.Controls.Add(this.lblGenero);
+            this.ContenedorTest.Controls.Add(this.lblEstCivil);
+            this.ContenedorTest.Controls.Add(this.lblTelefono);
+            this.ContenedorTest.Controls.Add(this.lblCurp);
+            this.ContenedorTest.Controls.Add(this.lblEdad);
+            this.ContenedorTest.Controls.Add(this.lblAM);
+            this.ContenedorTest.Controls.Add(this.lblAP);
+            this.ContenedorTest.Controls.Add(this.lblNombre);
             this.ContenedorTest.Controls.Add(this.comboEstatus);
             this.ContenedorTest.Controls.Add(this.etEstatus);
             this.ContenedorTest.Controls.Add(this.cB72HorasNo);
@@ -155,6 +183,132 @@
             this.ContenedorTest.Name = "ContenedorTest";
             this.ContenedorTest.Size = new System.Drawing.Size(707, 545);
             this.ContenedorTest.TabIndex = 3;
+            // 
+            // lblTipoPaciente
+            // 
+            this.lblTipoPaciente.AutoSize = true;
+            this.lblTipoPaciente.Location = new System.Drawing.Point(415, 495);
+            this.lblTipoPaciente.Name = "lblTipoPaciente";
+            this.lblTipoPaciente.Size = new System.Drawing.Size(41, 13);
+            this.lblTipoPaciente.TabIndex = 64;
+            this.lblTipoPaciente.Text = "label16";
+            // 
+            // lblCP
+            // 
+            this.lblCP.AutoSize = true;
+            this.lblCP.Location = new System.Drawing.Point(336, 520);
+            this.lblCP.Name = "lblCP";
+            this.lblCP.Size = new System.Drawing.Size(41, 13);
+            this.lblCP.TabIndex = 63;
+            this.lblCP.Text = "label16";
+            // 
+            // lblNumInterior
+            // 
+            this.lblNumInterior.AutoSize = true;
+            this.lblNumInterior.Location = new System.Drawing.Point(285, 520);
+            this.lblNumInterior.Name = "lblNumInterior";
+            this.lblNumInterior.Size = new System.Drawing.Size(41, 13);
+            this.lblNumInterior.TabIndex = 62;
+            this.lblNumInterior.Text = "label15";
+            // 
+            // lblNExterior
+            // 
+            this.lblNExterior.AutoSize = true;
+            this.lblNExterior.Location = new System.Drawing.Point(232, 520);
+            this.lblNExterior.Name = "lblNExterior";
+            this.lblNExterior.Size = new System.Drawing.Size(41, 13);
+            this.lblNExterior.TabIndex = 61;
+            this.lblNExterior.Text = "label14";
+            // 
+            // lblCalle
+            // 
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(368, 495);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(41, 13);
+            this.lblCalle.TabIndex = 57;
+            this.lblCalle.Text = "label10";
+            // 
+            // lblTipoSangre
+            // 
+            this.lblTipoSangre.AutoSize = true;
+            this.lblTipoSangre.Location = new System.Drawing.Point(321, 495);
+            this.lblTipoSangre.Name = "lblTipoSangre";
+            this.lblTipoSangre.Size = new System.Drawing.Size(35, 13);
+            this.lblTipoSangre.TabIndex = 56;
+            this.lblTipoSangre.Text = "label9";
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(273, 495);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(35, 13);
+            this.lblGenero.TabIndex = 55;
+            this.lblGenero.Text = "label8";
+            // 
+            // lblEstCivil
+            // 
+            this.lblEstCivil.AutoSize = true;
+            this.lblEstCivil.Location = new System.Drawing.Point(232, 495);
+            this.lblEstCivil.Name = "lblEstCivil";
+            this.lblEstCivil.Size = new System.Drawing.Size(35, 13);
+            this.lblEstCivil.TabIndex = 54;
+            this.lblEstCivil.Text = "label7";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(431, 472);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(35, 13);
+            this.lblTelefono.TabIndex = 53;
+            this.lblTelefono.Text = "label6";
+            // 
+            // lblCurp
+            // 
+            this.lblCurp.AutoSize = true;
+            this.lblCurp.Location = new System.Drawing.Point(390, 472);
+            this.lblCurp.Name = "lblCurp";
+            this.lblCurp.Size = new System.Drawing.Size(35, 13);
+            this.lblCurp.TabIndex = 52;
+            this.lblCurp.Text = "label5";
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(349, 472);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(35, 13);
+            this.lblEdad.TabIndex = 51;
+            this.lblEdad.Text = "label4";
+            // 
+            // lblAM
+            // 
+            this.lblAM.AutoSize = true;
+            this.lblAM.Location = new System.Drawing.Point(308, 472);
+            this.lblAM.Name = "lblAM";
+            this.lblAM.Size = new System.Drawing.Size(35, 13);
+            this.lblAM.TabIndex = 50;
+            this.lblAM.Text = "label3";
+            // 
+            // lblAP
+            // 
+            this.lblAP.AutoSize = true;
+            this.lblAP.Location = new System.Drawing.Point(269, 472);
+            this.lblAP.Name = "lblAP";
+            this.lblAP.Size = new System.Drawing.Size(35, 13);
+            this.lblAP.TabIndex = 49;
+            this.lblAP.Text = "label2";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(232, 472);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(35, 13);
+            this.lblNombre.TabIndex = 48;
+            this.lblNombre.Text = "label1";
             // 
             // comboEstatus
             // 
@@ -194,6 +348,7 @@
             this.cB72HorasNo.TabIndex = 45;
             this.cB72HorasNo.Text = "NO";
             this.cB72HorasNo.UseVisualStyleBackColor = true;
+            this.cB72HorasNo.CheckedChanged += new System.EventHandler(this.cB72HorasNo_CheckedChanged);
             // 
             // cB72HorasSI
             // 
@@ -399,6 +554,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestParaDonar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestParaDonar";
             this.pnEncabezadoTest.ResumeLayout(false);
             this.pnEncabezadoTest.PerformLayout();
@@ -434,5 +590,19 @@
         private System.Windows.Forms.CheckBox cBIDefinitivosSI;
         private System.Windows.Forms.ComboBox comboEstatus;
         private System.Windows.Forms.Label etEstatus;
+        public System.Windows.Forms.Label lblNombre;
+        public System.Windows.Forms.Label lblAP;
+        public System.Windows.Forms.Label lblTelefono;
+        public System.Windows.Forms.Label lblCurp;
+        public System.Windows.Forms.Label lblEdad;
+        public System.Windows.Forms.Label lblAM;
+        public System.Windows.Forms.Label lblGenero;
+        public System.Windows.Forms.Label lblEstCivil;
+        public System.Windows.Forms.Label lblTipoSangre;
+        public System.Windows.Forms.Label lblCalle;
+        public System.Windows.Forms.Label lblNExterior;
+        public System.Windows.Forms.Label lblNumInterior;
+        public System.Windows.Forms.Label lblCP;
+        public System.Windows.Forms.Label lblTipoPaciente;
     }
 }
