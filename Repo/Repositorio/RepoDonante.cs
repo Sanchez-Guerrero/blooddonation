@@ -54,6 +54,41 @@ namespace Repo.Repositorio
             }
         }
 
+        public void ModificarDonante(Tbl_Persona pers)
+        {
+            try
+            {
+                string constr = ConfigurationManager.ConnectionStrings["AllBloodContext"].ConnectionString;
+                AllBloodContext db = new AllBloodContext();
+                string sqlComand = @"st_ModificarEmpleado";
+                SqlConnection con = new SqlConnection(constr);
+                SqlCommand cmd = new SqlCommand(sqlComand, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", pers.id);
+                cmd.Parameters.AddWithValue("@Nombre", pers.nombre);
+                cmd.Parameters.AddWithValue("@APaterno", pers.aPaterno);
+                cmd.Parameters.AddWithValue("@AMaterno", pers.aMaterno);
+                cmd.Parameters.AddWithValue("@edad", pers.edad);
+                cmd.Parameters.AddWithValue("@curp", pers.curp);
+                cmd.Parameters.AddWithValue("@telefono", pers.telefono);
+                cmd.Parameters.AddWithValue("@idTiposangre ", pers.idTipoSangre);
+                cmd.Parameters.AddWithValue("@calle", pers.Calle);
+                cmd.Parameters.AddWithValue("@NumExterior", pers.NumExterior);
+                cmd.Parameters.AddWithValue("@NumInterior", pers.NumInterior);
+                cmd.Parameters.AddWithValue("@idGenero", pers.idGenero);
+                cmd.Parameters.AddWithValue("@idEstadoCivil", pers.idEstadoCivil);
+                cmd.Parameters.AddWithValue("@Id_CodigoPostal", pers.Id_CodigoPostal);
+                cmd.Parameters.AddWithValue("@Id_Direccion", pers.idDireccion);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
         public List<Donante_ViewDataModelDonante> ConsultarPorCurp(Tbl_Persona per)
         {
             try

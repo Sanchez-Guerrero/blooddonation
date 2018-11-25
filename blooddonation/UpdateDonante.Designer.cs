@@ -32,14 +32,13 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblIdCP = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dGVConsultarDonantes = new System.Windows.Forms.DataGridView();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.cBCP = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cBColonia = new System.Windows.Forms.ComboBox();
@@ -73,14 +72,14 @@
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.lbtiquetaNombre = new System.Windows.Forms.Label();
             this.lbEtiquetaDPersonales = new System.Windows.Forms.Label();
-            this.txtNombres = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rSTabla = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rshDatosPersonales = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.lblIdDireccion = new System.Windows.Forms.Label();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorRegistarPaciente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVConsultarDonantes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnEncabezadoPacientes
@@ -108,8 +107,14 @@
             // 
             this.pnContenedorRegistarPaciente.AutoScroll = true;
             this.pnContenedorRegistarPaciente.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblIdDireccion);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblEdad);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblTelefono);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblIdCP);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblId);
             this.pnContenedorRegistarPaciente.Controls.Add(this.btnModificar);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.dataGridView1);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.dGVConsultarDonantes);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.txtNombres);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBCP);
             this.pnContenedorRegistarPaciente.Controls.Add(this.label14);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBColonia);
@@ -143,13 +148,48 @@
             this.pnContenedorRegistarPaciente.Controls.Add(this.txtApellidoPaterno);
             this.pnContenedorRegistarPaciente.Controls.Add(this.lbtiquetaNombre);
             this.pnContenedorRegistarPaciente.Controls.Add(this.lbEtiquetaDPersonales);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.txtNombres);
             this.pnContenedorRegistarPaciente.Controls.Add(this.shapeContainer1);
             this.pnContenedorRegistarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedorRegistarPaciente.Location = new System.Drawing.Point(0, 71);
             this.pnContenedorRegistarPaciente.Name = "pnContenedorRegistarPaciente";
-            this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(750, 428);
-            this.pnContenedorRegistarPaciente.TabIndex = 6;
+            this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(750, 709);
+            this.pnContenedorRegistarPaciente.TabIndex = 4;
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(88, 590);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(32, 13);
+            this.lblEdad.TabIndex = 52;
+            this.lblEdad.Text = "Edad";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(32, 589);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.TabIndex = 51;
+            this.lblTelefono.Text = "Telefono";
+            // 
+            // lblIdCP
+            // 
+            this.lblIdCP.AutoSize = true;
+            this.lblIdCP.Location = new System.Drawing.Point(161, 593);
+            this.lblIdCP.Name = "lblIdCP";
+            this.lblIdCP.Size = new System.Drawing.Size(21, 13);
+            this.lblIdCP.TabIndex = 50;
+            this.lblIdCP.Text = "CP";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(344, 590);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(16, 13);
+            this.lblId.TabIndex = 49;
+            this.lblId.Text = "Id";
             // 
             // btnModificar
             // 
@@ -162,60 +202,38 @@
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(497, 566);
+            this.btnModificar.Location = new System.Drawing.Point(487, 574);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(184, 50);
-            this.btnModificar.TabIndex = 32;
+            this.btnModificar.TabIndex = 33;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // dataGridView1
+            // dGVConsultarDonantes
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
-            this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 433);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 120);
-            this.dataGridView1.TabIndex = 36;
+            this.dGVConsultarDonantes.AllowUserToAddRows = false;
+            this.dGVConsultarDonantes.AllowUserToDeleteRows = false;
+            this.dGVConsultarDonantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dGVConsultarDonantes.BackgroundColor = System.Drawing.Color.White;
+            this.dGVConsultarDonantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGVConsultarDonantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVConsultarDonantes.GridColor = System.Drawing.Color.Silver;
+            this.dGVConsultarDonantes.Location = new System.Drawing.Point(34, 426);
+            this.dGVConsultarDonantes.Name = "dGVConsultarDonantes";
+            this.dGVConsultarDonantes.ReadOnly = true;
+            this.dGVConsultarDonantes.Size = new System.Drawing.Size(635, 133);
+            this.dGVConsultarDonantes.TabIndex = 48;
+            this.dGVConsultarDonantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVConsultarDonantes_CellClick);
             // 
-            // ID
+            // txtNombres
             // 
-            this.ID.HeaderText = "N\'Paciente";
-            this.ID.Name = "ID";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre\'s";
-            this.nombre.Name = "nombre";
-            // 
-            // APaterno
-            // 
-            this.APaterno.HeaderText = "Apellido Paterno";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Apellido Materno";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Estado Civil";
-            this.ECivil.Name = "ECivil";
+            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(31, 63);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(190, 31);
+            this.txtNombres.TabIndex = 47;
             // 
             // cBCP
             // 
@@ -254,6 +272,7 @@
             this.cBColonia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBColonia.Size = new System.Drawing.Size(190, 32);
             this.cBColonia.TabIndex = 43;
+            this.cBColonia.SelectedIndexChanged += new System.EventHandler(this.cBColonia_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -279,6 +298,7 @@
             this.cBMunicipio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBMunicipio.Size = new System.Drawing.Size(190, 32);
             this.cBMunicipio.TabIndex = 41;
+            this.cBMunicipio.SelectedIndexChanged += new System.EventHandler(this.cBMunicipio_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -304,6 +324,7 @@
             this.cBEstadoDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBEstadoDireccion.Size = new System.Drawing.Size(190, 32);
             this.cBEstadoDireccion.TabIndex = 39;
+            this.cBEstadoDireccion.SelectedIndexChanged += new System.EventHandler(this.cBEstadoDireccion_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -596,35 +617,26 @@
             this.lbEtiquetaDPersonales.TabIndex = 2;
             this.lbEtiquetaDPersonales.Text = "Datos Personales";
             // 
-            // txtNombres
-            // 
-            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(31, 63);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(190, 31);
-            this.txtNombres.TabIndex = 0;
-            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape5,
+            this.rSTabla,
             this.rectangleShape1,
             this.rshDatosPersonales});
-            this.shapeContainer1.Size = new System.Drawing.Size(733, 616);
+            this.shapeContainer1.Size = new System.Drawing.Size(750, 709);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
-            // rectangleShape5
+            // rSTabla
             // 
-            this.rectangleShape5.BorderColor = System.Drawing.Color.Silver;
-            this.rectangleShape5.Enabled = false;
-            this.rectangleShape5.Location = new System.Drawing.Point(12, 415);
-            this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(680, 212);
+            this.rSTabla.BorderColor = System.Drawing.Color.Silver;
+            this.rSTabla.Enabled = false;
+            this.rSTabla.Location = new System.Drawing.Point(13, 415);
+            this.rSTabla.Name = "rSTabla";
+            this.rSTabla.Size = new System.Drawing.Size(683, 221);
             // 
             // rectangleShape1
             // 
@@ -643,11 +655,20 @@
             this.rshDatosPersonales.Name = "rshDatosPersonales";
             this.rshDatosPersonales.Size = new System.Drawing.Size(681, 207);
             // 
+            // lblIdDireccion
+            // 
+            this.lblIdDireccion.AutoSize = true;
+            this.lblIdDireccion.Location = new System.Drawing.Point(216, 589);
+            this.lblIdDireccion.Name = "lblIdDireccion";
+            this.lblIdDireccion.Size = new System.Drawing.Size(60, 13);
+            this.lblIdDireccion.TabIndex = 53;
+            this.lblIdDireccion.Text = "idDireccion";
+            // 
             // UpdateDonante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 499);
+            this.ClientSize = new System.Drawing.Size(750, 780);
             this.Controls.Add(this.pnContenedorRegistarPaciente);
             this.Controls.Add(this.pnEncabezadoPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -657,7 +678,7 @@
             this.pnEncabezadoPacientes.PerformLayout();
             this.pnContenedorRegistarPaciente.ResumeLayout(false);
             this.pnContenedorRegistarPaciente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVConsultarDonantes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -667,51 +688,50 @@
         private System.Windows.Forms.Panel pnEncabezadoPacientes;
         private System.Windows.Forms.Label lbPacientes;
         private System.Windows.Forms.Panel pnContenedorRegistarPaciente;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
-        private System.Windows.Forms.ComboBox cBCP;
+        public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.ComboBox cBCP;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cBColonia;
+        public System.Windows.Forms.ComboBox cBColonia;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cBMunicipio;
+        public System.Windows.Forms.ComboBox cBMunicipio;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cBEstadoDireccion;
+        public System.Windows.Forms.ComboBox cBEstadoDireccion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNumExterior;
-        private System.Windows.Forms.TextBox txtNumInterior;
+        public System.Windows.Forms.TextBox txtNumExterior;
+        public System.Windows.Forms.TextBox txtNumInterior;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCalle;
+        public System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cBTipSangre;
+        public System.Windows.Forms.ComboBox cBTipSangre;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCurp;
+        public System.Windows.Forms.TextBox txtCurp;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cBGenero;
+        public System.Windows.Forms.ComboBox cBGenero;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cBEstCivil;
+        public System.Windows.Forms.ComboBox cBEstCivil;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEdad;
+        public System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label lblEtiquetaEdad;
         private System.Windows.Forms.Label lblEtiqueaAMaterno;
-        private System.Windows.Forms.TextBox txtApellidoMaterno;
+        public System.Windows.Forms.TextBox txtApellidoMaterno;
         private System.Windows.Forms.Label lblEtiqutaAPaterno;
-        private System.Windows.Forms.TextBox txtApellidoPaterno;
+        public System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.Label lbtiquetaNombre;
         private System.Windows.Forms.Label lbEtiquetaDPersonales;
-        private System.Windows.Forms.TextBox txtNombres;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rshDatosPersonales;
+        private System.Windows.Forms.DataGridView dGVConsultarDonantes;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rSTabla;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label lblIdCP;
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblIdDireccion;
     }
 }

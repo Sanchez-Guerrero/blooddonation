@@ -16,6 +16,7 @@ namespace Model.ViewDataModels
         public string curp { get; set; }
         public long telefono { get; set; }
         public string Tipo_Sangre { get; set; }
+        public int Id_Direccion { get; set; }
         public string Calle { get; set; }
         public string NumExterior { get; set; }
         public string NumInterior { get; set; }

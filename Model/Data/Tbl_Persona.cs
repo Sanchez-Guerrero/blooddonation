@@ -31,5 +31,6 @@ namespace Model.Data
         public Boolean ImpMujeres { get; set; }
         public Boolean Imp72Horas { get; set; }
         public int Id_Estatus { get; set; }
+        public int idDireccion { get; set; }
     }
 }
