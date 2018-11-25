@@ -11,6 +11,6 @@ namespace Model.Data
     {
         [Key]
         public int Id_TipoSangre { get; set; }
-        public string Descripcion { get; set; }
+        public string Tipo_Sangre { get; set; }
     }
 }

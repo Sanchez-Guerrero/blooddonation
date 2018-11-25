@@ -11,6 +11,6 @@ namespace Model.Data
     {
         [Key]
         public int Id_Genero { get; set; }
-        public string Descripcion { get; set; }
+        public string Genero { get; set; }
     }
 }

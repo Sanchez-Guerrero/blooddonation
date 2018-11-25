@@ -36,6 +36,8 @@
             this.etImpedimentosDoce = new System.Windows.Forms.Label();
             this.etDescripcionDoce = new System.Windows.Forms.Label();
             this.ContenedorTest = new System.Windows.Forms.Panel();
+            this.lblIdCita = new System.Windows.Forms.Label();
+            this.pBCerrar = new System.Windows.Forms.PictureBox();
             this.lblTipoPaciente = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
             this.lblNumInterior = new System.Windows.Forms.Label();
@@ -69,6 +71,7 @@
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pnEncabezadoTest.SuspendLayout();
             this.ContenedorTest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnEncabezadoTest
@@ -144,6 +147,8 @@
             // 
             this.ContenedorTest.AutoScroll = true;
             this.ContenedorTest.BackColor = System.Drawing.Color.Gainsboro;
+            this.ContenedorTest.Controls.Add(this.lblIdCita);
+            this.ContenedorTest.Controls.Add(this.pBCerrar);
             this.ContenedorTest.Controls.Add(this.lblTipoPaciente);
             this.ContenedorTest.Controls.Add(this.lblCP);
             this.ContenedorTest.Controls.Add(this.lblNumInterior);
@@ -184,6 +189,28 @@
             this.ContenedorTest.Size = new System.Drawing.Size(707, 545);
             this.ContenedorTest.TabIndex = 3;
             // 
+            // lblIdCita
+            // 
+            this.lblIdCita.AutoSize = true;
+            this.lblIdCita.Location = new System.Drawing.Point(390, 520);
+            this.lblIdCita.Name = "lblIdCita";
+            this.lblIdCita.Size = new System.Drawing.Size(35, 13);
+            this.lblIdCita.TabIndex = 66;
+            this.lblIdCita.Text = "label1";
+            this.lblIdCita.Visible = false;
+            // 
+            // pBCerrar
+            // 
+            this.pBCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pBCerrar.Image")));
+            this.pBCerrar.Location = new System.Drawing.Point(645, 14);
+            this.pBCerrar.Name = "pBCerrar";
+            this.pBCerrar.Size = new System.Drawing.Size(24, 24);
+            this.pBCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBCerrar.TabIndex = 65;
+            this.pBCerrar.TabStop = false;
+            this.pBCerrar.Click += new System.EventHandler(this.pBCerrar_Click);
+            // 
             // lblTipoPaciente
             // 
             this.lblTipoPaciente.AutoSize = true;
@@ -192,6 +219,7 @@
             this.lblTipoPaciente.Size = new System.Drawing.Size(41, 13);
             this.lblTipoPaciente.TabIndex = 64;
             this.lblTipoPaciente.Text = "label16";
+            this.lblTipoPaciente.Visible = false;
             // 
             // lblCP
             // 
@@ -201,6 +229,7 @@
             this.lblCP.Size = new System.Drawing.Size(41, 13);
             this.lblCP.TabIndex = 63;
             this.lblCP.Text = "label16";
+            this.lblCP.Visible = false;
             // 
             // lblNumInterior
             // 
@@ -210,6 +239,7 @@
             this.lblNumInterior.Size = new System.Drawing.Size(41, 13);
             this.lblNumInterior.TabIndex = 62;
             this.lblNumInterior.Text = "label15";
+            this.lblNumInterior.Visible = false;
             // 
             // lblNExterior
             // 
@@ -219,6 +249,7 @@
             this.lblNExterior.Size = new System.Drawing.Size(41, 13);
             this.lblNExterior.TabIndex = 61;
             this.lblNExterior.Text = "label14";
+            this.lblNExterior.Visible = false;
             // 
             // lblCalle
             // 
@@ -228,6 +259,7 @@
             this.lblCalle.Size = new System.Drawing.Size(41, 13);
             this.lblCalle.TabIndex = 57;
             this.lblCalle.Text = "label10";
+            this.lblCalle.Visible = false;
             // 
             // lblTipoSangre
             // 
@@ -237,6 +269,7 @@
             this.lblTipoSangre.Size = new System.Drawing.Size(35, 13);
             this.lblTipoSangre.TabIndex = 56;
             this.lblTipoSangre.Text = "label9";
+            this.lblTipoSangre.Visible = false;
             // 
             // lblGenero
             // 
@@ -246,6 +279,7 @@
             this.lblGenero.Size = new System.Drawing.Size(35, 13);
             this.lblGenero.TabIndex = 55;
             this.lblGenero.Text = "label8";
+            this.lblGenero.Visible = false;
             // 
             // lblEstCivil
             // 
@@ -255,6 +289,7 @@
             this.lblEstCivil.Size = new System.Drawing.Size(35, 13);
             this.lblEstCivil.TabIndex = 54;
             this.lblEstCivil.Text = "label7";
+            this.lblEstCivil.Visible = false;
             // 
             // lblTelefono
             // 
@@ -264,6 +299,7 @@
             this.lblTelefono.Size = new System.Drawing.Size(35, 13);
             this.lblTelefono.TabIndex = 53;
             this.lblTelefono.Text = "label6";
+            this.lblTelefono.Visible = false;
             // 
             // lblCurp
             // 
@@ -273,6 +309,7 @@
             this.lblCurp.Size = new System.Drawing.Size(35, 13);
             this.lblCurp.TabIndex = 52;
             this.lblCurp.Text = "label5";
+            this.lblCurp.Visible = false;
             // 
             // lblEdad
             // 
@@ -282,6 +319,7 @@
             this.lblEdad.Size = new System.Drawing.Size(35, 13);
             this.lblEdad.TabIndex = 51;
             this.lblEdad.Text = "label4";
+            this.lblEdad.Visible = false;
             // 
             // lblAM
             // 
@@ -291,6 +329,7 @@
             this.lblAM.Size = new System.Drawing.Size(35, 13);
             this.lblAM.TabIndex = 50;
             this.lblAM.Text = "label3";
+            this.lblAM.Visible = false;
             // 
             // lblAP
             // 
@@ -300,6 +339,7 @@
             this.lblAP.Size = new System.Drawing.Size(35, 13);
             this.lblAP.TabIndex = 49;
             this.lblAP.Text = "label2";
+            this.lblAP.Visible = false;
             // 
             // lblNombre
             // 
@@ -309,10 +349,12 @@
             this.lblNombre.Size = new System.Drawing.Size(35, 13);
             this.lblNombre.TabIndex = 48;
             this.lblNombre.Text = "label1";
+            this.lblNombre.Visible = false;
             // 
             // comboEstatus
             // 
             this.comboEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstatus.Enabled = false;
             this.comboEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboEstatus.ForeColor = System.Drawing.Color.Black;
@@ -378,6 +420,7 @@
             this.cBMuejeresNO.TabIndex = 43;
             this.cBMuejeresNO.Text = "NO";
             this.cBMuejeresNO.UseVisualStyleBackColor = true;
+            this.cBMuejeresNO.CheckedChanged += new System.EventHandler(this.cBMuejeresNO_CheckedChanged);
             // 
             // cBMuejeresSI
             // 
@@ -407,6 +450,7 @@
             this.cB12MesesNO.TabIndex = 41;
             this.cB12MesesNO.Text = "NO";
             this.cB12MesesNO.UseVisualStyleBackColor = true;
+            this.cB12MesesNO.CheckedChanged += new System.EventHandler(this.cB12MesesNO_CheckedChanged);
             // 
             // cB12MesesSI
             // 
@@ -436,6 +480,7 @@
             this.cBIDefinitivosNO.TabIndex = 39;
             this.cBIDefinitivosNO.Text = "NO";
             this.cBIDefinitivosNO.UseVisualStyleBackColor = true;
+            this.cBIDefinitivosNO.CheckedChanged += new System.EventHandler(this.cBIDefinitivosNO_CheckedChanged);
             // 
             // cBIDefinitivosSI
             // 
@@ -560,6 +605,7 @@
             this.pnEncabezadoTest.PerformLayout();
             this.ContenedorTest.ResumeLayout(false);
             this.ContenedorTest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -604,5 +650,7 @@
         public System.Windows.Forms.Label lblNumInterior;
         public System.Windows.Forms.Label lblCP;
         public System.Windows.Forms.Label lblTipoPaciente;
+        private System.Windows.Forms.PictureBox pBCerrar;
+        public System.Windows.Forms.Label lblIdCita;
     }
 }

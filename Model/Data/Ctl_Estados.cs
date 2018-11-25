@@ -11,7 +11,7 @@ namespace Model.Data
     {
         [Key]
         public int Id_Estado { get; set; }
-        public string Descripcion { get; set; }
+        public string Estado { get; set; }
 
     }
 }

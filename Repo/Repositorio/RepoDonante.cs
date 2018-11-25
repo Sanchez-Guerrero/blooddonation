@@ -37,6 +37,7 @@ namespace Repo.Repositorio
                 cmd.Parameters.AddWithValue("@idGenero",pers.idGenero);
                 cmd.Parameters.AddWithValue("@idEstadoCivil", pers.idEstadoCivil);
                 cmd.Parameters.AddWithValue("@idTipoPaciente", pers.idTipoPaciente);
+                cmd.Parameters.AddWithValue("@idCita", pers.idCita);
                 cmd.Parameters.AddWithValue("@Id_CodigoPostal", pers.Id_CodigoPostal);
                 cmd.Parameters.AddWithValue("@ImpDefinitivos", pers.ImpDefinitivos);
                 cmd.Parameters.AddWithValue("@Imp12Meses", pers.Imp12Meses);
@@ -50,6 +51,39 @@ namespace Repo.Repositorio
             catch (Exception ex)
             {
                 return;
+            }
+        }
+
+        public List<Donante_ViewDataModelDonante> ConsultarPorCurp(Tbl_Persona per)
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    var donantes = db.Database.SqlQuery<Donante_ViewDataModelDonante>("st_ConsultarPorCurp @curp",
+                        new SqlParameter("@curp", per.curp)).ToList();
+                    return donantes;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Donante_ViewDataModelDonante> ConsultarDonantes()
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    var donantes = db.Database.SqlQuery<Donante_ViewDataModelDonante>("st_ConsultarDonantes").ToList();
+                    return donantes;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
     }

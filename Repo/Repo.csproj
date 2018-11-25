@@ -54,6 +54,7 @@
     <Compile Include="Conexion\AllBloodContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\RepoClinica.cs" />
+    <Compile Include="Repositorio\RepoCurp.cs" />
     <Compile Include="Repositorio\RepoDireccion.cs" />
     <Compile Include="Repositorio\RepoDonante.cs" />
     <Compile Include="Repositorio\RepoEstadoCivil.cs" />

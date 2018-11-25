@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model.Data;
+using Repo.Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace blooddonation
 {
     public partial class ControlDonante : Form
     {
+        RepoDonante repo = new RepoDonante();
         public ControlDonante()
         {
             InitializeComponent();
+            CargardGVDonantes();
         }
         private void AbrirFormInPanel(object Formhijo)
         {
@@ -32,7 +36,7 @@ namespace blooddonation
             btnModificarUsuario.Dispose();
             btnBuscar.Dispose();
             txtBuscar.Dispose();
-            dGVConsulta.Dispose();
+            dGVConsultarDonantes.Dispose();
             rSTabla.Dispose();
         }
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
@@ -43,6 +47,18 @@ namespace blooddonation
         private void btnModificarUsuario_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new UpdateDonante());
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Tbl_Persona per = new Tbl_Persona();
+            per.curp = txtBuscar.Text;
+            dGVConsultarDonantes.DataSource = repo.ConsultarPorCurp(per);
+        }
+
+        private void CargardGVDonantes()
+        {
+            dGVConsultarDonantes.DataSource = repo.ConsultarDonantes();
         }
     }
 }

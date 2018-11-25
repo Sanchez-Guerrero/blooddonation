@@ -59,67 +59,80 @@ namespace blooddonation
 
         private void cBIDefinitivosSI_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("No puedes donar sangre, cumples con uno o varios impedimentos definitivos");
-            MessageBox.Show("Gracias por intentar apoyar a otros");
-            cBIDefinitivosSI.Enabled = false;
-            cBIDefinitivosNO.Enabled = false;
-            cB12MesesSI.Enabled = false;
-            cB12MesesNO.Enabled = false;
-            cBMuejeresSI.Enabled = false;
-            cBMuejeresNO.Enabled = false;
-            cB72HorasSI.Enabled = false;
-            cB72HorasNo.Enabled = false;
-            btnGuadarTest.Enabled = true;
+            if (cBIDefinitivosSI.Checked == true)
+            {
+                MessageBox.Show("No puede donar sangre. Cumple con uno o varios impedimentos definitivos","¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                comboEstatus.SelectedIndex = 2;
+                BloquearCheckBox();
+            }
+        }
+
+        private void cBIDefinitivosNO_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cBIDefinitivosNO.Checked == true)
+            {
+                cBIDefinitivosSI.Enabled = false;
+                cBIDefinitivosNO.Enabled = false;
+            }
         }
 
         private void cB12MesesSI_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Debes esperar 12 meses para poder donar");
-            MessageBox.Show("Gracias por intentar apoyar a otros");
-            cBIDefinitivosSI.Enabled = false;
-            cBIDefinitivosNO.Enabled = false;
-            cB12MesesSI.Enabled = false;
-            cB12MesesNO.Enabled = false;
-            cBMuejeresSI.Enabled = false;
-            cBMuejeresNO.Enabled = false;
-            cB72HorasSI.Enabled = false;
-            cB72HorasNo.Enabled = false;
-            btnGuadarTest.Enabled = true;
+            if (cB12MesesSI.Checked == true)
+            {
+                MessageBox.Show("Debe esperar 12 meses para poder donar","¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                comboEstatus.SelectedIndex = 2;
+                BloquearCheckBox();
+            }
+        }
+
+        private void cB12MesesNO_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cB12MesesNO.Checked == true)
+            {
+                cB12MesesSI.Enabled = false;
+                cB12MesesNO.Enabled = false;
+            }
         }
 
         private void cBMuejeresSI_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Por el momento no puedes donar");
-            MessageBox.Show("Gracias por intentar apoyar a otros");
-            cBIDefinitivosSI.Enabled = false;
-            cBIDefinitivosNO.Enabled = false;
-            cBMuejeresSI.Enabled = false;
-            cB12MesesSI.Enabled = false;
-            cB12MesesNO.Enabled = false;
-            cBMuejeresNO.Enabled = false;
-            cB72HorasSI.Enabled = false;
-            cB72HorasNo.Enabled = false;
-            btnGuadarTest.Enabled = true;
+            if (cBMuejeresSI.Checked == true)
+            {
+                MessageBox.Show("Por el momento no puede donar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                comboEstatus.SelectedIndex = 2;
+                BloquearCheckBox();
+            }
+        }
+
+        private void cBMuejeresNO_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cBMuejeresNO.Checked == true)
+            {
+                cBMuejeresSI.Enabled = false;
+                cBMuejeresNO.Enabled = false;
+            }
         }
 
         private void cB72HorasSI_CheckedChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show("Deja transcurrir mínimo 72 horas para poder donar sangre");
-            MessageBox.Show("Gracias por intentar apoyar a otros");
-            cBIDefinitivosSI.Enabled = false;
-            cBIDefinitivosNO.Enabled = false;
-            cB12MesesSI.Enabled = false;
-            cB12MesesNO.Enabled = false;
-            cBMuejeresSI.Enabled = false;
-            cBMuejeresNO.Enabled = false;
-            cB72HorasSI.Enabled = false;
-            cB72HorasNo.Enabled = false;
-            btnGuadarTest.Enabled = true;
+        { 
+            if(cB72HorasSI.Checked == true)
+            {
+                MessageBox.Show("Dejar transcurrir mínimo 72 horas para poder donar sangre", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                comboEstatus.SelectedIndex = 2;
+                BloquearCheckBox();
+            }
         }
 
         private void cB72HorasNo_CheckedChanged(object sender, EventArgs e)
         {
-            btnGuadarTest.Enabled = true;
+            if(cB72HorasNo.Checked == true)
+            {
+                comboEstatus.SelectedIndex = 1;
+                cB72HorasSI.Enabled = false;
+                cB72HorasNo.Enabled = false;
+                btnGuadarTest.Enabled = true;
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -138,10 +151,10 @@ namespace blooddonation
             RepoEstatus repo = new RepoEstatus();
             List<Ctl_Estatus> listaEstatus = repo.CargarEstatus().ToList();
             est.Id_Estatus = -1;
-            est.Descripcion = "-------Selecciona-------";
+            est.Estatus = "-------Selecciona-------";
             listaEstatus.Insert(0, est);
             this.comboEstatus.ValueMember = "Id_Estatus";
-            this.comboEstatus.DisplayMember = "Descripcion";
+            this.comboEstatus.DisplayMember = "Estatus";
             this.comboEstatus.DataSource = listaEstatus;
         }
 
@@ -149,6 +162,7 @@ namespace blooddonation
         {
             Tbl_Persona per = new Tbl_Persona();
             RepoDonante repo = new RepoDonante();
+            RepoCurp rep = new RepoCurp();
             per.nombre = lblNombre.Text;
             per.aPaterno = lblAP.Text;
             per.aMaterno = lblAM.Text;
@@ -162,22 +176,77 @@ namespace blooddonation
             per.NumExterior = lblNExterior.Text;
             per.NumInterior = lblNumInterior.Text;
             per.idTipoPaciente = int.Parse(lblTipoPaciente.Text);
+            per.idCita = int.Parse(lblIdCita.Text);
             per.Id_CodigoPostal = int.Parse(lblCP.Text);
             per.ImpDefinitivos = cBIDefinitivosSI.Checked;
             per.Imp12Meses = cB12MesesSI.Checked;
             per.ImpMujeres = cBMuejeresSI.Checked;
             per.Imp72Horas = cB72HorasSI.Checked;
             per.Id_Estatus = comboEstatus.SelectedIndex;
-            if(per.Id_Estatus == 0)
+            if (MessageBox.Show("Desea registrar al donante: " + per.nombre, "¡ADVERTENCIA!"
+               , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Debe de elegir un status al test!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (per.curp == rep.ConsultarsiExistelaPersona(per.curp))
+                {
+                    MessageBox.Show("No se registro a la persona por que ya existe", "¡Advertencia!"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LimpiarCampos();
+                }
+                else
+                {
+                    repo.RegistrarDonante(per);
+                    MessageBox.Show("Se ha registrado correctamente", "¡EXITOSO!"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                }
             }
             else
             {
-                repo.RegistrarDonante(per);
+                MessageBox.Show("No se registro", "¡Advertencia!"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimpiarCampos();
             }
         }
 
-        
+        private void pBCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LimpiarCampos()
+        {
+            cBIDefinitivosSI.Checked = false;
+            cBIDefinitivosNO.Checked = false;
+            cB12MesesSI.Checked = false;
+            cB12MesesNO.Checked = false;
+            cBMuejeresSI.Checked = false;
+            cBMuejeresNO.Checked = false;
+            cB72HorasSI.Checked = false;
+            cB72HorasNo.Checked = false;
+            comboEstatus.SelectedIndex = 0;
+            cBIDefinitivosSI.Enabled = true;
+            cB12MesesSI.Enabled = true;
+            cBMuejeresSI.Enabled = true;
+            cB72HorasSI.Enabled = true;
+            cBIDefinitivosNO.Enabled = true;
+            cB12MesesNO.Enabled = true;
+            cBMuejeresNO.Enabled = true;
+            cB72HorasNo.Enabled = true;
+            btnGuadarTest.Enabled = false;
+        }
+
+        private void BloquearCheckBox()
+        {
+            cBIDefinitivosSI.Enabled = false;
+            cBIDefinitivosNO.Enabled = false;
+            cBMuejeresSI.Enabled = false;
+            cBMuejeresNO.Enabled = false; 
+            cB12MesesSI.Enabled = false;
+            cB12MesesNO.Enabled = false;          
+            cB72HorasSI.Enabled = false;
+            cB72HorasNo.Enabled = false;
+            btnGuadarTest.Enabled = true;
+        }        
     }
 }

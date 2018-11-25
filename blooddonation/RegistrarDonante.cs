@@ -75,6 +75,7 @@ namespace blooddonation
             ftest.lblGenero.Text = cBGenero.SelectedIndex.ToString();
             ftest.lblEstCivil.Text = cBEstCivil.SelectedIndex.ToString();
             ftest.lblTipoPaciente.Text = "2";
+            ftest.lblIdCita.Text = "3";
             ftest.lblCP.Text = cBCP.SelectedValue.ToString();
             var estado = cBEstadoDireccion.SelectedIndex;
             var muni = cBMunicipio.SelectedIndex;
@@ -145,7 +146,6 @@ namespace blooddonation
             }
             else
             {
-                this.Hide();
                 ftest.ShowDialog();
             }
         }
@@ -156,10 +156,10 @@ namespace blooddonation
             RepoDireccion repo = new RepoDireccion();
             List<Ctl_Estados> listaEstados = repo.CargarEstados().ToList();
             est.Id_Estado = -1;
-            est.Descripcion = "-------Selecciona-------";
+            est.Estado = "-------Selecciona-------";
             listaEstados.Insert(0, est);
             this.cBEstadoDireccion.ValueMember = "Id_Estado";
-            this.cBEstadoDireccion.DisplayMember = "Descripcion";
+            this.cBEstadoDireccion.DisplayMember = "Estado";
             this.cBEstadoDireccion.DataSource = listaEstados;
         }
 
@@ -169,10 +169,10 @@ namespace blooddonation
             RepoDireccion repo = new RepoDireccion();
             List<Ctl_Municipio> listaMunicipio = repo.CargarMunicipios(Id_Estado).ToList();
             muni.Id_Municipio = -1;
-            muni.Descripcion = "-------Selecciona-------";
+            muni.Municipio = "-------Selecciona-------";
             listaMunicipio.Insert(0, muni);
             this.cBMunicipio.ValueMember = "Id_Municipio";
-            this.cBMunicipio.DisplayMember = "Descripcion";
+            this.cBMunicipio.DisplayMember = "Municipio";
             this.cBMunicipio.DataSource = listaMunicipio;
         }
 
@@ -182,10 +182,10 @@ namespace blooddonation
             RepoDireccion repo = new RepoDireccion();
             List<Ctl_Colonia> listaColonia = repo.CargarColonias(Id_Municipio).ToList();
             col.Id_Colonia = -1;
-            col.Descripcion = "-------Selecciona-------";
+            col.Colonia = "-------Selecciona-------";
             listaColonia.Insert(0, col);
             this.cBColonia.ValueMember = "Id_Colonia";
-            this.cBColonia.DisplayMember = "Descripcion";
+            this.cBColonia.DisplayMember = "Colonia";
             this.cBColonia.DataSource = listaColonia;
         }
 
@@ -208,10 +208,10 @@ namespace blooddonation
             RepoTipoSangre repo = new RepoTipoSangre();
             List<Ctl_TipoSangre> listaTipoSangre = repo.CargarTipoSangre().ToList();
             tip.Id_TipoSangre = -1;
-            tip.Descripcion = "-------Selecciona-------";
+            tip.Tipo_Sangre = "-------Selecciona-------";
             listaTipoSangre.Insert(0, tip);
             this.cBTipSangre.ValueMember = "Id_TipoSangre";
-            this.cBTipSangre.DisplayMember = "Descripcion";
+            this.cBTipSangre.DisplayMember = "Tipo_Sangre";
             this.cBTipSangre.DataSource = listaTipoSangre;
         }
 
@@ -221,10 +221,10 @@ namespace blooddonation
             RepoGenero repo = new RepoGenero();
             List<Ctl_Genero> listaTipoGenero = repo.CargarGenero().ToList();
             gen.Id_Genero = -1;
-            gen.Descripcion = "-------Selecciona-------";
+            gen.Genero = "-------Selecciona-------";
             listaTipoGenero.Insert(0, gen);
             this.cBGenero.ValueMember = "Id_Genero";
-            this.cBGenero.DisplayMember = "Descripcion";
+            this.cBGenero.DisplayMember = "Genero";
             this.cBGenero.DataSource = listaTipoGenero;
         }
 
@@ -234,10 +234,10 @@ namespace blooddonation
             RepoEstadoCivil repo = new RepoEstadoCivil();
             List<Ctl_EstadoCivil> listaEstadoCivil = repo.CargarEstadoCivil().ToList();
             est.Id_EstadoCivil = -1;
-            est.Descripcion = "-------Selecciona-------";
+            est.Estado_Civil = "-------Selecciona-------";
             listaEstadoCivil.Insert(0, est);
             this.cBEstCivil.ValueMember = "Id_EstadoCivil";
-            this.cBEstCivil.DisplayMember = "Descripcion";
+            this.cBEstCivil.DisplayMember = "Estado_Civil";
             this.cBEstCivil.DataSource = listaEstadoCivil;
         }
         
