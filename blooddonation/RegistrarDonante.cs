@@ -285,7 +285,6 @@ namespace blooddonation
 
         private void txtCalle_KeyPress(object sender, KeyPressEventArgs e)
         {
-            v.SoloLetras(e);
         }
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)

@@ -54,31 +54,31 @@ namespace Repo.Repositorio
             }
         }
 
-        public void ModificarDonante(Tbl_Persona pers)
+        public void ModificarDonante(Tbl_Persona per)
         {
             try
             {
                 string constr = ConfigurationManager.ConnectionStrings["AllBloodContext"].ConnectionString;
                 AllBloodContext db = new AllBloodContext();
-                string sqlComand = @"st_ModificarEmpleado";
+                string sqlComand = @"st_ModificarDonante";
                 SqlConnection con = new SqlConnection(constr);
                 SqlCommand cmd = new SqlCommand(sqlComand, con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", pers.id);
-                cmd.Parameters.AddWithValue("@Nombre", pers.nombre);
-                cmd.Parameters.AddWithValue("@APaterno", pers.aPaterno);
-                cmd.Parameters.AddWithValue("@AMaterno", pers.aMaterno);
-                cmd.Parameters.AddWithValue("@edad", pers.edad);
-                cmd.Parameters.AddWithValue("@curp", pers.curp);
-                cmd.Parameters.AddWithValue("@telefono", pers.telefono);
-                cmd.Parameters.AddWithValue("@idTiposangre ", pers.idTipoSangre);
-                cmd.Parameters.AddWithValue("@calle", pers.Calle);
-                cmd.Parameters.AddWithValue("@NumExterior", pers.NumExterior);
-                cmd.Parameters.AddWithValue("@NumInterior", pers.NumInterior);
-                cmd.Parameters.AddWithValue("@idGenero", pers.idGenero);
-                cmd.Parameters.AddWithValue("@idEstadoCivil", pers.idEstadoCivil);
-                cmd.Parameters.AddWithValue("@Id_CodigoPostal", pers.Id_CodigoPostal);
-                cmd.Parameters.AddWithValue("@Id_Direccion", pers.idDireccion);
+                cmd.Parameters.AddWithValue("@id", per.id);
+                cmd.Parameters.AddWithValue("@nombre", per.nombre);
+                cmd.Parameters.AddWithValue("@aPaterno ", per.aPaterno);
+                cmd.Parameters.AddWithValue("@aMaterno ", per.aMaterno);
+                cmd.Parameters.AddWithValue("@edad", per.edad);
+                cmd.Parameters.AddWithValue("@curp", per.curp);
+                cmd.Parameters.AddWithValue("@telefono", per.telefono);
+                cmd.Parameters.AddWithValue("@idTipoSangre", per.idTipoSangre);
+                cmd.Parameters.AddWithValue("@idDireccion", per.idDireccion);
+                cmd.Parameters.AddWithValue("@idGenero", per.idGenero);
+                cmd.Parameters.AddWithValue("@idEstadoCivil", per.idEstadoCivil);
+                cmd.Parameters.AddWithValue("@calle", per.Calle);
+                cmd.Parameters.AddWithValue("@NumExterior",per.NumExterior);
+                cmd.Parameters.AddWithValue("@NumInterior",per.NumInterior);
+                cmd.Parameters.AddWithValue("@Id_CodigoPostal",per.Id_CodigoPostal);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

@@ -15,7 +15,7 @@ namespace blooddonation
 {
     public partial class UpdateDonante : Form
     {
-        ValidarLetras v = new ValidarLetras();
+        ValidarLetras vl = new ValidarLetras();
         ValidarNumeros vn = new ValidarNumeros();
         RepoDonante repo = new RepoDonante();
         public UpdateDonante()
@@ -181,21 +181,26 @@ namespace blooddonation
             per.nombre = txtNombres.Text;
             per.aPaterno = txtApellidoPaterno.Text;
             per.aMaterno = txtApellidoMaterno.Text;
-            lblEdad.Text = txtEdad.Text;           
-            per.curp = txtCurp.Text.ToUpper();
-            lblTelefono.Text = txtTelefono.Text;         
+            lblEdad.Text = txtEdad.Text;
+            per.edad = int.Parse(lblEdad.Text);
+            per.curp = txtCurp.Text;
+            lblTelefono.Text = txtTelefono.Text;
+            per.telefono = long.Parse(lblTelefono.Text);
             per.idTipoSangre = cBTipSangre.SelectedIndex;
             per.idDireccion = int.Parse(lblIdDireccion.Text);
+            per.idGenero = cBGenero.SelectedIndex;
+            per.idEstadoCivil = cBEstCivil.SelectedIndex;
+
             per.Calle = txtCalle.Text;
             per.NumExterior = txtNumExterior.Text;
             per.NumInterior = txtNumInterior.Text;
-            per.idGenero = cBGenero.SelectedIndex;
-            per.idEstadoCivil = cBEstCivil.SelectedIndex;
             lblIdCP.Text = cBCP.SelectedValue.ToString();
             per.Id_CodigoPostal = int.Parse(lblIdCP.Text);
+
             var estado = cBEstadoDireccion.SelectedIndex;
             var muni = cBMunicipio.SelectedIndex;
             var col = cBColonia.SelectedIndex;
+
             if (per.nombre == "")
             {
                 MessageBox.Show("El campo nombre debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -220,17 +225,17 @@ namespace blooddonation
             {
                 MessageBox.Show("El campo teléfono debe estar llenado!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.idEstadoCivil == 0)
+            else if (per.idTipoSangre == 0)
             {
-                MessageBox.Show("Debe de elegir un estado civil!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un tipo de sangre!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (per.idGenero == 0)
             {
                 MessageBox.Show("Debe de elegir un genero!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (per.idTipoSangre == 0)
+            else if (per.idEstadoCivil == 0)
             {
-                MessageBox.Show("Debe de elegir un tipo de sangre!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe de elegir un estado civil!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (per.Calle == "")
             {
@@ -262,14 +267,13 @@ namespace blooddonation
             }
             else
             {
-                per.edad = int.Parse(lblEdad.Text);
-                per.telefono = long.Parse(lblTelefono.Text);
-                if (MessageBox.Show("Desea modificar al donante: " + per.nombre, "¡ADVERTENCIA!"
+                if (MessageBox.Show("Desea modificar al donante: ", "¡ADVERTENCIA!"
                 , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     repo.ModificarDonante(per);
-                        MessageBox.Show("Se ha modificado correctamente", "¡EXITOSO!"
-                            , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dGVConsultarDonantes.DataSource = repo.ConsultarDonantes();
+                    MessageBox.Show("Se ha modificado correctamente", "¡EXITOSO!"
+                               , MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -277,6 +281,55 @@ namespace blooddonation
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void txtNombres_TextChanged(object sender, EventArgs e)
+        {
+            txtNombres.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNombres.Text);
+            txtNombres.SelectionStart = txtNombres.Text.Length;
+        }
+
+        private void txtApellidoPaterno_TextChanged(object sender, EventArgs e)
+        {
+            txtApellidoPaterno.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoPaterno.Text);
+            txtApellidoPaterno.SelectionStart = txtApellidoPaterno.Text.Length;
+        }
+
+        private void txtApellidoMaterno_TextChanged(object sender, EventArgs e)
+        {
+            txtApellidoMaterno.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoMaterno.Text);
+            txtApellidoMaterno.SelectionStart = txtApellidoMaterno.Text.Length;
+        }
+
+        private void txtCalle_TextChanged(object sender, EventArgs e)
+        {
+            txtCalle.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtCalle.Text);
+            txtCalle.SelectionStart = txtCalle.Text.Length;
+        }
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vn.SoloNumeros(e);
+        }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloLetras(e);
+        }
+
+        private void txtApellidoPaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloLetras(e);
+        }
+
+        private void txtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vl.SoloLetras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vn.SoloNumeros(e);
         }
     }
 }
