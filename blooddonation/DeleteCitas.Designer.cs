@@ -32,17 +32,11 @@
             this.pnEncabezadoRegistrar = new System.Windows.Forms.Panel();
             this.etRegistrar = new System.Windows.Forms.Label();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
+            this.dGVConsulta = new System.Windows.Forms.DataGridView();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rshDatosPersonales = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.dGVConsulta = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblidCita = new System.Windows.Forms.Label();
+            this.btnEliminarCita = new System.Windows.Forms.Button();
             this.pnEncabezadoRegistrar.SuspendLayout();
             this.pnContenedorRegistarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVConsulta)).BeginInit();
@@ -72,8 +66,8 @@
             // pnContenedorRegistarPaciente
             // 
             this.pnContenedorRegistarPaciente.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnContenedorRegistarPaciente.Controls.Add(this.btnBuscar);
-            this.pnContenedorRegistarPaciente.Controls.Add(this.txtBuscar);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.btnEliminarCita);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblidCita);
             this.pnContenedorRegistarPaciente.Controls.Add(this.dGVConsulta);
             this.pnContenedorRegistarPaciente.Controls.Add(this.shapeContainer1);
             this.pnContenedorRegistarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,6 +75,18 @@
             this.pnContenedorRegistarPaciente.Name = "pnContenedorRegistarPaciente";
             this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(710, 555);
             this.pnContenedorRegistarPaciente.TabIndex = 3;
+            // 
+            // dGVConsulta
+            // 
+            this.dGVConsulta.BackgroundColor = System.Drawing.Color.White;
+            this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
+            this.dGVConsulta.Location = new System.Drawing.Point(27, 26);
+            this.dGVConsulta.Name = "dGVConsulta";
+            this.dGVConsulta.Size = new System.Drawing.Size(655, 398);
+            this.dGVConsulta.TabIndex = 38;
+            this.dGVConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVConsulta_CellClick);
             // 
             // shapeContainer1
             // 
@@ -99,82 +105,36 @@
             this.rshDatosPersonales.Enabled = false;
             this.rshDatosPersonales.Location = new System.Drawing.Point(13, 13);
             this.rshDatosPersonales.Name = "rshDatosPersonales";
-            this.rshDatosPersonales.Size = new System.Drawing.Size(681, 441);
+            this.rshDatosPersonales.Size = new System.Drawing.Size(681, 516);
             // 
-            // dGVConsulta
+            // lblidCita
             // 
-            this.dGVConsulta.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
-            this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
-            this.dGVConsulta.Location = new System.Drawing.Point(27, 76);
-            this.dGVConsulta.Name = "dGVConsulta";
-            this.dGVConsulta.Size = new System.Drawing.Size(655, 363);
-            this.dGVConsulta.TabIndex = 38;
+            this.lblidCita.AutoSize = true;
+            this.lblidCita.Location = new System.Drawing.Point(55, 431);
+            this.lblidCita.Name = "lblidCita";
+            this.lblidCita.Size = new System.Drawing.Size(35, 13);
+            this.lblidCita.TabIndex = 39;
+            this.lblidCita.Text = "label1";
+            this.lblidCita.Visible = false;
             // 
-            // ID
+            // btnEliminarCita
             // 
-            this.ID.HeaderText = "N\'Cita";
-            this.ID.Name = "ID";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Paciente";
-            this.nombre.Name = "nombre";
-            // 
-            // APaterno
-            // 
-            this.APaterno.HeaderText = "Donante";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Fecha";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Hora";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Sitio de la cita";
-            this.ECivil.Name = "ECivil";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(526, 28);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(156, 31);
-            this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(27, 28);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(477, 31);
-            this.txtBuscar.TabIndex = 12;
+            this.btnEliminarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnEliminarCita.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCita.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEliminarCita.FlatAppearance.BorderSize = 0;
+            this.btnEliminarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCita.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCita.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCita.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarCita.Image")));
+            this.btnEliminarCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarCita.Location = new System.Drawing.Point(473, 448);
+            this.btnEliminarCita.Name = "btnEliminarCita";
+            this.btnEliminarCita.Size = new System.Drawing.Size(185, 50);
+            this.btnEliminarCita.TabIndex = 7;
+            this.btnEliminarCita.Text = "Eliminar";
+            this.btnEliminarCita.UseVisualStyleBackColor = false;
+            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
             // 
             // DeleteCitas
             // 
@@ -203,13 +163,7 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rshDatosPersonales;
         private System.Windows.Forms.DataGridView dGVConsulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblidCita;
+        private System.Windows.Forms.Button btnEliminarCita;
     }
 }

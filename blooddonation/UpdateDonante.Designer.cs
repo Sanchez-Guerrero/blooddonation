@@ -163,6 +163,7 @@
             this.lblIdDireccion.Size = new System.Drawing.Size(60, 13);
             this.lblIdDireccion.TabIndex = 53;
             this.lblIdDireccion.Text = "idDireccion";
+            this.lblIdDireccion.Visible = false;
             // 
             // lblEdad
             // 
@@ -172,6 +173,7 @@
             this.lblEdad.Size = new System.Drawing.Size(32, 13);
             this.lblEdad.TabIndex = 52;
             this.lblEdad.Text = "Edad";
+            this.lblEdad.Visible = false;
             // 
             // lblTelefono
             // 
@@ -181,6 +183,7 @@
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 51;
             this.lblTelefono.Text = "Telefono";
+            this.lblTelefono.Visible = false;
             // 
             // lblIdCP
             // 
@@ -190,6 +193,7 @@
             this.lblIdCP.Size = new System.Drawing.Size(21, 13);
             this.lblIdCP.TabIndex = 50;
             this.lblIdCP.Text = "CP";
+            this.lblIdCP.Visible = false;
             // 
             // lblId
             // 
@@ -199,6 +203,7 @@
             this.lblId.Size = new System.Drawing.Size(16, 13);
             this.lblId.TabIndex = 49;
             this.lblId.Text = "Id";
+            this.lblId.Visible = false;
             // 
             // btnModificar
             // 

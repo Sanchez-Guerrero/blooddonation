@@ -2,6 +2,8 @@
 using Repo.Conexion;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,13 +13,15 @@ namespace Repo.Repositorio
 {
     public class RepoClinica
     {
-        public List<Ctl_Clinica> ConsultarClinica()
+       
+        public List<Ctl_Clinica> ConsultarClinica(int Id_Direccion)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_Clinica> clinica = db.Database.SqlQuery<Ctl_Clinica>("st_ConsultarClinica").ToList();
+                    List<Ctl_Clinica> clinica = db.Database.SqlQuery<Ctl_Clinica>("st_ConsultarClinica @Id_Direccion",
+                        new SqlParameter("@Id_Direccion",Id_Direccion)).ToList();
 
                     return clinica;
                 }
@@ -28,15 +32,49 @@ namespace Repo.Repositorio
             }
         }
 
-        public List<Ctl_Clinica> ConsultarDireccion()
+        public List<Ctl_DireccionClinica> ConsultarDireccionClinica()
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_Clinica> direccion = db.Database.SqlQuery<Ctl_Clinica>("st_ConsultarDireccionClinicas").ToList();
+                    List<Ctl_DireccionClinica> direClinica = db.Database.SqlQuery<Ctl_DireccionClinica>("st_ConsultarDireccionClinica").ToList();
 
-                    return direccion;
+                    return direClinica;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Tbl_Persona> ConsultarPaciente()
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    List<Tbl_Persona> paciente = db.Database.SqlQuery<Tbl_Persona>("st_ConsultarPacientePorPerfil").ToList();
+
+                    return paciente;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Tbl_Persona> ConsultarDonante()
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    List<Tbl_Persona> donante = db.Database.SqlQuery<Tbl_Persona>("st_ConsultarDonantePorPerfil").ToList();
+
+                    return donante;
                 }
             }
             catch (Exception ex)

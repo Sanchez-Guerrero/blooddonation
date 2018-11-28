@@ -12,6 +12,6 @@ namespace Model.Data
         [Key]
         public int Id_Clinica { get; set; }
         public string NomClinica{ get; set; }
-        public string DireccionClinica { get; set; }
+        public int Id_Direccion { get; set; }
     }
 }

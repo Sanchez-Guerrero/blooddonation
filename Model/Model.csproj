@@ -53,6 +53,7 @@
     <Compile Include="Data\Ctl_Clinica.cs" />
     <Compile Include="Data\Ctl_Colonia.cs" />
     <Compile Include="Data\Ctl_CodigoPostal.cs" />
+    <Compile Include="Data\Ctl_DireccionClinica.cs" />
     <Compile Include="Data\Ctl_EstadoCivil.cs" />
     <Compile Include="Data\Ctl_Estados.cs" />
     <Compile Include="Data\Ctl_Estatus.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Data\Tbl_Direccion.cs" />
     <Compile Include="Data\Tbl_Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewDataModels\Citas_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\Donante_ViewDataModelDonante.cs" />
   </ItemGroup>
   <ItemGroup>

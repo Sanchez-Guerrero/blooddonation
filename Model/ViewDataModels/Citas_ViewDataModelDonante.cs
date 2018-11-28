@@ -5,16 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Data
+namespace Model.ViewDataModels
 {
-    public class Tbl_Cita
+    public class Citas_ViewDataModelDonante
     {
         [Key]
         public int Id_Cita { get; set; }
         public int Id_Solicitante { get; set; }
         public int Id_Donante { get; set; }
-        public DateTime Fecha  { get; set; }
+        public DateTime Fecha { get; set; }
         public string Hora { get; set; }
-        public int Id_Clinica { get; set; }
+        public string NomClinica { get; set; }
+        public string DireccionClinica { get; set; }
     }
 }

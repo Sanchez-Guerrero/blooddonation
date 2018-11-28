@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repo.Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace blooddonation
         public ControlCitas()
         {
             InitializeComponent();
+            LlenardGriedViewCitas();
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -32,8 +34,6 @@ namespace blooddonation
             btnNuevaCita.Dispose();
             btnModificarCita.Dispose();
             btnEliminarCita.Dispose();
-            btnBuscar.Dispose();
-            txtBuscar.Dispose();
             dGVConsulta.Dispose();
             rSTabla.Dispose();
         }
@@ -51,6 +51,12 @@ namespace blooddonation
         private void btnEliminarCita_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new DeleteCitas());
+        }
+
+        private void LlenardGriedViewCitas()
+        {
+            RepoCita repo = new RepoCita();
+            dGVConsulta.DataSource = repo.ConsultarCitas();
         }
     }
 }

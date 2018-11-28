@@ -33,14 +33,6 @@
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
             this.dGVConsulta = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnEliminarCita = new System.Windows.Forms.Button();
             this.btnNuevaCita = new System.Windows.Forms.Button();
             this.btnModificarCita = new System.Windows.Forms.Button();
@@ -76,8 +68,6 @@
             // 
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
             this.pnContenedorPacientes.Controls.Add(this.dGVConsulta);
-            this.pnContenedorPacientes.Controls.Add(this.btnBuscar);
-            this.pnContenedorPacientes.Controls.Add(this.txtBuscar);
             this.pnContenedorPacientes.Controls.Add(this.btnEliminarCita);
             this.pnContenedorPacientes.Controls.Add(this.btnNuevaCita);
             this.pnContenedorPacientes.Controls.Add(this.btnModificarCita);
@@ -90,78 +80,14 @@
             // 
             // dGVConsulta
             // 
-            this.dGVConsulta.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dGVConsulta.BackgroundColor = System.Drawing.Color.White;
             this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
             this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
-            this.dGVConsulta.Location = new System.Drawing.Point(32, 193);
+            this.dGVConsulta.Location = new System.Drawing.Point(32, 150);
             this.dGVConsulta.Name = "dGVConsulta";
-            this.dGVConsulta.Size = new System.Drawing.Size(662, 208);
+            this.dGVConsulta.Size = new System.Drawing.Size(662, 251);
             this.dGVConsulta.TabIndex = 36;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "N\'Cita";
-            this.ID.Name = "ID";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Paciente";
-            this.nombre.Name = "nombre";
-            // 
-            // APaterno
-            // 
-            this.APaterno.HeaderText = "Donante";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Fecha";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Hora";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Sitio de la cita";
-            this.ECivil.Name = "ECivil";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(538, 148);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(156, 31);
-            this.btnBuscar.TabIndex = 11;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(39, 148);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(477, 31);
-            this.txtBuscar.TabIndex = 3;
             // 
             // btnEliminarCita
             // 
@@ -252,7 +178,6 @@
             this.pnEncabezadoPacientes.ResumeLayout(false);
             this.pnEncabezadoPacientes.PerformLayout();
             this.pnContenedorPacientes.ResumeLayout(false);
-            this.pnContenedorPacientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVConsulta)).EndInit();
             this.ResumeLayout(false);
 
@@ -268,14 +193,6 @@
         private System.Windows.Forms.Button btnEliminarCita;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rSTabla;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dGVConsulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
     }
 }

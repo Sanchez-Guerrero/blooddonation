@@ -32,6 +32,9 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
+            this.lblIdClinica = new System.Windows.Forms.Label();
+            this.lblIdDonante = new System.Windows.Forms.Label();
+            this.lblPaciente = new System.Windows.Forms.Label();
             this.btnEnviarEmail = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,12 +42,10 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgendar = new System.Windows.Forms.Button();
-            this.dTPHoraCita = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dTPFechaCita = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,6 +56,8 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtHora = new System.Windows.Forms.TextBox();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorPacientes.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +87,10 @@
             // 
             this.pnContenedorPacientes.AutoScroll = true;
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorPacientes.Controls.Add(this.txtHora);
+            this.pnContenedorPacientes.Controls.Add(this.lblIdClinica);
+            this.pnContenedorPacientes.Controls.Add(this.lblIdDonante);
+            this.pnContenedorPacientes.Controls.Add(this.lblPaciente);
             this.pnContenedorPacientes.Controls.Add(this.btnEnviarEmail);
             this.pnContenedorPacientes.Controls.Add(this.richTextBox1);
             this.pnContenedorPacientes.Controls.Add(this.textBox1);
@@ -96,7 +103,6 @@
             this.pnContenedorPacientes.Controls.Add(this.comboBox1);
             this.pnContenedorPacientes.Controls.Add(this.label4);
             this.pnContenedorPacientes.Controls.Add(this.btnAgendar);
-            this.pnContenedorPacientes.Controls.Add(this.dTPHoraCita);
             this.pnContenedorPacientes.Controls.Add(this.label3);
             this.pnContenedorPacientes.Controls.Add(this.dTPFechaCita);
             this.pnContenedorPacientes.Controls.Add(this.label2);
@@ -108,8 +114,39 @@
             this.pnContenedorPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedorPacientes.Location = new System.Drawing.Point(0, 71);
             this.pnContenedorPacientes.Name = "pnContenedorPacientes";
-            this.pnContenedorPacientes.Size = new System.Drawing.Size(726, 279);
+            this.pnContenedorPacientes.Size = new System.Drawing.Size(726, 709);
             this.pnContenedorPacientes.TabIndex = 2;
+            // 
+            // lblIdClinica
+            // 
+            this.lblIdClinica.AutoSize = true;
+            this.lblIdClinica.Location = new System.Drawing.Point(206, 607);
+            this.lblIdClinica.Name = "lblIdClinica";
+            this.lblIdClinica.Size = new System.Drawing.Size(47, 13);
+            this.lblIdClinica.TabIndex = 43;
+            this.lblIdClinica.Text = "IdClinica";
+            this.lblIdClinica.Visible = false;
+            // 
+            // lblIdDonante
+            // 
+            this.lblIdDonante.AutoSize = true;
+            this.lblIdDonante.Location = new System.Drawing.Point(125, 608);
+            this.lblIdDonante.Name = "lblIdDonante";
+            this.lblIdDonante.Size = new System.Drawing.Size(57, 13);
+            this.lblIdDonante.TabIndex = 42;
+            this.lblIdDonante.Text = "IdDonante";
+            this.lblIdDonante.Visible = false;
+            // 
+            // lblPaciente
+            // 
+            this.lblPaciente.AutoSize = true;
+            this.lblPaciente.Location = new System.Drawing.Point(41, 608);
+            this.lblPaciente.Name = "lblPaciente";
+            this.lblPaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPaciente.Size = new System.Drawing.Size(57, 13);
+            this.lblPaciente.TabIndex = 41;
+            this.lblPaciente.Text = "idPaciente";
+            this.lblPaciente.Visible = false;
             // 
             // btnEnviarEmail
             // 
@@ -192,19 +229,6 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "Correo Electrónico";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(387, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox2.Size = new System.Drawing.Size(292, 32);
-            this.comboBox2.TabIndex = 34;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -227,7 +251,7 @@
             this.comboBox1.Location = new System.Drawing.Point(41, 178);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(292, 32);
+            this.comboBox1.Size = new System.Drawing.Size(321, 32);
             this.comboBox1.TabIndex = 32;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -260,17 +284,7 @@
             this.btnAgendar.TabIndex = 30;
             this.btnAgendar.Text = "Agendar";
             this.btnAgendar.UseVisualStyleBackColor = false;
-            // 
-            // dTPHoraCita
-            // 
-            this.dTPHoraCita.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dTPHoraCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.dTPHoraCita.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dTPHoraCita.Location = new System.Drawing.Point(387, 115);
-            this.dTPHoraCita.Name = "dTPHoraCita";
-            this.dTPHoraCita.ShowUpDown = true;
-            this.dTPHoraCita.Size = new System.Drawing.Size(292, 29);
-            this.dTPHoraCita.TabIndex = 21;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // label3
             // 
@@ -367,7 +381,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape2,
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(709, 615);
+            this.shapeContainer1.Size = new System.Drawing.Size(726, 709);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
@@ -387,11 +401,33 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(682, 210);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.Black;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(387, 178);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox2.Size = new System.Drawing.Size(292, 32);
+            this.comboBox2.TabIndex = 34;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // txtHora
+            // 
+            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHora.Location = new System.Drawing.Point(391, 114);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(122, 26);
+            this.txtHora.TabIndex = 44;
+            // 
             // RegistrarCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 350);
+            this.ClientSize = new System.Drawing.Size(726, 780);
             this.Controls.Add(this.pnContenedorPacientes);
             this.Controls.Add(this.pnEncabezadoPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -418,11 +454,9 @@
         private System.Windows.Forms.ComboBox cBDonantes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBPacientes;
-        private System.Windows.Forms.DateTimePicker dTPHoraCita;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
@@ -433,5 +467,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.Label lblIdClinica;
+        private System.Windows.Forms.Label lblIdDonante;
+        private System.Windows.Forms.Label lblPaciente;
+        private System.Windows.Forms.TextBox txtHora;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
