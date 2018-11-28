@@ -120,5 +120,44 @@ namespace blooddonation
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnEnviarEmail_Click(object sender, EventArgs e)
+        {
+            System.Net.Mail.MailMessage mmsg = new System.Net.Mail.MailMessage();
+            mmsg.To.Add(txtPara.Text);
+            mmsg.Subject = txtAsunto.Text;
+            mmsg.SubjectEncoding = System.Text.Encoding.UTF8;
+            mmsg.Bcc.Add(txtccc.Text);
+            mmsg.Body = txtDescripcion.Text;
+            mmsg.BodyEncoding = System.Text.Encoding.UTF8;
+            mmsg.IsBodyHtml = false;
+            mmsg.From = new System.Net.Mail.MailAddress("alblood2018@outlook.com");
+
+            System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+            cliente.Credentials = new System.Net.NetworkCredential("alblood2018@outlook.com", "hola123..");
+            cliente.Port = 587;
+            cliente.EnableSsl = true;
+            cliente.Host = "smtp-mail.outlook.com";
+
+            try
+            {
+                cliente.Send(mmsg);
+                MessageBox.Show("Se envio correctamente","¡EXITO!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                LimpiarCamposCorreo();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Error al enviar","¡ADVERTENCIA!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void LimpiarCamposCorreo()
+        {
+            txtPara.Clear();
+            txtccc.Clear();
+            txtAsunto.Clear();
+            txtDescripcion.Clear();
+            txtDescripcion.Focus();
+        }
     }
 }

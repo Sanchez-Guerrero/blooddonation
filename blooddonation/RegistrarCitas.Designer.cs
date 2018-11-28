@@ -32,16 +32,18 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
+            this.txtHora = new System.Windows.Forms.TextBox();
             this.lblIdClinica = new System.Windows.Forms.Label();
             this.lblIdDonante = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.btnEnviarEmail = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.txtAsunto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.txtPara = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,8 +58,8 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txtccc = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorPacientes.SuspendLayout();
             this.SuspendLayout();
@@ -87,15 +89,17 @@
             // 
             this.pnContenedorPacientes.AutoScroll = true;
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorPacientes.Controls.Add(this.txtccc);
+            this.pnContenedorPacientes.Controls.Add(this.label9);
             this.pnContenedorPacientes.Controls.Add(this.txtHora);
             this.pnContenedorPacientes.Controls.Add(this.lblIdClinica);
             this.pnContenedorPacientes.Controls.Add(this.lblIdDonante);
             this.pnContenedorPacientes.Controls.Add(this.lblPaciente);
             this.pnContenedorPacientes.Controls.Add(this.btnEnviarEmail);
-            this.pnContenedorPacientes.Controls.Add(this.richTextBox1);
-            this.pnContenedorPacientes.Controls.Add(this.textBox1);
+            this.pnContenedorPacientes.Controls.Add(this.txtDescripcion);
+            this.pnContenedorPacientes.Controls.Add(this.txtAsunto);
             this.pnContenedorPacientes.Controls.Add(this.label8);
-            this.pnContenedorPacientes.Controls.Add(this.txtNombres);
+            this.pnContenedorPacientes.Controls.Add(this.txtPara);
             this.pnContenedorPacientes.Controls.Add(this.label7);
             this.pnContenedorPacientes.Controls.Add(this.label6);
             this.pnContenedorPacientes.Controls.Add(this.comboBox2);
@@ -116,6 +120,14 @@
             this.pnContenedorPacientes.Name = "pnContenedorPacientes";
             this.pnContenedorPacientes.Size = new System.Drawing.Size(726, 709);
             this.pnContenedorPacientes.TabIndex = 2;
+            // 
+            // txtHora
+            // 
+            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHora.Location = new System.Drawing.Point(391, 114);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(122, 26);
+            this.txtHora.TabIndex = 44;
             // 
             // lblIdClinica
             // 
@@ -165,24 +177,25 @@
             this.btnEnviarEmail.TabIndex = 40;
             this.btnEnviarEmail.Text = "Enviar";
             this.btnEnviarEmail.UseVisualStyleBackColor = false;
+            this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
             // 
-            // richTextBox1
+            // txtDescripcion
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(81, 351);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(598, 134);
-            this.richTextBox1.TabIndex = 39;
-            this.richTextBox1.Text = "";
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Location = new System.Drawing.Point(81, 351);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(598, 134);
+            this.txtDescripcion.TabIndex = 39;
+            this.txtDescripcion.Text = "";
             // 
-            // textBox1
+            // txtAsunto
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(81, 308);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(598, 23);
-            this.textBox1.TabIndex = 37;
+            this.txtAsunto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAsunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAsunto.Location = new System.Drawing.Point(81, 308);
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.Size = new System.Drawing.Size(598, 23);
+            this.txtAsunto.TabIndex = 37;
             // 
             // label8
             // 
@@ -196,14 +209,14 @@
             this.label8.TabIndex = 38;
             this.label8.Text = "Asunto:";
             // 
-            // txtNombres
+            // txtPara
             // 
-            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(81, 267);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(598, 23);
-            this.txtNombres.TabIndex = 3;
+            this.txtPara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPara.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPara.Location = new System.Drawing.Point(81, 267);
+            this.txtPara.Name = "txtPara";
+            this.txtPara.Size = new System.Drawing.Size(264, 23);
+            this.txtPara.TabIndex = 3;
             // 
             // label7
             // 
@@ -228,6 +241,20 @@
             this.label6.Size = new System.Drawing.Size(168, 24);
             this.label6.TabIndex = 35;
             this.label6.Text = "Correo Electrónico";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.Black;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(387, 178);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox2.Size = new System.Drawing.Size(292, 32);
+            this.comboBox2.TabIndex = 34;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -401,27 +428,26 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(682, 210);
             // 
-            // comboBox2
+            // txtccc
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(387, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox2.Size = new System.Drawing.Size(292, 32);
-            this.comboBox2.TabIndex = 34;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.txtccc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtccc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtccc.Location = new System.Drawing.Point(413, 267);
+            this.txtccc.Name = "txtccc";
+            this.txtccc.Size = new System.Drawing.Size(266, 23);
+            this.txtccc.TabIndex = 45;
             // 
-            // txtHora
+            // label9
             // 
-            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHora.Location = new System.Drawing.Point(391, 114);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(122, 26);
-            this.txtHora.TabIndex = 44;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label9.Location = new System.Drawing.Point(362, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 24);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "BCC:";
             // 
             // RegistrarCitas
             // 
@@ -463,14 +489,16 @@
         private System.Windows.Forms.Label label6;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private System.Windows.Forms.Button btnEnviarEmail;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtAsunto;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.TextBox txtPara;
         private System.Windows.Forms.Label lblIdClinica;
         private System.Windows.Forms.Label lblIdDonante;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtccc;
+        private System.Windows.Forms.Label label9;
     }
 }
