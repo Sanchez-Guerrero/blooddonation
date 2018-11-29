@@ -33,12 +33,6 @@
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
             this.dGVConsulta = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnModificarUsuario = new System.Windows.Forms.Button();
@@ -88,51 +82,17 @@
             // 
             // dGVConsulta
             // 
-            this.dGVConsulta.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dGVConsulta.AllowUserToAddRows = false;
+            this.dGVConsulta.AllowUserToDeleteRows = false;
+            this.dGVConsulta.BackgroundColor = System.Drawing.Color.White;
             this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
             this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
             this.dGVConsulta.Location = new System.Drawing.Point(35, 186);
             this.dGVConsulta.Name = "dGVConsulta";
+            this.dGVConsulta.ReadOnly = true;
             this.dGVConsulta.Size = new System.Drawing.Size(662, 208);
             this.dGVConsulta.TabIndex = 35;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "N\'Paciente";
-            this.ID.Name = "ID";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre\'s";
-            this.nombre.Name = "nombre";
-            // 
-            // APaterno
-            // 
-            this.APaterno.HeaderText = "Apellido Paterno";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Apellido Materno";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Estado Civil";
-            this.ECivil.Name = "ECivil";
             // 
             // btnBuscar
             // 
@@ -151,6 +111,7 @@
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -249,11 +210,5 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dGVConsulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
     }
 }

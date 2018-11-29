@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model.Data;
+using Repo.Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace blooddonation
         public FrmPacientes()
         {
             InitializeComponent();
+            LlenardGriedViewPacientes();
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -50,6 +53,20 @@ namespace blooddonation
         private void btnModificarUsuario_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new UpdatePaciente());
+        }
+
+        private void LlenardGriedViewPacientes()
+        {
+            RepoPacientes repo = new RepoPacientes();
+            dGVConsulta.DataSource = repo.ConsultarPacientes();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Tbl_Persona per = new Tbl_Persona();
+            per.curp = txtBuscar.Text;
+            RepoPacientes repo = new RepoPacientes();
+            dGVConsulta.DataSource = repo.ConsultarPorCurp(per);
         }
     }
 }

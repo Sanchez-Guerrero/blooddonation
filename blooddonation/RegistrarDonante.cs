@@ -240,6 +240,7 @@ namespace blooddonation
             this.cBEstCivil.DisplayMember = "Estado_Civil";
             this.cBEstCivil.DataSource = listaEstadoCivil;
         }
+
         
         private void cBEstadoDireccion_SelectedIndexChanged(object sender, EventArgs e)
         {

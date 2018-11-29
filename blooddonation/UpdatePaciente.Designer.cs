@@ -32,6 +32,13 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
+            this.lblIdCP = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblIDireccion = new System.Windows.Forms.Label();
+            this.lblIdPersona = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cBCP = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cBColonia = new System.Windows.Forms.ComboBox();
@@ -67,17 +74,9 @@
             this.lbEtiquetaDPersonales = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rshDatosPersonales = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ECivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorRegistarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,6 +107,11 @@
             // 
             this.pnContenedorRegistarPaciente.AutoScroll = true;
             this.pnContenedorRegistarPaciente.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblIdCP);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblTelefono);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblEdad);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblIDireccion);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblIdPersona);
             this.pnContenedorRegistarPaciente.Controls.Add(this.btnModificar);
             this.pnContenedorRegistarPaciente.Controls.Add(this.dataGridView1);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBCP);
@@ -151,6 +155,90 @@
             this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(710, 709);
             this.pnContenedorRegistarPaciente.TabIndex = 5;
             // 
+            // lblIdCP
+            // 
+            this.lblIdCP.AutoSize = true;
+            this.lblIdCP.Location = new System.Drawing.Point(357, 635);
+            this.lblIdCP.Name = "lblIdCP";
+            this.lblIdCP.Size = new System.Drawing.Size(29, 13);
+            this.lblIdCP.TabIndex = 50;
+            this.lblIdCP.Text = "idCP";
+            this.lblIdCP.Visible = false;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(286, 635);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(45, 13);
+            this.lblTelefono.TabIndex = 49;
+            this.lblTelefono.Text = "telefono";
+            this.lblTelefono.Visible = false;
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(234, 635);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(32, 13);
+            this.lblEdad.TabIndex = 48;
+            this.lblEdad.Text = "Edad";
+            this.lblEdad.Visible = false;
+            // 
+            // lblIDireccion
+            // 
+            this.lblIDireccion.AutoSize = true;
+            this.lblIDireccion.Location = new System.Drawing.Point(148, 635);
+            this.lblIDireccion.Name = "lblIDireccion";
+            this.lblIDireccion.Size = new System.Drawing.Size(61, 13);
+            this.lblIDireccion.TabIndex = 47;
+            this.lblIDireccion.Text = "IdDireccion";
+            this.lblIDireccion.Visible = false;
+            // 
+            // lblIdPersona
+            // 
+            this.lblIdPersona.AutoSize = true;
+            this.lblIdPersona.Location = new System.Drawing.Point(45, 635);
+            this.lblIdPersona.Name = "lblIdPersona";
+            this.lblIdPersona.Size = new System.Drawing.Size(54, 13);
+            this.lblIdPersona.TabIndex = 46;
+            this.lblIdPersona.Text = "idPersona";
+            this.lblIdPersona.Visible = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(497, 566);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(184, 50);
+            this.btnModificar.TabIndex = 32;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Silver;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 433);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(650, 120);
+            this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
             // cBCP
             // 
             this.cBCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -188,6 +276,7 @@
             this.cBColonia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBColonia.Size = new System.Drawing.Size(190, 32);
             this.cBColonia.TabIndex = 43;
+            this.cBColonia.SelectedIndexChanged += new System.EventHandler(this.cBColonia_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -213,6 +302,7 @@
             this.cBMunicipio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBMunicipio.Size = new System.Drawing.Size(190, 32);
             this.cBMunicipio.TabIndex = 41;
+            this.cBMunicipio.SelectedIndexChanged += new System.EventHandler(this.cBMunicipio_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -238,6 +328,7 @@
             this.cBEstadoDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBEstadoDireccion.Size = new System.Drawing.Size(190, 32);
             this.cBEstadoDireccion.TabIndex = 39;
+            this.cBEstadoDireccion.SelectedIndexChanged += new System.EventHandler(this.cBEstadoDireccion_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -271,6 +362,7 @@
             this.txtNumExterior.Name = "txtNumExterior";
             this.txtNumExterior.Size = new System.Drawing.Size(119, 31);
             this.txtNumExterior.TabIndex = 27;
+            this.txtNumExterior.TextChanged += new System.EventHandler(this.txtNumExterior_TextChanged);
             // 
             // txtNumInterior
             // 
@@ -280,6 +372,7 @@
             this.txtNumInterior.Name = "txtNumInterior";
             this.txtNumInterior.Size = new System.Drawing.Size(115, 31);
             this.txtNumInterior.TabIndex = 29;
+            this.txtNumInterior.TextChanged += new System.EventHandler(this.txtNumInterior_TextChanged);
             // 
             // label8
             // 
@@ -313,6 +406,7 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(190, 31);
             this.txtCalle.TabIndex = 17;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // label6
             // 
@@ -359,6 +453,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(190, 31);
             this.txtTelefono.TabIndex = 35;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label4
             // 
@@ -451,6 +546,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(190, 31);
             this.txtEdad.TabIndex = 9;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // lblEtiquetaEdad
             // 
@@ -484,6 +580,8 @@
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(190, 31);
             this.txtApellidoMaterno.TabIndex = 6;
+            this.txtApellidoMaterno.TextChanged += new System.EventHandler(this.txtApellidoMaterno_TextChanged);
+            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             // 
             // lblEtiqutaAPaterno
             // 
@@ -505,6 +603,8 @@
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(190, 31);
             this.txtApellidoPaterno.TabIndex = 4;
+            this.txtApellidoPaterno.TextChanged += new System.EventHandler(this.txtApellidoPaterno_TextChanged);
+            this.txtApellidoPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoPaterno_KeyPress);
             // 
             // lbtiquetaNombre
             // 
@@ -538,6 +638,8 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(190, 31);
             this.txtNombres.TabIndex = 0;
+            this.txtNombres.TextChanged += new System.EventHandler(this.txtNombres_TextChanged);
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             // 
             // shapeContainer1
             // 
@@ -551,6 +653,14 @@
             this.shapeContainer1.Size = new System.Drawing.Size(710, 709);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
+            // 
+            // rectangleShape5
+            // 
+            this.rectangleShape5.BorderColor = System.Drawing.Color.Silver;
+            this.rectangleShape5.Enabled = false;
+            this.rectangleShape5.Location = new System.Drawing.Point(12, 415);
+            this.rectangleShape5.Name = "rectangleShape5";
+            this.rectangleShape5.Size = new System.Drawing.Size(680, 212);
             // 
             // rectangleShape1
             // 
@@ -568,80 +678,6 @@
             this.rshDatosPersonales.Location = new System.Drawing.Point(11, 28);
             this.rshDatosPersonales.Name = "rshDatosPersonales";
             this.rshDatosPersonales.Size = new System.Drawing.Size(681, 207);
-            // 
-            // rectangleShape5
-            // 
-            this.rectangleShape5.BorderColor = System.Drawing.Color.Silver;
-            this.rectangleShape5.Enabled = false;
-            this.rectangleShape5.Location = new System.Drawing.Point(12, 415);
-            this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(680, 212);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nombre,
-            this.APaterno,
-            this.AMaterno,
-            this.Edad,
-            this.ECivil});
-            this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 433);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 120);
-            this.dataGridView1.TabIndex = 36;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "N\'Paciente";
-            this.ID.Name = "ID";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre\'s";
-            this.nombre.Name = "nombre";
-            // 
-            // APaterno
-            // 
-            this.APaterno.HeaderText = "Apellido Paterno";
-            this.APaterno.Name = "APaterno";
-            // 
-            // AMaterno
-            // 
-            this.AMaterno.HeaderText = "Apellido Materno";
-            this.AMaterno.Name = "AMaterno";
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            // 
-            // ECivil
-            // 
-            this.ECivil.HeaderText = "Estado Civil";
-            this.ECivil.Name = "ECivil";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(497, 566);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(184, 50);
-            this.btnModificar.TabIndex = 32;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // UpdatePaciente
             // 
@@ -706,12 +742,11 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rshDatosPersonales;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMaterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ECivil;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label lblIDireccion;
+        private System.Windows.Forms.Label lblIdPersona;
+        private System.Windows.Forms.Label lblIdCP;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblEdad;
     }
 }

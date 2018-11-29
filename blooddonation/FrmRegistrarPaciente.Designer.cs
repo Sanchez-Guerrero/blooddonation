@@ -32,6 +32,9 @@
             this.pnEncabezadoRegistrar = new System.Windows.Forms.Panel();
             this.etRegistrar = new System.Windows.Forms.Label();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
+            this.lblCP = new System.Windows.Forms.Label();
+            this.lblTTelefono = new System.Windows.Forms.Label();
+            this.lblEdad = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cBCP = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -99,6 +102,9 @@
             // 
             this.pnContenedorRegistarPaciente.AutoScroll = true;
             this.pnContenedorRegistarPaciente.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblCP);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblTTelefono);
+            this.pnContenedorRegistarPaciente.Controls.Add(this.lblEdad);
             this.pnContenedorRegistarPaciente.Controls.Add(this.btnGuardar);
             this.pnContenedorRegistarPaciente.Controls.Add(this.cBCP);
             this.pnContenedorRegistarPaciente.Controls.Add(this.label14);
@@ -140,6 +146,36 @@
             this.pnContenedorRegistarPaciente.Name = "pnContenedorRegistarPaciente";
             this.pnContenedorRegistarPaciente.Size = new System.Drawing.Size(710, 555);
             this.pnContenedorRegistarPaciente.TabIndex = 4;
+            // 
+            // lblCP
+            // 
+            this.lblCP.AutoSize = true;
+            this.lblCP.Location = new System.Drawing.Point(231, 419);
+            this.lblCP.Name = "lblCP";
+            this.lblCP.Size = new System.Drawing.Size(21, 13);
+            this.lblCP.TabIndex = 49;
+            this.lblCP.Text = "CP";
+            this.lblCP.Visible = false;
+            // 
+            // lblTTelefono
+            // 
+            this.lblTTelefono.AutoSize = true;
+            this.lblTTelefono.Location = new System.Drawing.Point(151, 418);
+            this.lblTTelefono.Name = "lblTTelefono";
+            this.lblTTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTTelefono.TabIndex = 48;
+            this.lblTTelefono.Text = "Telefono";
+            this.lblTTelefono.Visible = false;
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(46, 416);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(32, 13);
+            this.lblEdad.TabIndex = 47;
+            this.lblEdad.Text = "Edad";
+            this.lblEdad.Visible = false;
             // 
             // btnGuardar
             // 
@@ -197,6 +233,7 @@
             this.cBColonia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBColonia.Size = new System.Drawing.Size(190, 32);
             this.cBColonia.TabIndex = 43;
+            this.cBColonia.SelectedIndexChanged += new System.EventHandler(this.cBColonia_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -222,6 +259,7 @@
             this.cBMunicipio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBMunicipio.Size = new System.Drawing.Size(190, 32);
             this.cBMunicipio.TabIndex = 41;
+            this.cBMunicipio.SelectedIndexChanged += new System.EventHandler(this.cBMunicipio_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -247,6 +285,7 @@
             this.cBEstadoDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBEstadoDireccion.Size = new System.Drawing.Size(190, 32);
             this.cBEstadoDireccion.TabIndex = 39;
+            this.cBEstadoDireccion.SelectedIndexChanged += new System.EventHandler(this.cBEstadoDireccion_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -280,6 +319,7 @@
             this.txtNumExterior.Name = "txtNumExterior";
             this.txtNumExterior.Size = new System.Drawing.Size(119, 31);
             this.txtNumExterior.TabIndex = 27;
+            this.txtNumExterior.TextChanged += new System.EventHandler(this.txtNumExterior_TextChanged);
             // 
             // txtNumInterior
             // 
@@ -289,6 +329,7 @@
             this.txtNumInterior.Name = "txtNumInterior";
             this.txtNumInterior.Size = new System.Drawing.Size(115, 31);
             this.txtNumInterior.TabIndex = 29;
+            this.txtNumInterior.TextChanged += new System.EventHandler(this.txtNumInterior_TextChanged);
             // 
             // label8
             // 
@@ -322,6 +363,7 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(190, 31);
             this.txtCalle.TabIndex = 17;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // label6
             // 
@@ -368,6 +410,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(190, 31);
             this.txtTelefono.TabIndex = 35;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label4
             // 
@@ -461,6 +504,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(190, 31);
             this.txtEdad.TabIndex = 9;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // lblEtiquetaEdad
             // 
@@ -494,6 +538,8 @@
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(190, 31);
             this.txtApellidoMaterno.TabIndex = 6;
+            this.txtApellidoMaterno.TextChanged += new System.EventHandler(this.txtApellidoMaterno_TextChanged);
+            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             // 
             // lblEtiqutaAPaterno
             // 
@@ -515,6 +561,8 @@
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(190, 31);
             this.txtApellidoPaterno.TabIndex = 4;
+            this.txtApellidoPaterno.TextChanged += new System.EventHandler(this.txtApellidoPaterno_TextChanged);
+            this.txtApellidoPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoPaterno_KeyPress);
             // 
             // lbtiquetaNombre
             // 
@@ -548,6 +596,8 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(190, 31);
             this.txtNombres.TabIndex = 0;
+            this.txtNombres.TextChanged += new System.EventHandler(this.txtNombres_TextChanged);
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             // 
             // shapeContainer1
             // 
@@ -639,5 +689,8 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rshDatosPersonales;
+        private System.Windows.Forms.Label lblCP;
+        private System.Windows.Forms.Label lblTTelefono;
+        private System.Windows.Forms.Label lblEdad;
     }
 }

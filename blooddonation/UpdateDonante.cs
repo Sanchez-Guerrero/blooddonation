@@ -267,7 +267,7 @@ namespace blooddonation
             }
             else
             {
-                if (MessageBox.Show("Desea modificar al donante: ", "¡ADVERTENCIA!"
+                if (MessageBox.Show("Desea modificar al donante", "¡ADVERTENCIA!"
                 , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     repo.ModificarDonante(per);

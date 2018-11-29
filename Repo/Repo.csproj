@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\AllBloodContext.cs" />
+    <Compile Include="Encriptacion\EncriptacionPassword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\RepoAdministrador.cs" />
     <Compile Include="Repositorio\RepoCita.cs" />
     <Compile Include="Repositorio\RepoClinica.cs" />
     <Compile Include="Repositorio\RepoCurp.cs" />
@@ -62,6 +64,8 @@
     <Compile Include="Repositorio\RepoEstatus.cs" />
     <Compile Include="Repositorio\RepoGenero.cs" />
     <Compile Include="Repositorio\RepoLogin.cs" />
+    <Compile Include="Repositorio\RepoPacientes.cs" />
+    <Compile Include="Repositorio\RepoPerfil.cs" />
     <Compile Include="Repositorio\RepoSolicitante.cs" />
     <Compile Include="Repositorio\RepoTipoSangre.cs" />
     <Compile Include="Validaciones\ValidarLetras.cs" />
