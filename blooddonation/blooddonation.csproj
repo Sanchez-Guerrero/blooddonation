@@ -272,6 +272,7 @@
     <Content Include="Content\Registrar.png" />
     <Content Include="Content\salir.png" />
     <Content Include="Content\Save.png" />
+    <Content Include="Content\SesionAdmin.png" />
     <Content Include="Content\usuario.png" />
   </ItemGroup>
   <ItemGroup>

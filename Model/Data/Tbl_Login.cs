@@ -7,7 +7,7 @@ namespace Model.Data
         [Key]
         public int Id { get; set; }
         public string Usuario { get; set; }
-        public string Password { get; set; }
+        public string Contrasenia { get; set; }
         public int IdPerfil { get; set; }
     }
 }

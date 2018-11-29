@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model.Data;
 using Repo.Repositorio;
+using Repo.Encriptacion;
 
 namespace blooddonation
 {
@@ -64,23 +65,33 @@ namespace blooddonation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Tbl_Login login = new Tbl_Login();
-            RepoLogin repositorio = new RepoLogin();
-            var user = login.Usuario = txtUsuario.Text;
-            var pass = login.Password = txtPassword.Text;
-            repositorio.logear(user);
-            var IdPerfil = repositorio.ObtenerPerfil(user);
-
-            if (IdPerfil == 1)
+            Tbl_Login lo = new Tbl_Login();
+            RepoLogin repo = new RepoLogin();
+            EncriptacionPassword ecp = new EncriptacionPassword();
+            lo.Usuario = txtUsuario.Text;
+            lo.Contrasenia = txtPassword.Text;
+            if(repo.LogearUsuario(lo.Usuario))
             {
-                MessageBox.Show("BIenvenido Administrador");
-                this.Hide();
-                ControlPrincipal ctrl = new ControlPrincipal();
-                ctrl.Show();
-
-
+                var password = ecp.DesencriptarPassword(repo.ObtenerEncriptacion(lo.Usuario));
+                if (password == lo.Contrasenia)
+                {
+                    var Id_Perfil = repo.ObtenerPerfil(lo.Usuario);
+                    if (Id_Perfil > 0)
+                    {
+                        if(Id_Perfil == 1)
+                        {
+                            MessageBox.Show("Bienvenido administrador: " + lo.Usuario, "¡BIENVENIDO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            ControlPrincipal cp = new ControlPrincipal(lo.Usuario);
+                            cp.Show();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña incorrectos!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
         }
     }
 }

@@ -13,9 +13,10 @@ namespace blooddonation
 {
     public partial class ControlPrincipal : Form
     {
-        public ControlPrincipal()
+        public ControlPrincipal(string Usuario)
         {
             InitializeComponent();
+            lblSession.Text = Usuario;
         }
 
         private void horafecha_Tick(object sender, EventArgs e)

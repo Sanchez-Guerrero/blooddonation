@@ -321,5 +321,17 @@ namespace blooddonation
             txtCalle.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtCalle.Text);
             txtCalle.SelectionStart = txtCalle.Text.Length;
         }
+
+        private void txtNumExterior_TextChanged(object sender, EventArgs e)
+        {
+            txtNumExterior.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNumExterior.Text);
+            txtNumExterior.SelectionStart = txtNumExterior.Text.Length;
+        }
+
+        private void txtNumInterior_TextChanged(object sender, EventArgs e)
+        {
+            txtNumInterior.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNumInterior.Text);
+            txtNumInterior.SelectionStart = txtNumInterior.Text.Length;
+        }
     }
 }

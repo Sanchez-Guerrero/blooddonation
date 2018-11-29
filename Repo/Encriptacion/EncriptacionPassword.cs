@@ -30,7 +30,7 @@ namespace Repo.Encriptacion
             return Convert.ToBase64String(encripted);
         }
 
-        public string Desencripta(string Contrasenia)
+        public string DesencriptarPassword(string Contrasenia)
         {
             byte[] inputBytes = Convert.FromBase64String(Contrasenia);
             byte[] resultBytes = new byte[inputBytes.Length];

@@ -360,6 +360,7 @@
             this.txtNumInterior.Name = "txtNumInterior";
             this.txtNumInterior.Size = new System.Drawing.Size(115, 31);
             this.txtNumInterior.TabIndex = 29;
+            this.txtNumInterior.TextChanged += new System.EventHandler(this.txtNumInterior_TextChanged);
             // 
             // txtNumExterior
             // 
@@ -369,6 +370,7 @@
             this.txtNumExterior.Name = "txtNumExterior";
             this.txtNumExterior.Size = new System.Drawing.Size(119, 31);
             this.txtNumExterior.TabIndex = 27;
+            this.txtNumExterior.TextChanged += new System.EventHandler(this.txtNumExterior_TextChanged);
             // 
             // label9
             // 

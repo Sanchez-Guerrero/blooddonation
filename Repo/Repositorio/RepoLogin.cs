@@ -14,7 +14,7 @@ namespace Repo.Repositorio
         //Aqui se realiza el stored procedure para el logueo
 
  
-      public bool logear(string Usuario)
+      public bool LogearUsuario(string Usuario)
         {
             try
             {
@@ -48,23 +48,23 @@ namespace Repo.Repositorio
             }
         }
 
-        public bool ObtenerPassword(string Password)
+        public string ObtenerEncriptacion(string Usuario)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    bool IdPerfil = db.Database.SqlQuery<bool>("st_ObtenerPassword @Password",
-                        new SqlParameter("@Password", Password)).SingleOrDefault();
-                    return IdPerfil;
+                    var obPass = db.Database.SqlQuery<string>("st_ObtenerEncriptacion @Usuario",
+                        new SqlParameter("@Usuario", Usuario)).FirstOrDefault();
+                    return obPass;
                 }
             }
             catch (Exception ex)
             {
-                return false;
+                return null;
             }
-        } 
-       
+        }
+
     }
 }
 

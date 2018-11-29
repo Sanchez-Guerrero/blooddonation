@@ -277,7 +277,7 @@ namespace blooddonation
                 }
                 else
                 {
-                    MessageBox.Show("No se modifico", "¡Advertencia!"
+                    MessageBox.Show("No se modifico", "¡ADVERTENCIA!"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -330,6 +330,18 @@ namespace blooddonation
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             vn.SoloNumeros(e);
+        }
+
+        private void txtNumExterior_TextChanged(object sender, EventArgs e)
+        {
+            txtNumExterior.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNumExterior.Text);
+            txtNumExterior.SelectionStart = txtNumExterior.Text.Length;
+        }
+
+        private void txtNumInterior_TextChanged(object sender, EventArgs e)
+        {
+            txtNumInterior.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNumInterior.Text);
+            txtNumInterior.SelectionStart = txtNumInterior.Text.Length;
         }
     }
 }

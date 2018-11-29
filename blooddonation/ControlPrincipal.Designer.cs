@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSession = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdministrador = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -48,16 +49,20 @@
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogomanossangre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.lblSession);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnAdministrador);
             this.panel1.Controls.Add(this.btnSalir);
@@ -73,6 +78,18 @@
             this.panel1.Size = new System.Drawing.Size(187, 550);
             this.panel1.TabIndex = 0;
             // 
+            // lblSession
+            // 
+            this.lblSession.AutoSize = true;
+            this.lblSession.BackColor = System.Drawing.Color.Transparent;
+            this.lblSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSession.ForeColor = System.Drawing.Color.White;
+            this.lblSession.Location = new System.Drawing.Point(55, 469);
+            this.lblSession.Name = "lblSession";
+            this.lblSession.Size = new System.Drawing.Size(77, 24);
+            this.lblSession.TabIndex = 10;
+            this.lblSession.Text = "Session";
+            // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -83,7 +100,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(2, 228);
+            this.button1.Location = new System.Drawing.Point(2, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 50);
             this.button1.TabIndex = 9;
@@ -101,7 +118,7 @@
             this.btnAdministrador.ForeColor = System.Drawing.Color.White;
             this.btnAdministrador.Image = ((System.Drawing.Image)(resources.GetObject("btnAdministrador.Image")));
             this.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministrador.Location = new System.Drawing.Point(3, 389);
+            this.btnAdministrador.Location = new System.Drawing.Point(3, 345);
             this.btnAdministrador.Name = "btnAdministrador";
             this.btnAdministrador.Size = new System.Drawing.Size(181, 50);
             this.btnAdministrador.TabIndex = 8;
@@ -138,7 +155,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 333);
+            this.button2.Location = new System.Drawing.Point(3, 289);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 50);
             this.button2.TabIndex = 6;
@@ -157,7 +174,7 @@
             this.btnInicio.ForeColor = System.Drawing.Color.White;
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(3, 116);
+            this.btnInicio.Location = new System.Drawing.Point(3, 72);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(184, 50);
             this.btnInicio.TabIndex = 5;
@@ -175,7 +192,7 @@
             this.btnCitas.ForeColor = System.Drawing.Color.White;
             this.btnCitas.Image = ((System.Drawing.Image)(resources.GetObject("btnCitas.Image")));
             this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitas.Location = new System.Drawing.Point(3, 277);
+            this.btnCitas.Location = new System.Drawing.Point(3, 233);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(181, 50);
             this.btnCitas.TabIndex = 4;
@@ -193,7 +210,7 @@
             this.btnPersona.ForeColor = System.Drawing.Color.White;
             this.btnPersona.Image = ((System.Drawing.Image)(resources.GetObject("btnPersona.Image")));
             this.btnPersona.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersona.Location = new System.Drawing.Point(2, 172);
+            this.btnPersona.Location = new System.Drawing.Point(2, 128);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(185, 50);
             this.btnPersona.TabIndex = 3;
@@ -308,6 +325,16 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(59, 401);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // ControlPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,12 +349,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AL-BLOOD";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogomanossangre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,6 +381,8 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAdministrador;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblSession;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
