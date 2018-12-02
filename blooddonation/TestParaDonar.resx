@@ -137,19 +137,6 @@
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pBCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        tQAAALUBOdDOnwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAF3SURBVEhLpZZN
-        bsMgEIW5S/8bYzdHSINTKZsetctKvUY2kTBpF22T+BLuDM1YgGf8kyw+yzyY94QFBuV0uXa52bqi/LDF
-        YtY0jbqEXb642+Xm3RXGWm1eFZhvgOZE7bTRXOEYvjLzAB771g9CFDzeWuGCkJP5IfTCmSibPV9B4zvs
-        ACaF2PnyEWoic2CPn8sPqGYv1yCcFSKYH3BG2N8OdE/lDXRMCsFFAWOOSU1rjkQFGFLl5icpYEMkc5xR
-        OC4qQlyxvB0KqfJV5rV4zDE1R6IGgSFg+JsY+BDRXNhDHYHAFcCGdM3rvg3KioQPCTdOlxpnxNUSrBjy
-        qVf3YMSFDJojrBjSF8CtrhRWJHrMicEQVkQEc2ynWm8IK0rmqAt9YkhH6DOnMeISZkKixhhzYmxI+zLF
-        nBjzW/GPc8yJoRBpt44yJ6RfPf5CIAAO6LhjkjnBhsBFAs9kG4hnmRPMybhVeLXAEJwJfi6ucAr+jP+/
-        SGycLtd/NWmrtsUW/UwAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnGuadarTest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

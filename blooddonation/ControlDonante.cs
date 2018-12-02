@@ -18,6 +18,7 @@ namespace blooddonation
         public ControlDonante()
         {
             InitializeComponent();
+            dGVConsultarDonantes.AutoGenerateColumns = false;
             CargardGVDonantes();
         }
         private void AbrirFormInPanel(object Formhijo)
@@ -59,6 +60,23 @@ namespace blooddonation
         private void CargardGVDonantes()
         {
             dGVConsultarDonantes.DataSource = repo.ConsultarDonantes();
+        }
+
+        private void dGVConsultarDonantes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dGVConsultarDonantes.Columns[e.ColumnIndex].Name == "Estatus")
+            {
+                if (Convert.ToString(e.Value) == "Reprobado")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.Red;
+                }
+                if (Convert.ToString(e.Value) == "Aprobado")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.Green;
+                }
+            }
         }
     }
 }

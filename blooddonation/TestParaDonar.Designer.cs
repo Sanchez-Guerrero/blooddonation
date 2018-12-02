@@ -37,7 +37,6 @@
             this.etDescripcionDoce = new System.Windows.Forms.Label();
             this.ContenedorTest = new System.Windows.Forms.Panel();
             this.lblIdCita = new System.Windows.Forms.Label();
-            this.pBCerrar = new System.Windows.Forms.PictureBox();
             this.lblTipoPaciente = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
             this.lblNumInterior = new System.Windows.Forms.Label();
@@ -71,7 +70,6 @@
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pnEncabezadoTest.SuspendLayout();
             this.ContenedorTest.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnEncabezadoTest
@@ -148,7 +146,6 @@
             this.ContenedorTest.AutoScroll = true;
             this.ContenedorTest.BackColor = System.Drawing.Color.Gainsboro;
             this.ContenedorTest.Controls.Add(this.lblIdCita);
-            this.ContenedorTest.Controls.Add(this.pBCerrar);
             this.ContenedorTest.Controls.Add(this.lblTipoPaciente);
             this.ContenedorTest.Controls.Add(this.lblCP);
             this.ContenedorTest.Controls.Add(this.lblNumInterior);
@@ -198,18 +195,6 @@
             this.lblIdCita.TabIndex = 66;
             this.lblIdCita.Text = "label1";
             this.lblIdCita.Visible = false;
-            // 
-            // pBCerrar
-            // 
-            this.pBCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pBCerrar.Image")));
-            this.pBCerrar.Location = new System.Drawing.Point(645, 14);
-            this.pBCerrar.Name = "pBCerrar";
-            this.pBCerrar.Size = new System.Drawing.Size(24, 24);
-            this.pBCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pBCerrar.TabIndex = 65;
-            this.pBCerrar.TabStop = false;
-            this.pBCerrar.Click += new System.EventHandler(this.pBCerrar_Click);
             // 
             // lblTipoPaciente
             // 
@@ -605,7 +590,6 @@
             this.pnEncabezadoTest.PerformLayout();
             this.ContenedorTest.ResumeLayout(false);
             this.ContenedorTest.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -650,7 +634,6 @@
         public System.Windows.Forms.Label lblNumInterior;
         public System.Windows.Forms.Label lblCP;
         public System.Windows.Forms.Label lblTipoPaciente;
-        private System.Windows.Forms.PictureBox pBCerrar;
         public System.Windows.Forms.Label lblIdCita;
     }
 }

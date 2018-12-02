@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateDonante));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorRegistarPaciente = new System.Windows.Forms.Panel();
@@ -77,6 +81,24 @@
             this.rSTabla = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rshDatosPersonales = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorRegistarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVConsultarDonantes)).BeginInit();
@@ -228,17 +250,74 @@
             // 
             this.dGVConsultarDonantes.AllowUserToAddRows = false;
             this.dGVConsultarDonantes.AllowUserToDeleteRows = false;
-            this.dGVConsultarDonantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dGVConsultarDonantes.BackgroundColor = System.Drawing.Color.White;
+            this.dGVConsultarDonantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVConsultarDonantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dGVConsultarDonantes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.dGVConsultarDonantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dGVConsultarDonantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVConsultarDonantes.GridColor = System.Drawing.Color.Silver;
+            this.dGVConsultarDonantes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dGVConsultarDonantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVConsultarDonantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVConsultarDonantes.ColumnHeadersHeight = 30;
+            this.dGVConsultarDonantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dGVConsultarDonantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.nombre,
+            this.Column3,
+            this.aMaterno,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column2});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVConsultarDonantes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVConsultarDonantes.EnableHeadersVisualStyles = false;
+            this.dGVConsultarDonantes.GridColor = System.Drawing.Color.White;
             this.dGVConsultarDonantes.Location = new System.Drawing.Point(34, 426);
             this.dGVConsultarDonantes.Name = "dGVConsultarDonantes";
             this.dGVConsultarDonantes.ReadOnly = true;
+            this.dGVConsultarDonantes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVConsultarDonantes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dGVConsultarDonantes.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dGVConsultarDonantes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dGVConsultarDonantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVConsultarDonantes.Size = new System.Drawing.Size(635, 133);
             this.dGVConsultarDonantes.TabIndex = 48;
             this.dGVConsultarDonantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVConsultarDonantes_CellClick);
+            this.dGVConsultarDonantes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dGVConsultarDonantes_CellFormatting);
             // 
             // txtNombres
             // 
@@ -680,6 +759,149 @@
             this.rshDatosPersonales.Name = "rshDatosPersonales";
             this.rshDatosPersonales.Size = new System.Drawing.Size(681, 207);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id";
+            this.Column1.HeaderText = "Nº Donante";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 79;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre(s)";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 78;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "aPaterno";
+            this.Column3.HeaderText = "Apellido Paterno";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 98;
+            // 
+            // aMaterno
+            // 
+            this.aMaterno.DataPropertyName = "aMaterno";
+            this.aMaterno.HeaderText = "Apellido Materno";
+            this.aMaterno.Name = "aMaterno";
+            this.aMaterno.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "edad";
+            this.Column5.HeaderText = "Edad";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 55;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "curp";
+            this.Column6.HeaderText = "CURP";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 60;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "telefono";
+            this.Column7.HeaderText = "Teléfono";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 72;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Estado_Civil";
+            this.Column8.HeaderText = "Estado Civil";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 78;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Genero";
+            this.Column9.HeaderText = "Genero";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 65;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Tipo_Sangre";
+            this.Column10.HeaderText = "Tipo de Sangre";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 94;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Id_Direccion";
+            this.Column11.HeaderText = "Nº Dirrección";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 85;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "Calle";
+            this.Column12.HeaderText = "Calle";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 53;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "Estado";
+            this.Column13.HeaderText = "Estado";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 63;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Municipio";
+            this.Column14.HeaderText = "Municipio";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 75;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "Colonia";
+            this.Column15.HeaderText = "Colonia";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 65;
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "NumExterior";
+            this.Column16.HeaderText = "Numero Exterior";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 96;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "NumInterior";
+            this.Column17.HeaderText = "Numero Interior";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 94;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "CodigoPostal";
+            this.Column2.HeaderText = "Codigo Postal";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 87;
+            // 
             // UpdateDonante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -749,5 +971,23 @@
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblIdDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aMaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

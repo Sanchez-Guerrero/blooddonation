@@ -26,6 +26,7 @@ namespace blooddonation
             LlenarComboGenero();
             LlenarComboEstadoCivil();
             CargardGVDonantes();
+            dGVConsultarDonantes.AutoGenerateColumns = false;
             btnModificar.Enabled = false;
         }
 
@@ -120,9 +121,26 @@ namespace blooddonation
             this.cBEstCivil.DataSource = listaEstadoCivil;
         }
 
+        private void LimpiarCampos()
+        {
+            txtNombres.Clear();
+            txtApellidoPaterno.Clear();
+            txtApellidoMaterno.Clear();
+            txtEdad.Clear();
+            txtCurp.Clear();
+            txtTelefono.Clear();
+            cBEstCivil.SelectedIndex = 0;
+            cBGenero.SelectedIndex = 0;
+            cBTipSangre.SelectedIndex = 0;
+            txtCalle.Clear();
+            cBEstadoDireccion.SelectedIndex = 0;
+            txtNumExterior.Clear();
+            txtNumInterior.Clear();
+        }
+
         private void CargardGVDonantes()
         {
-            dGVConsultarDonantes.DataSource = repo.ConsultarDonantes();
+            dGVConsultarDonantes.DataSource = repo.ConsultarDonantesParaModificar();
         }
 
         private void cBEstadoDireccion_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,7 +174,7 @@ namespace blooddonation
         {
             if (dGVConsultarDonantes.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in dGVConsultarDonantes.SelectedRows) 
+                foreach (DataGridViewRow row in dGVConsultarDonantes.SelectedRows)
                 {
                     lblId.Text = row.Cells[0].Value.ToString();
                     txtNombres.Text = row.Cells[1].Value.ToString();
@@ -165,10 +183,17 @@ namespace blooddonation
                     txtEdad.Text = row.Cells[4].Value.ToString();
                     txtCurp.Text = row.Cells[5].Value.ToString();
                     txtTelefono.Text = row.Cells[6].Value.ToString();
-                    lblIdDireccion.Text = row.Cells[8].Value.ToString();
-                    txtCalle.Text = row.Cells[9].Value.ToString();
-                    txtNumExterior.Text = row.Cells[10].Value.ToString();
-                    txtNumInterior.Text = row.Cells[11].Value.ToString();
+                    cBEstCivil.Text = row.Cells[7].Value.ToString();
+                    cBGenero.Text = row.Cells[8].Value.ToString();
+                    cBTipSangre.Text = row.Cells[9].Value.ToString();
+                    lblIdDireccion.Text = row.Cells[10].Value.ToString();
+                    txtCalle.Text = row.Cells[11].Value.ToString();
+                    cBEstadoDireccion.Text = row.Cells[12].Value.ToString();
+                    cBMunicipio.Text = row.Cells[13].Value.ToString();
+                    cBColonia.Text = row.Cells[14].Value.ToString();
+                    txtNumExterior.Text = row.Cells[15].Value.ToString();
+                    txtNumInterior.Text = row.Cells[16].Value.ToString();
+                    cBCP.Text = row.Cells[17].Value.ToString();
                     btnModificar.Enabled = true;
                 }
             }
@@ -267,13 +292,14 @@ namespace blooddonation
             }
             else
             {
-                if (MessageBox.Show("Desea modificar al donante", "¡ADVERTENCIA!"
+                if (MessageBox.Show("Desea modificar al donante: "+per.nombre, "¡ADVERTENCIA!"
                 , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     repo.ModificarDonante(per);
-                    dGVConsultarDonantes.DataSource = repo.ConsultarDonantes();
+                    dGVConsultarDonantes.DataSource = repo.ConsultarDonantesParaModificar();
                     MessageBox.Show("Se ha modificado correctamente", "¡EXITOSO!"
                                , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
                 }
                 else
                 {
@@ -342,6 +368,10 @@ namespace blooddonation
         {
             txtNumInterior.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNumInterior.Text);
             txtNumInterior.SelectionStart = txtNumInterior.Text.Length;
+        }
+
+        private void dGVConsultarDonantes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
         }
     }
 }

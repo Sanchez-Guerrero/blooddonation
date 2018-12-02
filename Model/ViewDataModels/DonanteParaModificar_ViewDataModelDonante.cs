@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Model.ViewDataModels
 {
-    public class Pacientes_ViewDataModelDonante
+    public class DonanteParaModificar_ViewDataModelDonante
     {
         public int id { get; set; }
         public string nombre { get; set; }
@@ -26,6 +25,8 @@ namespace Model.ViewDataModels
         public string Colonia { get; set; }
         public string NumExterior { get; set; }
         public string NumInterior { get; set; }
-        public string CodigoPostal { get; set; }  
+        public string CodigoPostal { get; set; }
+        
+        
     }
 }

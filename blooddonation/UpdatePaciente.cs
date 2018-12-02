@@ -20,11 +20,12 @@ namespace blooddonation
         public UpdatePaciente()
         {
             InitializeComponent();
-            LlenarComboEstados();
-            LlenarComboTipoSangre();
-            LlenarComboGenero();
-            LlenarComboEstadoCivil();
             LlenardGriedViewPacientes();
+            LlenarComboEstadoCivil();
+            LlenarComboEstados();
+            LlenarComboGenero();
+            LlenarComboTipoSangre();
+            dataGridView1.AutoGenerateColumns = false;
             btnModificar.Enabled = false;
         }
 
@@ -98,7 +99,7 @@ namespace blooddonation
             Ctl_Genero gen = new Ctl_Genero();
             RepoGenero repo = new RepoGenero();
             List<Ctl_Genero> listaTipoGenero = repo.CargarGenero().ToList();
-            gen.Id_Genero = -1;
+            gen.Id_Genero = 0;
             gen.Genero = "-------Selecciona-------";
             listaTipoGenero.Insert(0, gen);
             this.cBGenero.ValueMember = "Id_Genero";
@@ -110,12 +111,12 @@ namespace blooddonation
         {
             Ctl_EstadoCivil est = new Ctl_EstadoCivil();
             RepoEstadoCivil repo = new RepoEstadoCivil();
-            List<Ctl_EstadoCivil> listaEstadoCivil = repo.CargarEstadoCivil().ToList();
-            est.Id_EstadoCivil = -1;
+            var listaEstadoCivil = repo.CargarEstadoCivil();
+            est.Id_EstadoCivil = 0;
             est.Estado_Civil = "-------Selecciona-------";
             listaEstadoCivil.Insert(0, est);
-            this.cBEstCivil.ValueMember = "Id_EstadoCivil";
             this.cBEstCivil.DisplayMember = "Estado_Civil";
+            this.cBEstCivil.ValueMember = "Id_EstadoCivil";
             this.cBEstCivil.DataSource = listaEstadoCivil;
         }
 
@@ -181,11 +182,18 @@ namespace blooddonation
                     txtApellidoMaterno.Text = row.Cells[3].Value.ToString();
                     txtEdad.Text = row.Cells[4].Value.ToString();
                     txtCurp.Text = row.Cells[5].Value.ToString();
-                    txtTelefono.Text = row.Cells[6].Value.ToString();
+                    txtTelefono.Text = row.Cells[6].Value.ToString();                
+                    cBEstCivil.Text = row.Cells[7].Value.ToString();
+                    cBGenero.Text = row.Cells[8].Value.ToString();
+                    cBTipSangre.Text = row.Cells[9].Value.ToString();
                     lblIDireccion.Text = row.Cells[10].Value.ToString();
                     txtCalle.Text = row.Cells[11].Value.ToString();
+                    cBEstadoDireccion.Text = row.Cells[12].Value.ToString();
+                    cBMunicipio.Text = row.Cells[13].Value.ToString();
+                    cBColonia.Text = row.Cells[14].Value.ToString();
                     txtNumExterior.Text = row.Cells[15].Value.ToString();
                     txtNumInterior.Text = row.Cells[16].Value.ToString();
+                    cBCP.Text = row.Cells[17].Value.ToString();
                     btnModificar.Enabled = true;
                 }
             }

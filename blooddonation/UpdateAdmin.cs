@@ -159,6 +159,8 @@ namespace blooddonation
                     txtNomUsuario.Text = row.Cells[16].Value.ToString();
                     txtPassword.Text = row.Cells[17].Value.ToString();
                     btnModificar.Enabled = true;
+
+
                 }
             }
         }
@@ -177,6 +179,7 @@ namespace blooddonation
             ad.Id_EstadoCivil = cBEstCivil.SelectedIndex;
             ad.Id_Direccion = int.Parse(lblDireccion.Text);
             ad.Calle = txtCalle.Text;
+            //var estado = cBEstadoDireccion_SelectedIndexChanged();
             var estado = cBEstadoDireccion.SelectedIndex;
             var muni = cBMunicipio.SelectedIndex;
             var col = cBColonia.SelectedIndex;

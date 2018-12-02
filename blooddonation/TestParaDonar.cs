@@ -198,6 +198,7 @@ namespace blooddonation
                     repo.RegistrarDonante(per);
                     MessageBox.Show("Se ha registrado correctamente", "¡EXITOSO!"
                         , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                     LimpiarCampos();
                 }
             }
@@ -207,11 +208,6 @@ namespace blooddonation
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LimpiarCampos();
             }
-        }
-
-        private void pBCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void LimpiarCampos()

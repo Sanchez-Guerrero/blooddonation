@@ -17,17 +17,18 @@ namespace blooddonation
         public UpdateCitas()
         {
             InitializeComponent();
-            LlenarComboDireccion();
+            LlenarComboClinicas();
             LlenarComboPaciente();
             LlenarComboDonante();
             LlenardGriedViewCitas();
+            txtHora.Text = DateTime.Now.ToShortTimeString();
         }
 
-        private void LlenarComboClinicas(int Id_Direccion)
+        private void LlenarComboClinicas()
         {
             Ctl_Clinica clinica = new Ctl_Clinica();
             RepoClinica repo = new RepoClinica();
-            List<Ctl_Clinica> listaClinica = repo.ConsultarClinica(Id_Direccion).ToList();
+            List<Ctl_Clinica> listaClinica = repo.ConsultarClinica().ToList();
             clinica.Id_Clinica = -1;
             clinica.NomClinica = "----------Seleccionar----------";
             listaClinica.Insert(0, clinica);
@@ -64,11 +65,11 @@ namespace blooddonation
 
         }
 
-        private void LlenarComboDireccion()
+        private void LlenarComboDireccion(int Id_Clinica)
         {
             Ctl_DireccionClinica dir = new Ctl_DireccionClinica();
             RepoClinica repo = new RepoClinica();
-            List<Ctl_DireccionClinica> listaDireClini = repo.ConsultarDireccionClinica();
+            List<Ctl_DireccionClinica> listaDireClini = repo.ConsultarDireccionClinica(Id_Clinica);
             dir.Id_Direccion = -1;
             dir.DireccionClinica = "----------Seleccionar----------";
             listaDireClini.Insert(0, dir);
@@ -98,11 +99,6 @@ namespace blooddonation
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedValue.ToString() != null)
-            {
-                int Id_Direccion = int.Parse(comboBox2.SelectedValue.ToString());
-                LlenarComboClinicas(Id_Direccion);
-            }
         }
 
         private void btnModificarCita_Click(object sender, EventArgs e)
@@ -128,6 +124,24 @@ namespace blooddonation
             {
                 MessageBox.Show("No se modifico", "¡Advertencia!"
                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dTPFechaCita_Validating(object sender, CancelEventArgs e)
+        {
+            if (dTPFechaCita.Value.Date <= DateTime.Now.Date)
+            {
+                e.Cancel = true;
+                MessageBox.Show("No puede seleccionar una fecha despues de la de hoy", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedValue.ToString() != null)
+            {
+                int Id_Clinica = int.Parse(comboBox1.SelectedValue.ToString());
+                LlenarComboDireccion(Id_Clinica);
             }
         }
     }

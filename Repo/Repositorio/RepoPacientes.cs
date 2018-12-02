@@ -100,14 +100,30 @@ namespace Repo.Repositorio
             }
         }
 
-        public List<Pacientes_ViewDataModelDonante> ConsultarPorCurp(Tbl_Persona per)
+        public List<PacientesTotales_ViewDataModelDonante> ConsultarPorCurp(Tbl_Persona per)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    var pacientes = db.Database.SqlQuery<Pacientes_ViewDataModelDonante>("st_ConsultarPacientesPorCurp @curp",
+                    var pacientes = db.Database.SqlQuery<PacientesTotales_ViewDataModelDonante>("st_ConsultarPacientesPorCurp @curp",
                         new SqlParameter("@curp", per.curp)).ToList();
+                    return pacientes;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<PacientesTotales_ViewDataModelDonante> ConsultarPacientesTotales()
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    var pacientes = db.Database.SqlQuery<PacientesTotales_ViewDataModelDonante>("st_ConsultarPacientesTotales").ToList();
                     return pacientes;
                 }
             }

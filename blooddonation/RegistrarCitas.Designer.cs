@@ -32,7 +32,8 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
-            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txtccc = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblIdClinica = new System.Windows.Forms.Label();
             this.lblIdDonante = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
@@ -58,8 +59,7 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.txtccc = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorPacientes.SuspendLayout();
             this.SuspendLayout();
@@ -89,9 +89,9 @@
             // 
             this.pnContenedorPacientes.AutoScroll = true;
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorPacientes.Controls.Add(this.txtHora);
             this.pnContenedorPacientes.Controls.Add(this.txtccc);
             this.pnContenedorPacientes.Controls.Add(this.label9);
-            this.pnContenedorPacientes.Controls.Add(this.txtHora);
             this.pnContenedorPacientes.Controls.Add(this.lblIdClinica);
             this.pnContenedorPacientes.Controls.Add(this.lblIdDonante);
             this.pnContenedorPacientes.Controls.Add(this.lblPaciente);
@@ -121,13 +121,26 @@
             this.pnContenedorPacientes.Size = new System.Drawing.Size(726, 709);
             this.pnContenedorPacientes.TabIndex = 2;
             // 
-            // txtHora
+            // txtccc
             // 
-            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHora.Location = new System.Drawing.Point(391, 114);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(122, 26);
-            this.txtHora.TabIndex = 44;
+            this.txtccc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtccc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtccc.Location = new System.Drawing.Point(413, 267);
+            this.txtccc.Name = "txtccc";
+            this.txtccc.Size = new System.Drawing.Size(266, 23);
+            this.txtccc.TabIndex = 45;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label9.Location = new System.Drawing.Point(362, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 24);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "BCC:";
             // 
             // lblIdClinica
             // 
@@ -337,6 +350,7 @@
             this.dTPFechaCita.Name = "dTPFechaCita";
             this.dTPFechaCita.Size = new System.Drawing.Size(292, 29);
             this.dTPFechaCita.TabIndex = 19;
+            this.dTPFechaCita.Validating += new System.ComponentModel.CancelEventHandler(this.dTPFechaCita_Validating);
             // 
             // label2
             // 
@@ -428,26 +442,15 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(682, 210);
             // 
-            // txtccc
+            // txtHora
             // 
-            this.txtccc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtccc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtccc.Location = new System.Drawing.Point(413, 267);
-            this.txtccc.Name = "txtccc";
-            this.txtccc.Size = new System.Drawing.Size(266, 23);
-            this.txtccc.TabIndex = 45;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label9.Location = new System.Drawing.Point(362, 266);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 24);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "BCC:";
+            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHora.Location = new System.Drawing.Point(391, 114);
+            this.txtHora.Mask = "00:00";
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(100, 26);
+            this.txtHora.TabIndex = 47;
+            this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
             // RegistrarCitas
             // 
@@ -496,9 +499,9 @@
         private System.Windows.Forms.Label lblIdClinica;
         private System.Windows.Forms.Label lblIdDonante;
         private System.Windows.Forms.Label lblPaciente;
-        private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox txtccc;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox txtHora;
     }
 }

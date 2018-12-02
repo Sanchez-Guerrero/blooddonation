@@ -17,6 +17,7 @@ namespace blooddonation
         public FrmPacientes()
         {
             InitializeComponent();
+            dGVConsulta.AutoGenerateColumns = false;
             LlenardGriedViewPacientes();
         }
 
@@ -58,7 +59,7 @@ namespace blooddonation
         private void LlenardGriedViewPacientes()
         {
             RepoPacientes repo = new RepoPacientes();
-            dGVConsulta.DataSource = repo.ConsultarPacientes();
+            dGVConsulta.DataSource = repo.ConsultarPacientesTotales();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

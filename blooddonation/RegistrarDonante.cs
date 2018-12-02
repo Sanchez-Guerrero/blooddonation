@@ -147,6 +147,7 @@ namespace blooddonation
             else
             {
                 ftest.ShowDialog();
+                LimpiarCampos();
             }
         }
 
@@ -241,7 +242,22 @@ namespace blooddonation
             this.cBEstCivil.DataSource = listaEstadoCivil;
         }
 
-        
+        private void LimpiarCampos()
+        {
+            txtNombres.Clear();
+            txtApellidoPaterno.Clear();
+            txtApellidoMaterno.Clear();
+            txtEdad.Clear();
+            txtCurp.Clear();
+            txtTelefono.Clear();
+            cBTipSangre.SelectedIndex = 0;
+            txtCalle.Clear();
+            txtNumExterior.Clear();
+            txtNumInterior.Clear();
+            cBGenero.SelectedIndex = 0;
+            cBEstCivil.SelectedIndex = 0;
+            cBEstadoDireccion.SelectedIndex = 0;
+        }
         private void cBEstadoDireccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cBEstadoDireccion.SelectedValue.ToString() != null)

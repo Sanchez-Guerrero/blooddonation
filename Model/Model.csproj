@@ -70,7 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewDataModels\Administradores_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\Citas_ViewDataModelDonante.cs" />
+    <Compile Include="ViewDataModels\DonanteParaModificar_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\Donante_ViewDataModelDonante.cs" />
+    <Compile Include="ViewDataModels\PacientesTotales_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\Pacientes_ViewDataModelDonante.cs" />
   </ItemGroup>
   <ItemGroup>

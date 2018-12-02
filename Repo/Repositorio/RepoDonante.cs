@@ -121,5 +121,21 @@ namespace Repo.Repositorio
                 return null;
             }
         }
+
+        public List<DonanteParaModificar_ViewDataModelDonante> ConsultarDonantesParaModificar()
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    var donantes = db.Database.SqlQuery<DonanteParaModificar_ViewDataModelDonante>("st_ConsultarDonantesParaModificar").ToList();
+                    return donantes;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

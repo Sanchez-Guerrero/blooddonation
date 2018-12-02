@@ -14,14 +14,13 @@ namespace Repo.Repositorio
     public class RepoClinica
     {
        
-        public List<Ctl_Clinica> ConsultarClinica(int Id_Direccion)
+        public List<Ctl_Clinica> ConsultarClinica()
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_Clinica> clinica = db.Database.SqlQuery<Ctl_Clinica>("st_ConsultarClinica @Id_Direccion",
-                        new SqlParameter("@Id_Direccion",Id_Direccion)).ToList();
+                    List<Ctl_Clinica> clinica = db.Database.SqlQuery<Ctl_Clinica>("st_ConsultarClinica").ToList();
 
                     return clinica;
                 }
@@ -32,13 +31,14 @@ namespace Repo.Repositorio
             }
         }
 
-        public List<Ctl_DireccionClinica> ConsultarDireccionClinica()
+        public List<Ctl_DireccionClinica> ConsultarDireccionClinica(int Id_Clinica)
         {
             try
             {
                 using (AllBloodContext db = new AllBloodContext())
                 {
-                    List<Ctl_DireccionClinica> direClinica = db.Database.SqlQuery<Ctl_DireccionClinica>("st_ConsultarDireccionClinica").ToList();
+                    List<Ctl_DireccionClinica> direClinica = db.Database.SqlQuery<Ctl_DireccionClinica>("st_ConsultarDireccionClinica @Id_Clinica",
+                        new SqlParameter("@Id_Clinica", Id_Clinica)).ToList();
 
                     return direClinica;
                 }

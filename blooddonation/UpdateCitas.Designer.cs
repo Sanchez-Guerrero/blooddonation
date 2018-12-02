@@ -32,8 +32,9 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
+            this.lblIdClinica = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
-            this.txtHora = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.lbtiquetaNombre = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.lblIdClinica = new System.Windows.Forms.Label();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorPacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVConsulta)).BeginInit();
@@ -79,9 +79,9 @@
             // pnContenedorPacientes
             // 
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnContenedorPacientes.Controls.Add(this.txtHora);
             this.pnContenedorPacientes.Controls.Add(this.lblIdClinica);
             this.pnContenedorPacientes.Controls.Add(this.lblId);
-            this.pnContenedorPacientes.Controls.Add(this.txtHora);
             this.pnContenedorPacientes.Controls.Add(this.comboBox2);
             this.pnContenedorPacientes.Controls.Add(this.comboBox1);
             this.pnContenedorPacientes.Controls.Add(this.label5);
@@ -102,6 +102,26 @@
             this.pnContenedorPacientes.Size = new System.Drawing.Size(710, 555);
             this.pnContenedorPacientes.TabIndex = 3;
             // 
+            // txtHora
+            // 
+            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHora.Location = new System.Drawing.Point(391, 112);
+            this.txtHora.Mask = "00:00";
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(122, 26);
+            this.txtHora.TabIndex = 48;
+            this.txtHora.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblIdClinica
+            // 
+            this.lblIdClinica.AutoSize = true;
+            this.lblIdClinica.Location = new System.Drawing.Point(115, 415);
+            this.lblIdClinica.Name = "lblIdClinica";
+            this.lblIdClinica.Size = new System.Drawing.Size(35, 13);
+            this.lblIdClinica.TabIndex = 47;
+            this.lblIdClinica.Text = "label6";
+            this.lblIdClinica.Visible = false;
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -111,14 +131,6 @@
             this.lblId.TabIndex = 46;
             this.lblId.Text = "Id";
             this.lblId.Visible = false;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHora.Location = new System.Drawing.Point(391, 111);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(122, 26);
-            this.txtHora.TabIndex = 45;
             // 
             // comboBox2
             // 
@@ -146,6 +158,7 @@
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox1.Size = new System.Drawing.Size(292, 32);
             this.comboBox1.TabIndex = 36;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -226,6 +239,7 @@
             this.dTPFechaCita.Name = "dTPFechaCita";
             this.dTPFechaCita.Size = new System.Drawing.Size(292, 29);
             this.dTPFechaCita.TabIndex = 19;
+            this.dTPFechaCita.Validating += new System.ComponentModel.CancelEventHandler(this.dTPFechaCita_Validating);
             // 
             // label2
             // 
@@ -308,16 +322,6 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(682, 445);
             // 
-            // lblIdClinica
-            // 
-            this.lblIdClinica.AutoSize = true;
-            this.lblIdClinica.Location = new System.Drawing.Point(115, 415);
-            this.lblIdClinica.Name = "lblIdClinica";
-            this.lblIdClinica.Size = new System.Drawing.Size(35, 13);
-            this.lblIdClinica.TabIndex = 47;
-            this.lblIdClinica.Text = "label6";
-            this.lblIdClinica.Visible = false;
-            // 
             // UpdateCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,8 +361,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblIdClinica;
+        private System.Windows.Forms.MaskedTextBox txtHora;
     }
 }

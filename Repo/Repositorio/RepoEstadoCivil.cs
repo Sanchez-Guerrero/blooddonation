@@ -2,6 +2,7 @@
 using Repo.Conexion;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,23 @@ namespace Repo.Repositorio
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        public int ConsultarIdEstadoCivil(string lblEstadoCivil)
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    int estadoCivil = db.Database.SqlQuery<int>("st_ConsultarIdEstadoCivil @Estado_Civil",
+                        new SqlParameter("@Estado_Civil", lblEstadoCivil)).FirstOrDefault();
+                    return estadoCivil;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }

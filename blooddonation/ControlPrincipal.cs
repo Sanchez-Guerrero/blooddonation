@@ -64,7 +64,9 @@ namespace blooddonation
             if (MessageBox.Show("Estas seguro de salir de la aplicación?","¡ADVERTENCIA!"
                 ,MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                Application.Exit();
+                Login fl = new Login();
+                this.Close();
+                fl.ShowDialog();      
             }
         }
 
