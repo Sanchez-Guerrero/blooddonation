@@ -22,40 +22,18 @@ namespace blooddonation
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
-            {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.White;
-            }
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "")
-            {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.White;
-            }
         }
 
         private void txtPassword_Enter(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "PASSWORD")
-            {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = Color.White;
-                txtPassword.UseSystemPasswordChar = true;
-            }
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "")
-            {
-                txtPassword.Text = "PASSWORD";
-                txtPassword.ForeColor = Color.White;
-                txtPassword.UseSystemPasswordChar = false;
-            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -70,26 +48,33 @@ namespace blooddonation
             EncriptacionPassword ecp = new EncriptacionPassword();
             lo.Usuario = txtUsuario.Text;
             lo.Contrasenia = txtPassword.Text;
-            if(repo.LogearUsuario(lo.Usuario))
+            if (txtUsuario.Text == "" && txtPassword.Text == "")
             {
-                var password = ecp.DesencriptarPassword(repo.ObtenerEncriptacion(lo.Usuario));
-                if (password == lo.Contrasenia)
+                MessageBox.Show("Los campos deben ser llenados", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (repo.LogearUsuario(lo.Usuario))
                 {
-                    var Id_Perfil = repo.ObtenerPerfil(lo.Usuario);
-                    if (Id_Perfil > 0)
+                    var password = ecp.DesencriptarPassword(repo.ObtenerEncriptacion(lo.Usuario));
+                    if (password == lo.Contrasenia)
                     {
-                        if(Id_Perfil == 1)
+                        var Id_Perfil = repo.ObtenerPerfil(lo.Usuario);
+                        if (Id_Perfil > 0)
                         {
-                            MessageBox.Show("Bienvenido administrador: " + lo.Usuario, "¡BIENVENIDO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            ControlPrincipal cp = new ControlPrincipal(lo.Usuario);
-                            cp.Show();
+                            if (Id_Perfil == 1)
+                            {
+                                MessageBox.Show("Bienvenido administrador: " + lo.Usuario, "¡BIENVENIDO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                ControlPrincipal cp = new ControlPrincipal(lo.Usuario);
+                                cp.Show();
+                            }
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o Contraseña incorrectos!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Usuario o Contraseña incorrectos!", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
