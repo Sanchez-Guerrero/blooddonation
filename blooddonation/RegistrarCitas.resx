@@ -139,6 +139,19 @@
         43rT3vOZwf4g66b1Tyi0ALVXyLipJKcQx+jTQp2kkEj8AfBUln9HyyvRAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="txtDescripcion.Text" xml:space="preserve">
+    <value>Con motivo de este correo electrónico, es para dar aviso que usted tiene una cita con el solicitante de sangre ________________________________, ya que esta persona es compatible con su sangre.
+El lugar de la cita es en la clínica _______________________________________, se encuentra en ____________________________, la fecha de la cita es el_______________________, a las _____.
+Al concluir la cita llevar este comprobante al centro de apoyo Al-Blood para sellarlo y hacer valida la cita.
+                                                                              ATENTAMENTE
+                                                                                   Al-Blood
+
+
+
+
+                Al-Blood
+"Donar Sangre es Donar vida"</value>
+  </data>
   <data name="btnAgendar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

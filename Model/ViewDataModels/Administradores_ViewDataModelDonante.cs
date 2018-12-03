@@ -15,8 +15,8 @@ namespace Model.ViewDataModels
         public string APaterno { get; set; }
         public string AMaterno { get; set; }
         public long Telefono { get; set; }
-        public string Genero { get; set; }
         public string Estado_Civil { get; set; }
+        public string Genero { get; set; }
         public int Id_Direccion { get; set; }
         public string Calle { get; set; }
         public string Estado { get; set; }

@@ -57,6 +57,7 @@
     <Compile Include="Data\Ctl_EstadoCivil.cs" />
     <Compile Include="Data\Ctl_Estados.cs" />
     <Compile Include="Data\Ctl_Estatus.cs" />
+    <Compile Include="Data\Ctl_EstatusCita.cs" />
     <Compile Include="Data\Ctl_Genero.cs" />
     <Compile Include="Data\Ctl_Municipio.cs" />
     <Compile Include="Data\Ctl_Perfil.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Data\Tbl_Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewDataModels\Administradores_ViewDataModelDonante.cs" />
+    <Compile Include="ViewDataModels\CitasTotales_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\Citas_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\DonanteParaModificar_ViewDataModelDonante.cs" />
     <Compile Include="ViewDataModels\Donante_ViewDataModelDonante.cs" />

@@ -24,6 +24,7 @@ namespace blooddonation
             LlenarComboEstados();
             LlenarComboGenero();
             LlenarComboEstadoCivil();
+            dataGridView1.AutoGenerateColumns = false;
             LlenardGriedViewAdministradores();
             btnModificar.Enabled = false;
         }
@@ -150,11 +151,16 @@ namespace blooddonation
                     txtApellidoPaterno.Text = row.Cells[2].Value.ToString();
                     txtApellidoMaterno.Text = row.Cells[3].Value.ToString();
                     txtTelefono.Text = row.Cells[4].Value.ToString();
+                    cBEstCivil.Text = row.Cells[5].Value.ToString();
+                    cBGenero.Text = row.Cells[6].Value.ToString();
                     lblDireccion.Text = row.Cells[7].Value.ToString();
                     txtCalle.Text = row.Cells[8].Value.ToString();
+                    cBEstadoDireccion.Text = row.Cells[9].Value.ToString();
+                    cBMunicipio.Text = row.Cells[10].Value.ToString();
+                    cBColonia.Text = row.Cells[11].Value.ToString();
                     txtNumExterior.Text = row.Cells[12].Value.ToString();
                     txtNumInterior.Text = row.Cells[13].Value.ToString();
-                    lblIdCP.Text = row.Cells[14].Value.ToString();
+                    cBCP.Text = row.Cells[14].Value.ToString();
                     lblIdLogin.Text = row.Cells[15].Value.ToString();
                     txtNomUsuario.Text = row.Cells[16].Value.ToString();
                     txtPassword.Text = row.Cells[17].Value.ToString();
@@ -179,7 +185,6 @@ namespace blooddonation
             ad.Id_EstadoCivil = cBEstCivil.SelectedIndex;
             ad.Id_Direccion = int.Parse(lblDireccion.Text);
             ad.Calle = txtCalle.Text;
-            //var estado = cBEstadoDireccion_SelectedIndexChanged();
             var estado = cBEstadoDireccion.SelectedIndex;
             var muni = cBMunicipio.SelectedIndex;
             var col = cBColonia.SelectedIndex;

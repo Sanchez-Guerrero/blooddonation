@@ -17,6 +17,7 @@ namespace blooddonation
         {
             InitializeComponent();
             LlenardGriedViewCitas();
+            dGVConsulta.AutoGenerateColumns = false;
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -57,6 +58,23 @@ namespace blooddonation
         {
             RepoCita repo = new RepoCita();
             dGVConsulta.DataSource = repo.ConsultarCitas();
+        }
+
+        private void dGVConsulta_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dGVConsulta.Columns[e.ColumnIndex].Name == "EstatusCita")
+            {
+                if (Convert.ToString(e.Value) == "Sin Estatus")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.Red;
+                }
+                if (Convert.ToString(e.Value) == "Concluida")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.Green;
+                }
+            }
         }
     }
 }

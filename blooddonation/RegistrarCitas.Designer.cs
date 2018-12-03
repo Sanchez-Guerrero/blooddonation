@@ -32,6 +32,7 @@
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.txtccc = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblIdClinica = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.pnEncabezadoPacientes.SuspendLayout();
             this.pnContenedorPacientes.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +120,16 @@
             this.pnContenedorPacientes.Name = "pnContenedorPacientes";
             this.pnContenedorPacientes.Size = new System.Drawing.Size(726, 709);
             this.pnContenedorPacientes.TabIndex = 2;
+            // 
+            // txtHora
+            // 
+            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHora.Location = new System.Drawing.Point(391, 114);
+            this.txtHora.Mask = "00:00";
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(100, 26);
+            this.txtHora.TabIndex = 47;
+            this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
             // txtccc
             // 
@@ -195,11 +205,12 @@
             // txtDescripcion
             // 
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(81, 351);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(21, 351);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(598, 134);
+            this.txtDescripcion.Size = new System.Drawing.Size(658, 134);
             this.txtDescripcion.TabIndex = 39;
-            this.txtDescripcion.Text = "";
+            this.txtDescripcion.Text = resources.GetString("txtDescripcion.Text");
             // 
             // txtAsunto
             // 
@@ -376,6 +387,7 @@
             this.cBDonantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBDonantes.Size = new System.Drawing.Size(292, 32);
             this.cBDonantes.TabIndex = 16;
+            this.cBDonantes.SelectedIndexChanged += new System.EventHandler(this.cBDonantes_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -401,6 +413,7 @@
             this.cBPacientes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBPacientes.Size = new System.Drawing.Size(292, 32);
             this.cBPacientes.TabIndex = 14;
+            this.cBPacientes.SelectedIndexChanged += new System.EventHandler(this.cBPacientes_SelectedIndexChanged);
             // 
             // lbtiquetaNombre
             // 
@@ -441,16 +454,6 @@
             this.rectangleShape1.Location = new System.Drawing.Point(11, 9);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(682, 210);
-            // 
-            // txtHora
-            // 
-            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHora.Location = new System.Drawing.Point(391, 114);
-            this.txtHora.Mask = "00:00";
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(100, 26);
-            this.txtHora.TabIndex = 47;
-            this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
             // RegistrarCitas
             // 

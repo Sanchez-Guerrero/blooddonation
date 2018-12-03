@@ -82,5 +82,41 @@ namespace Repo.Repositorio
                 return null;
             }
         }
+
+        public string ObtenerNombre(int id)
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    string donante = db.Database.SqlQuery<string>("st_ConsultarPacienteParaObtenerNombre @id",
+                        new SqlParameter("@id", id)).FirstOrDefault();
+
+                    return donante;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public string ObtenerNombrePaciente(int id)
+        {
+            try
+            {
+                using (AllBloodContext db = new AllBloodContext())
+                {
+                    string donante = db.Database.SqlQuery<string>("st_ConsultarDonanteParaObtenerNombre @id",
+                        new SqlParameter("@id", id)).FirstOrDefault();
+
+                    return donante;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

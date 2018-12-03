@@ -29,11 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCitas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnEncabezadoPacientes = new System.Windows.Forms.Panel();
             this.lbPacientes = new System.Windows.Forms.Label();
             this.pnContenedorPacientes = new System.Windows.Forms.Panel();
-            this.txtHora = new System.Windows.Forms.MaskedTextBox();
+            this.cbEstatusCita = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblIdClinica = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblIdDireccion = new System.Windows.Forms.Label();
+            this.lblIdDonante = new System.Windows.Forms.Label();
+            this.lblIdPaciente = new System.Windows.Forms.Label();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -41,6 +51,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnModificarCita = new System.Windows.Forms.Button();
             this.dGVConsulta = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.dTPFechaCita = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,8 +99,14 @@
             // pnContenedorPacientes
             // 
             this.pnContenedorPacientes.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnContenedorPacientes.Controls.Add(this.txtHora);
+            this.pnContenedorPacientes.Controls.Add(this.cbEstatusCita);
+            this.pnContenedorPacientes.Controls.Add(this.label6);
             this.pnContenedorPacientes.Controls.Add(this.lblIdClinica);
+            this.pnContenedorPacientes.Controls.Add(this.lblStatus);
+            this.pnContenedorPacientes.Controls.Add(this.lblIdDireccion);
+            this.pnContenedorPacientes.Controls.Add(this.lblIdDonante);
+            this.pnContenedorPacientes.Controls.Add(this.lblIdPaciente);
+            this.pnContenedorPacientes.Controls.Add(this.txtHora);
             this.pnContenedorPacientes.Controls.Add(this.lblId);
             this.pnContenedorPacientes.Controls.Add(this.comboBox2);
             this.pnContenedorPacientes.Controls.Add(this.comboBox1);
@@ -102,6 +128,81 @@
             this.pnContenedorPacientes.Size = new System.Drawing.Size(710, 555);
             this.pnContenedorPacientes.TabIndex = 3;
             // 
+            // cbEstatusCita
+            // 
+            this.cbEstatusCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstatusCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstatusCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstatusCita.ForeColor = System.Drawing.Color.Black;
+            this.cbEstatusCita.FormattingEnabled = true;
+            this.cbEstatusCita.Location = new System.Drawing.Point(41, 260);
+            this.cbEstatusCita.Name = "cbEstatusCita";
+            this.cbEstatusCita.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbEstatusCita.Size = new System.Drawing.Size(292, 32);
+            this.cbEstatusCita.TabIndex = 55;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label6.Location = new System.Drawing.Point(37, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 24);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "Estatus Cita";
+            // 
+            // lblIdClinica
+            // 
+            this.lblIdClinica.AutoSize = true;
+            this.lblIdClinica.Location = new System.Drawing.Point(366, 463);
+            this.lblIdClinica.Name = "lblIdClinica";
+            this.lblIdClinica.Size = new System.Drawing.Size(57, 13);
+            this.lblIdClinica.TabIndex = 53;
+            this.lblIdClinica.Text = "lblIdClinica";
+            this.lblIdClinica.Visible = false;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(303, 463);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(56, 13);
+            this.lblStatus.TabIndex = 52;
+            this.lblStatus.Text = "lblIdStatus";
+            this.lblStatus.Visible = false;
+            // 
+            // lblIdDireccion
+            // 
+            this.lblIdDireccion.AutoSize = true;
+            this.lblIdDireccion.Location = new System.Drawing.Point(226, 463);
+            this.lblIdDireccion.Name = "lblIdDireccion";
+            this.lblIdDireccion.Size = new System.Drawing.Size(71, 13);
+            this.lblIdDireccion.TabIndex = 51;
+            this.lblIdDireccion.Text = "lblIdDireccion";
+            this.lblIdDireccion.Visible = false;
+            // 
+            // lblIdDonante
+            // 
+            this.lblIdDonante.AutoSize = true;
+            this.lblIdDonante.Location = new System.Drawing.Point(172, 461);
+            this.lblIdDonante.Name = "lblIdDonante";
+            this.lblIdDonante.Size = new System.Drawing.Size(48, 13);
+            this.lblIdDonante.TabIndex = 50;
+            this.lblIdDonante.Text = "Donante";
+            this.lblIdDonante.Visible = false;
+            // 
+            // lblIdPaciente
+            // 
+            this.lblIdPaciente.AutoSize = true;
+            this.lblIdPaciente.Location = new System.Drawing.Point(105, 461);
+            this.lblIdPaciente.Name = "lblIdPaciente";
+            this.lblIdPaciente.Size = new System.Drawing.Size(49, 13);
+            this.lblIdPaciente.TabIndex = 49;
+            this.lblIdPaciente.Text = "Paciente";
+            this.lblIdPaciente.Visible = false;
+            // 
             // txtHora
             // 
             this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,20 +213,10 @@
             this.txtHora.TabIndex = 48;
             this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
-            // lblIdClinica
-            // 
-            this.lblIdClinica.AutoSize = true;
-            this.lblIdClinica.Location = new System.Drawing.Point(115, 415);
-            this.lblIdClinica.Name = "lblIdClinica";
-            this.lblIdClinica.Size = new System.Drawing.Size(35, 13);
-            this.lblIdClinica.TabIndex = 47;
-            this.lblIdClinica.Text = "label6";
-            this.lblIdClinica.Visible = false;
-            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(70, 415);
+            this.lblId.Location = new System.Drawing.Point(70, 461);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(16, 13);
             this.lblId.TabIndex = 46;
@@ -195,7 +286,7 @@
             this.btnModificarCita.ForeColor = System.Drawing.Color.White;
             this.btnModificarCita.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarCita.Image")));
             this.btnModificarCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarCita.Location = new System.Drawing.Point(494, 398);
+            this.btnModificarCita.Location = new System.Drawing.Point(494, 444);
             this.btnModificarCita.Name = "btnModificarCita";
             this.btnModificarCita.Size = new System.Drawing.Size(185, 50);
             this.btnModificarCita.TabIndex = 5;
@@ -205,15 +296,146 @@
             // 
             // dGVConsulta
             // 
-            this.dGVConsulta.BackgroundColor = System.Drawing.Color.White;
+            this.dGVConsulta.AllowUserToAddRows = false;
+            this.dGVConsulta.AllowUserToDeleteRows = false;
+            this.dGVConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dGVConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dGVConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.dGVConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVConsulta.GridColor = System.Drawing.Color.Silver;
-            this.dGVConsulta.Location = new System.Drawing.Point(28, 252);
+            this.dGVConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dGVConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVConsulta.ColumnHeadersHeight = 30;
+            this.dGVConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dGVConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVConsulta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVConsulta.EnableHeadersVisualStyles = false;
+            this.dGVConsulta.GridColor = System.Drawing.Color.White;
+            this.dGVConsulta.Location = new System.Drawing.Point(28, 298);
             this.dGVConsulta.Name = "dGVConsulta";
+            this.dGVConsulta.ReadOnly = true;
+            this.dGVConsulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dGVConsulta.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dGVConsulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dGVConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVConsulta.Size = new System.Drawing.Size(651, 140);
             this.dGVConsulta.TabIndex = 37;
             this.dGVConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVConsulta_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id_Cita";
+            this.Column1.HeaderText = "Nº Cita";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 58;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Id_Solicitante";
+            this.Column2.HeaderText = "Nº Solicitante";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 86;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Id_Donante";
+            this.Column3.HeaderText = "Nº Donante";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 79;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Fecha";
+            this.Column4.HeaderText = "Fecha";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 60;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Hora";
+            this.Column5.HeaderText = "Hora";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 53;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Id_Direccion";
+            this.Column6.HeaderText = "Nº Dirección";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 83;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "NomClinica";
+            this.Column7.HeaderText = "Nombre Clinica";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 93;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "DireccionClinica";
+            this.Column8.HeaderText = "Dirección Clinica";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Id_Estatus";
+            this.Column9.HeaderText = "Nº Estatus";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 74;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "EstatusCita";
+            this.Column10.HeaderText = "Estatus de la Cita";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 76;
             // 
             // label3
             // 
@@ -265,6 +487,7 @@
             this.cBDonantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBDonantes.Size = new System.Drawing.Size(292, 32);
             this.cBDonantes.TabIndex = 16;
+            this.cBDonantes.SelectedIndexChanged += new System.EventHandler(this.cBDonantes_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -290,6 +513,7 @@
             this.cBPacientes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cBPacientes.Size = new System.Drawing.Size(292, 32);
             this.cBPacientes.TabIndex = 14;
+            this.cBPacientes.SelectedIndexChanged += new System.EventHandler(this.cBPacientes_SelectedIndexChanged);
             // 
             // lbtiquetaNombre
             // 
@@ -320,7 +544,7 @@
             this.rectangleShape1.Enabled = false;
             this.rectangleShape1.Location = new System.Drawing.Point(11, 11);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(682, 445);
+            this.rectangleShape1.Size = new System.Drawing.Size(682, 494);
             // 
             // UpdateCitas
             // 
@@ -362,7 +586,23 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label lblIdClinica;
         private System.Windows.Forms.MaskedTextBox txtHora;
+        private System.Windows.Forms.Label lblIdDonante;
+        private System.Windows.Forms.Label lblIdPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblIdDireccion;
+        private System.Windows.Forms.Label lblIdClinica;
+        private System.Windows.Forms.ComboBox cbEstatusCita;
+        private System.Windows.Forms.Label label6;
     }
 }

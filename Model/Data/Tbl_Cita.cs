@@ -15,6 +15,7 @@ namespace Model.Data
         public int Id_Donante { get; set; }
         public DateTime Fecha  { get; set; }
         public string Hora { get; set; }
-        public int Id_Clinica { get; set; }
+        public int Id_Direccion { get; set; }
+        public int Id_Estatus { get; set; }
     }
 }
